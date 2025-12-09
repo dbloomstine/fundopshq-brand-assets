@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FundOpsHQ Asset Workshop</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #1E3A5F;
+      --gold: #B8860B;
+      --slate: #64748B;
+      --light-gray: #F1F5F9;
+      --border: #E2E8F0;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--light-gray);
+      color: var(--navy);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--navy);
+      color: white;
+      padding: 24px 32px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    header p {
+      opacity: 0.8;
+      font-size: 14px;
+      margin-top: 4px;
+    }
+
+    .refresh-btn {
+      position: absolute;
+      right: 32px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--gold);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .refresh-btn:hover {
+      background: #9a7209;
+    }
+
+    main {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 32px;
+    }
+
+    section {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);
+    }
+
+    section h2 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--navy);
+    }
+
+    section > p {
+      color: var(--slate);
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .asset-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .asset-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .asset-preview {
+      background: repeating-conic-gradient(#f0f0f0 0% 25%, white 0% 50%) 50% / 20px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 200px;
+      padding: 20px;
+    }
+
+    .asset-preview.dark-bg {
+      background: var(--navy);
+    }
+
+    .asset-preview.video-bg {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .asset-preview img,
+    .asset-preview object {
+      max-width: 100%;
+      max-height: 200px;
+    }
+
+    .asset-info {
+      padding: 16px;
+      border-top: 1px solid var(--border);
+      background: var(--light-gray);
+    }
+
+    .asset-info h3 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .asset-info p {
+      font-size: 12px;
+      color: var(--slate);
+    }
+
+    .version-badge {
+      display: inline-block;
+      background: var(--gold);
+      color: white;
+      font-size: 10px;
+      padding: 2px 8px;
+      border-radius: 10px;
+      margin-left: 8px;
+      font-weight: 600;
+    }
+
+    .coming-soon {
+      opacity: 0.5;
+      text-align: center;
+      padding: 40px;
+      color: var(--slate);
+    }
+
+    .notes {
+      background: #FEF3C7;
+      border: 1px solid #F59E0B;
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .notes strong {
+      color: #92400E;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FundOpsHQ Asset Workshop</h1>
+    <p>Iterate on new brand assets before pushing to production</p>
+    <button class="refresh-btn" onclick="location.reload()">Refresh Preview</button>
+  </header>
+
+  <main>
+    <!-- Social Media Profile Icons -->
+    <section id="social">
+      <h2>Social Media Profile Icons</h2>
+      <p>Square icons optimized for circular crop on most platforms</p>
+
+      <div class="asset-grid">
+        <div class="asset-card">
+          <div class="asset-preview">
+            <img src="workshop/social/profile-icon-v1.svg" alt="Profile Icon V1" onerror="this.parentElement.innerHTML='<div class=coming-soon>Generating...</div>'">
+          </div>
+          <div class="asset-info">
+            <h3>Profile Icon <span class="version-badge">V1</span></h3>
+            <p>800x800 - Full logo, navy background</p>
+          </div>
+        </div>
+
+        <div class="asset-card">
+          <div class="asset-preview">
+            <img src="workshop/social/profile-icon-v2.svg" alt="Profile Icon V2" onerror="this.parentElement.innerHTML='<div class=coming-soon>Generating...</div>'">
+          </div>
+          <div class="asset-info">
+            <h3>Profile Icon <span class="version-badge">V2</span></h3>
+            <p>800x800 - FOHQ monogram, navy background</p>
+          </div>
+        </div>
+
+        <div class="asset-card">
+          <div class="asset-preview">
+            <img src="workshop/social/profile-icon-v3.svg" alt="Profile Icon V3" onerror="this.parentElement.innerHTML='<div class=coming-soon>Generating...</div>'">
+          </div>
+          <div class="asset-info">
+            <h3>Profile Icon <span class="version-badge">V3</span></h3>
+            <p>800x800 - Stylized "F" mark</p>
+          </div>
+        </div>
+
+        <div class="asset-card">
+          <div class="asset-preview">
+            <img src="workshop/social/profile-icon-v4.svg" alt="Profile Icon V4" onerror="this.parentElement.innerHTML='<div class=coming-soon>Generating...</div>'">
+          </div>
+          <div class="asset-info">
+            <h3>Profile Icon <span class="version-badge">V4</span></h3>
+            <p>800x800 - Gold accent variant</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Watermarks -->
+    <section id="video">
+      <h2>Video Watermarks & Overlays</h2>
+      <p>Transparent logos for video content - shown on sample video background</p>
+
+      <div class="asset-grid">
+        <div class="asset-card">
+          <div class="asset-preview video-bg">
+            <img src="workshop/video/watermark-v1.svg" alt="Watermark V1" onerror="this.parentElement.innerHTML='<div class=coming-soon style=color:white>Generating...</div>'">
+          </div>
+          <div class="asset-info">
+            <h3>Corner Watermark <span class="version-badge">V1</span></h3>
+            <p>White logo, semi-transparent</p>
+          </div>
+        </div>
+
+        <div class="asset-card">
+          <div class="asset-preview video-bg">
+            <img src="workshop/video/watermark-v2.svg" alt="Watermark V2" onerror="this.parentElement.innerHTML='<div class=coming-soon style=color:white>Generating...</div>'">
+          </div>
+          <div class="asset-info">
+            <h3>Corner Watermark <span class="version-badge">V2</span></h3>
+            <p>Gold HQ accent version</p>
+          </div>
+        </div>
+
+        <div class="asset-card">
+          <div class="asset-preview video-bg">
+            <img src="workshop/video/watermark-v3.svg" alt="Watermark V3" onerror="this.parentElement.innerHTML='<div class=coming-soon style=color:white>Generating...</div>'">
+          </div>
+          <div class="asset-info">
+            <h3>Minimal Watermark <span class="version-badge">V3</span></h3>
+            <p>Just FOHQ mark, very subtle</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Podcast Covers -->
+    <section id="podcast">
+      <h2>Podcast Cover Variations</h2>
+      <p>Alternative designs for the podcast artwork</p>
+
+      <div class="asset-grid">
+        <div class="asset-card">
+          <div class="asset-preview dark-bg">
+            <img src="workshop/podcast/cover-v1.svg" alt="Podcast Cover V1" onerror="this.parentElement.innerHTML='<div class=coming-soon style=color:white>Generating...</div>'">
+          </div>
+          <div class="asset-info">
+            <h3>Podcast Cover <span class="version-badge">V1</span></h3>
+            <p>Current design (centered)</p>
+          </div>
+        </div>
+
+        <div class="asset-card">
+          <div class="asset-preview dark-bg">
+            <img src="workshop/podcast/cover-v2.svg" alt="Podcast Cover V2" onerror="this.parentElement.innerHTML='<div class=coming-soon style=color:white>Generating...</div>'">
+          </div>
+          <div class="asset-info">
+            <h3>Podcast Cover <span class="version-badge">V2</span></h3>
+            <p>Logo top, tagline bottom</p>
+          </div>
+        </div>
+
+        <div class="asset-card">
+          <div class="asset-preview dark-bg">
+            <img src="workshop/podcast/cover-v3.svg" alt="Podcast Cover V3" onerror="this.parentElement.innerHTML='<div class=coming-soon style=color:white>Generating...</div>'">
+          </div>
+          <div class="asset-info">
+            <h3>Podcast Cover <span class="version-badge">V3</span></h3>
+            <p>Large "F" mark background</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Thumbnails -->
+    <section id="thumbnails">
+      <h2>YouTube / Content Thumbnails</h2>
+      <p>Templates for video thumbnails and content cards</p>
+
+      <div class="asset-grid">
+        <div class="asset-card">
+          <div class="asset-preview">
+            <img src="workshop/thumbnails/youtube-template-v1.svg" alt="YouTube Template V1" onerror="this.parentElement.innerHTML='<div class=coming-soon>Generating...</div>'">
+          </div>
+          <div class="asset-info">
+            <h3>YouTube Thumbnail <span class="version-badge">V1</span></h3>
+            <p>1280x720 - Logo bottom right</p>
+          </div>
+        </div>
+
+        <div class="asset-card">
+          <div class="asset-preview">
+            <img src="workshop/thumbnails/episode-card-v1.svg" alt="Episode Card V1" onerror="this.parentElement.innerHTML='<div class=coming-soon>Generating...</div>'">
+          </div>
+          <div class="asset-info">
+            <h3>Episode Card <span class="version-badge">V1</span></h3>
+            <p>1200x630 - For sharing episodes</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Badges -->
+    <section id="badges">
+      <h2>Web Badges & Guest Graphics</h2>
+      <p>Badges for guests, sponsors, and embeds</p>
+
+      <div class="asset-grid">
+        <div class="asset-card">
+          <div class="asset-preview">
+            <img src="workshop/badges/featured-badge-v1.svg" alt="Featured Badge V1" onerror="this.parentElement.innerHTML='<div class=coming-soon>Generating...</div>'">
+          </div>
+          <div class="asset-info">
+            <h3>Featured Badge <span class="version-badge">V1</span></h3>
+            <p>"As Featured on FundOpsHQ"</p>
+          </div>
+        </div>
+
+        <div class="asset-card">
+          <div class="asset-preview">
+            <img src="workshop/badges/guest-badge-v1.svg" alt="Guest Badge V1" onerror="this.parentElement.innerHTML='<div class=coming-soon>Generating...</div>'">
+          </div>
+          <div class="asset-info">
+            <h3>Guest Badge <span class="version-badge">V1</span></h3>
+            <p>"FundOpsHQ Interviews Guest"</p>
+          </div>
+        </div>
+
+        <div class="asset-card">
+          <div class="asset-preview">
+            <img src="workshop/badges/email-sig-v1.svg" alt="Email Signature V1" onerror="this.parentElement.innerHTML='<div class=coming-soon>Generating...</div>'">
+          </div>
+          <div class="asset-info">
+            <h3>Email Signature <span class="version-badge">V1</span></h3>
+            <p>Compact horizontal logo</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="notes">
+      <strong>Iteration Notes:</strong> This page auto-shows all assets in the workshop folder.
+      Click "Refresh Preview" after I make changes to see updates.
+      Tell me what to tweak: colors, sizes, layouts, text, etc.
+    </div>
+  </main>
+
+  <script>
+    // Auto-refresh every 5 seconds during active development
+    // Uncomment the line below to enable:
+    // setInterval(() => location.reload(), 5000);
+  </script>
+</body>
+</html>

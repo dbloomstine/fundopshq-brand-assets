@@ -1,0 +1,6 @@
+<svg width="200" height="50" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+  <!-- V2: Semi-transparent white watermark - slightly bolder -->
+  <g opacity="0.85">
+    <text x="0" y="35" fill="#FFFFFF" font-family="DM Sans, system-ui, sans-serif" font-size="28" font-weight="700">FundOpsHQ</text>
+  </g>
+</svg>

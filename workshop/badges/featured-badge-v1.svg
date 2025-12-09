@@ -1,0 +1,8 @@
+<svg width="300" height="80" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Featured Badge V1 - MONOCHROME for guest websites -->
+  <rect width="300" height="80" rx="8" fill="#1E3A5F"/>
+
+  <text x="24" y="35" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="500" letter-spacing="0.1em">AS FEATURED ON</text>
+
+  <text x="24" y="58" fill="#FFFFFF" font-family="DM Sans, system-ui, sans-serif" font-size="22" font-weight="700">FundOpsHQ</text>
+</svg>

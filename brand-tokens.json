@@ -1,35 +1,103 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "FundOpsHQ Brand Tokens",
-  "version": "1.0.0",
-  "description": "Design tokens for FundOpsHQ brand implementation",
+  "version": "2.0.0",
+  "description": "Design tokens for FundOpsHQ brand implementation - Monochrome institutional palette",
 
   "colors": {
-    "primary": {
-      "value": "#1E3A5F",
-      "name": "Deep Navy",
-      "usage": "Primary brand color, headers, buttons, navigation, dark backgrounds"
+    "navy": {
+      "dark": {
+        "value": "#152d4a",
+        "name": "Navy Dark",
+        "usage": "Hover states, emphasis, deep backgrounds"
+      },
+      "primary": {
+        "value": "#1E3A5F",
+        "name": "Navy Primary",
+        "usage": "Primary brand color, headers, buttons, navigation"
+      },
+      "light": {
+        "value": "#2d4a6f",
+        "name": "Navy Light",
+        "usage": "Secondary navy elements, lighter accents on dark backgrounds"
+      }
     },
-    "accent": {
-      "value": "#B8860B",
-      "name": "Muted Gold",
-      "usage": "Accent highlights, CTAs, links hover, the 'HQ' in logo"
+    "gray": {
+      "slate": {
+        "value": "#64748B",
+        "name": "Slate",
+        "usage": "Body text, paragraphs, secondary content"
+      },
+      "medium": {
+        "value": "#94A3B8",
+        "name": "Medium Gray",
+        "usage": "Captions, metadata, timestamps, helper text"
+      },
+      "light": {
+        "value": "#CBD5E1",
+        "name": "Light Slate",
+        "usage": "Borders, dividers, subtle UI elements"
+      },
+      "lighter": {
+        "value": "#E2E8F0",
+        "name": "Lighter Gray",
+        "usage": "Card borders, input borders, light dividers"
+      },
+      "cool": {
+        "value": "#F1F5F9",
+        "name": "Cool Gray",
+        "usage": "Card backgrounds, alternating rows, sections"
+      }
+    },
+    "warm": {
+      "cream": {
+        "value": "#FAF9F7",
+        "name": "Cream",
+        "usage": "Warm page backgrounds, softer alternative to white"
+      },
+      "beige": {
+        "value": "#E8E4DE",
+        "name": "Warm Beige",
+        "usage": "Warm card backgrounds, subtle warm accents"
+      },
+      "stone": {
+        "value": "#D4CDC4",
+        "name": "Stone",
+        "usage": "Warm borders, warm UI accents"
+      },
+      "taupe": {
+        "value": "#A39E93",
+        "name": "Taupe",
+        "usage": "Warm muted text, sophisticated neutral"
+      }
+    },
+    "base": {
+      "white": {
+        "value": "#FFFFFF",
+        "name": "White",
+        "usage": "Primary backgrounds, text on dark"
+      },
+      "black": {
+        "value": "#0f172a",
+        "name": "Near Black",
+        "usage": "Maximum contrast text when needed"
+      }
     },
     "text": {
       "primary": {
         "value": "#1E3A5F",
-        "name": "Deep Navy",
+        "name": "Navy Primary",
         "usage": "Headings, important text on light backgrounds"
       },
       "secondary": {
         "value": "#64748B",
-        "name": "Slate Gray",
-        "usage": "Body text, paragraphs, secondary content"
+        "name": "Slate",
+        "usage": "Body text, paragraphs"
       },
       "muted": {
         "value": "#94A3B8",
-        "name": "Caption Gray",
-        "usage": "Captions, metadata, timestamps, helper text"
+        "name": "Medium Gray",
+        "usage": "Captions, metadata, timestamps"
       },
       "inverse": {
         "value": "#FFFFFF",
@@ -45,12 +113,17 @@
       },
       "secondary": {
         "value": "#F1F5F9",
-        "name": "Light Gray",
+        "name": "Cool Gray",
         "usage": "Cards, sections, alternating rows"
+      },
+      "warm": {
+        "value": "#FAF9F7",
+        "name": "Cream",
+        "usage": "Warm sections, softer backgrounds"
       },
       "dark": {
         "value": "#1E3A5F",
-        "name": "Deep Navy",
+        "name": "Navy Primary",
         "usage": "Dark sections, footer, hero backgrounds"
       }
     },
@@ -62,15 +135,19 @@
       "medium": {
         "value": "#CBD5E1",
         "usage": "Focused input borders, hover states"
+      },
+      "warm": {
+        "value": "#D4CDC4",
+        "usage": "Warm theme borders"
       }
     },
     "state": {
       "hover": {
         "primary": "#152d4a",
-        "accent": "#9a7209"
+        "secondary": "#F1F5F9"
       },
       "focus": {
-        "ring": "#B8860B",
+        "ring": "#1E3A5F",
         "ringOffset": "#FFFFFF"
       }
     }
@@ -222,14 +299,6 @@
         "borderRadius": "8px",
         "fontWeight": 600
       },
-      "accent": {
-        "background": "#B8860B",
-        "color": "#FFFFFF",
-        "hoverBackground": "#9a7209",
-        "padding": "12px 24px",
-        "borderRadius": "8px",
-        "fontWeight": 600
-      },
       "ghost": {
         "background": "transparent",
         "color": "#64748B",
@@ -251,8 +320,8 @@
       "border": "1px solid #E2E8F0",
       "borderRadius": "8px",
       "padding": "12px 16px",
-      "focusBorder": "#B8860B",
-      "focusRing": "0 0 0 3px rgba(184, 134, 11, 0.1)"
+      "focusBorder": "#1E3A5F",
+      "focusRing": "0 0 0 3px rgba(30, 58, 95, 0.1)"
     },
     "badge": {
       "background": "#F1F5F9",
@@ -264,7 +333,7 @@
     },
     "link": {
       "color": "#1E3A5F",
-      "hoverColor": "#B8860B",
+      "hoverColor": "#152d4a",
       "underline": "none",
       "hoverUnderline": "underline"
     }
@@ -287,7 +356,8 @@
     "minSizes": {
       "full": "120px",
       "short": "32px"
-    }
+    },
+    "note": "Logo is fully monochrome - FundOpsHQ in single color (white on dark, navy on light)"
   },
 
   "socialMedia": {
@@ -314,8 +384,8 @@
   },
 
   "brandVoice": {
-    "tone": ["professional", "knowledgeable", "trustworthy", "clear", "educational"],
-    "avoid": ["emojis in formal content", "casual slang", "overly technical jargon without explanation"],
-    "personality": "Expert advisor who explains complex fund operations concepts clearly and builds trust through accuracy and professionalism"
+    "tone": ["professional", "knowledgeable", "trustworthy", "clear", "educational", "institutional"],
+    "avoid": ["emojis in formal content", "casual slang", "overly technical jargon without explanation", "flashy colors or effects"],
+    "personality": "Expert advisor who explains complex fund operations concepts clearly and builds trust through accuracy, professionalism, and quiet confidence"
   }
 }
