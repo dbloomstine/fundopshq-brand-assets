@@ -6,396 +6,342 @@
     <title>FundOpsHQ Brand Kit</title>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --color-navy: #1E3A5F;
+            --color-navy-dark: #152d4a;
+            --color-gold: #B8860B;
+            --color-gold-dark: #9a7209;
+            --color-gray: #64748B;
+            --color-light: #F1F5F9;
+            --color-caption: #94A3B8;
+            --color-border: #E2E8F0;
+            --color-white: #FFFFFF;
+            --font-heading: 'DM Sans', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --shadow-card: 0 2px 8px rgba(30, 58, 95, 0.08);
+            --shadow-card-hover: 0 8px 24px rgba(30, 58, 95, 0.12);
+            --radius-md: 8px;
+            --radius-lg: 12px;
         }
 
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
-            font-family: 'Inter', sans-serif;
-            background: #FFFFFF;
-            color: #1E3A5F;
+            font-family: var(--font-body);
+            background: var(--color-white);
+            color: var(--color-navy);
             line-height: 1.6;
-            padding: 60px 40px;
+        }
+
+        /* Navigation */
+        .nav {
+            position: sticky;
+            top: 0;
+            background: var(--color-white);
+            border-bottom: 1px solid var(--color-border);
+            padding: 16px 40px;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-logo {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 18px;
+            color: var(--color-navy);
+            text-decoration: none;
+        }
+
+        .nav-logo span { color: var(--color-gold); }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--color-gray);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.15s;
+        }
+
+        .nav-links a:hover { color: var(--color-navy); }
+
+        /* Main Content */
+        .container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 60px 40px;
         }
 
         h1 {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 42px;
+            font-family: var(--font-heading);
+            font-size: 48px;
             font-weight: 700;
-            margin-bottom: 8px;
-            color: #1E3A5F;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
         }
 
         .subtitle {
             font-size: 18px;
-            color: #64748B;
-            margin-bottom: 60px;
+            color: var(--color-gray);
+            margin-bottom: 48px;
         }
 
         h2 {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 24px;
+            font-family: var(--font-heading);
+            font-size: 28px;
             font-weight: 600;
             margin-bottom: 24px;
-            color: #1E3A5F;
             padding-bottom: 12px;
-            border-bottom: 2px solid #F1F5F9;
+            border-bottom: 2px solid var(--color-light);
         }
 
-        .section {
-            margin-bottom: 60px;
+        h3 {
+            font-family: var(--font-heading);
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--color-navy);
         }
+
+        .section { margin-bottom: 80px; }
 
         /* Color Palette */
         .color-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
         }
 
         .color-card {
-            border-radius: 8px;
+            border-radius: var(--radius-lg);
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            box-shadow: var(--shadow-card);
             cursor: pointer;
-            transition: transform 0.15s ease;
+            transition: all 0.2s;
         }
 
         .color-card:hover {
             transform: translateY(-2px);
+            box-shadow: var(--shadow-card-hover);
         }
 
-        .color-swatch {
-            height: 120px;
-        }
+        .color-swatch { height: 100px; }
+        .color-info { padding: 16px; background: var(--color-light); }
+        .color-name { font-weight: 600; font-size: 14px; margin-bottom: 4px; }
+        .color-hex { font-family: monospace; font-size: 13px; color: var(--color-gray); }
 
-        .color-info {
-            padding: 16px;
-            background: #F8FAFC;
-        }
-
-        .color-name {
-            font-weight: 600;
-            font-size: 14px;
-            margin-bottom: 4px;
-        }
-
-        .color-hex {
-            font-family: 'DM Sans', monospace;
-            font-size: 14px;
-            color: #64748B;
-        }
-
-        .color-use {
-            font-size: 12px;
-            color: #94A3B8;
-            margin-top: 8px;
-        }
-
-        /* Typography */
-        .font-specimen {
-            background: #F8FAFC;
-            padding: 32px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-
-        .font-name {
-            font-size: 14px;
-            color: #64748B;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .font-display {
-            font-size: 48px;
-            margin-bottom: 16px;
-            color: #1E3A5F;
-        }
-
-        .font-weights {
-            display: flex;
-            gap: 32px;
-            flex-wrap: wrap;
-        }
-
-        .font-weight-sample {
-            font-size: 16px;
-            color: #64748B;
-        }
-
-        .dm-sans { font-family: 'DM Sans', sans-serif; }
-        .inter { font-family: 'Inter', sans-serif; }
-
-        /* Logos */
-        .logo-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-        }
-
-        .logo-card {
-            border: 1px solid #E2E8F0;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .logo-display {
-            padding: 48px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 180px;
-        }
-
-        .logo-display.light {
-            background: #FFFFFF;
-        }
-
-        .logo-display.dark {
-            background: #1E3A5F;
-        }
-
-        .logo-display.gray {
-            background: #F1F5F9;
-        }
-
-        .logo-display.pattern {
-            background: url('patterns/diagonal-stripes.svg');
-        }
-
-        .logo-label {
-            padding: 12px 16px;
-            background: #F8FAFC;
-            font-size: 13px;
-            color: #64748B;
-            border-top: 1px solid #E2E8F0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo-display img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .download-link {
-            font-size: 12px;
-            color: #B8860B;
-            text-decoration: none;
-        }
-
-        .download-link:hover {
-            text-decoration: underline;
-        }
-
-        /* Usage Notes */
-        .usage-grid {
+        /* Asset Grid */
+        .asset-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 24px;
         }
 
-        .usage-card {
-            background: #F8FAFC;
-            padding: 24px;
-            border-radius: 8px;
-        }
-
-        .usage-card h3 {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 12px;
-            color: #1E3A5F;
-        }
-
-        .usage-card p {
-            font-size: 14px;
-            color: #64748B;
-        }
-
-        /* Podcast Section */
-        .podcast-logo {
-            background: #1E3A5F;
-            padding: 60px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            max-width: 500px;
-        }
-
-        .podcast-logo img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .podcast-note {
-            margin-top: 16px;
-            font-size: 14px;
-            color: #64748B;
-        }
-
-        /* Pattern Section */
-        .pattern-preview {
-            width: 100%;
-            height: 200px;
-            border-radius: 8px;
-            background: url('patterns/diagonal-stripes.svg');
-            margin-bottom: 16px;
-        }
-
-        .pattern-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
-        }
-
-        .pattern-card {
-            border: 1px solid #E2E8F0;
-            border-radius: 8px;
+        .asset-card {
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
             overflow: hidden;
+            transition: all 0.2s;
         }
 
-        .pattern-display {
+        .asset-card:hover {
+            box-shadow: var(--shadow-card-hover);
+        }
+
+        .asset-preview {
             height: 160px;
-            background: url('patterns/diagonal-stripes.svg');
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
         }
 
-        .pattern-info {
+        .asset-preview.light-bg { background: var(--color-white); }
+        .asset-preview.dark-bg { background: var(--color-navy); }
+        .asset-preview.gray-bg { background: var(--color-light); }
+        .asset-preview.pattern-bg { background: url('patterns/diagonal-stripes.svg'); }
+
+        .asset-preview img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .asset-info {
             padding: 16px;
-            background: #F8FAFC;
+            background: var(--color-light);
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .pattern-info span {
-            font-size: 14px;
-            color: #64748B;
+        .asset-name { font-size: 13px; font-weight: 500; }
+
+        .asset-actions {
+            display: flex;
+            gap: 8px;
         }
 
-        /* Podcast Assets */
-        .podcast-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-        }
-
-        .podcast-card {
-            border: 1px solid #E2E8F0;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .podcast-cover-preview {
-            aspect-ratio: 1;
-            max-width: 300px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-
-        .podcast-cover-preview img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .doc-link {
-            display: block;
-            padding: 16px 20px;
-            background: #F8FAFC;
-            border: 1px solid #E2E8F0;
-            border-radius: 8px;
-            text-decoration: none;
-            color: #1E3A5F;
-            font-weight: 500;
-            transition: background 0.15s ease;
-        }
-
-        .doc-link:hover {
-            background: #F1F5F9;
-        }
-
-        .doc-link small {
-            display: block;
-            color: #64748B;
-            font-weight: 400;
-            margin-top: 4px;
-        }
-
-        /* Specs Table */
-        .specs-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 16px;
-        }
-
-        .specs-table th,
-        .specs-table td {
-            text-align: left;
-            padding: 12px 16px;
-            border-bottom: 1px solid #E2E8F0;
-            font-size: 14px;
-        }
-
-        .specs-table th {
-            background: #F8FAFC;
-            font-weight: 600;
-            color: #1E3A5F;
-        }
-
-        .specs-table td {
-            color: #64748B;
-        }
-
-        .specs-table code {
-            font-family: 'DM Sans', monospace;
-            background: #F1F5F9;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-size: 13px;
-        }
-
-        /* Copy Button */
-        .copy-btn {
+        .btn-download {
             background: none;
-            border: 1px solid #E2E8F0;
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 11px;
-            color: #64748B;
+            border: 1px solid var(--color-border);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            color: var(--color-gray);
             cursor: pointer;
-            transition: all 0.15s ease;
+            transition: all 0.15s;
+            text-decoration: none;
         }
 
-        .copy-btn:hover {
-            background: #F1F5F9;
-            border-color: #B8860B;
-            color: #B8860B;
+        .btn-download:hover {
+            background: var(--color-white);
+            border-color: var(--color-gold);
+            color: var(--color-gold);
         }
 
-        .copy-btn.copied {
-            background: #B8860B;
-            border-color: #B8860B;
-            color: white;
+        /* Large Preview Card */
+        .preview-large {
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            margin-bottom: 24px;
+        }
+
+        .preview-large .asset-preview {
+            height: 300px;
+        }
+
+        /* Component Library */
+        .component-section {
+            background: var(--color-light);
+            padding: 32px;
+            border-radius: var(--radius-lg);
+            margin-bottom: 24px;
+        }
+
+        .component-row {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .component-row:last-child { margin-bottom: 0; }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            border-radius: var(--radius-md);
+            font-family: var(--font-heading);
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.15s;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--color-navy);
+            color: var(--color-white);
+        }
+        .btn-primary:hover { background: var(--color-navy-dark); }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-navy);
+            border: 1px solid var(--color-navy);
+        }
+        .btn-secondary:hover { background: var(--color-light); }
+
+        .btn-accent {
+            background: var(--color-gold);
+            color: var(--color-white);
+        }
+        .btn-accent:hover { background: var(--color-gold-dark); }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--color-gray);
+        }
+        .btn-ghost:hover { background: var(--color-light); }
+
+        .btn-sm { padding: 8px 16px; font-size: 13px; }
+        .btn-lg { padding: 16px 32px; font-size: 16px; }
+
+        /* Cards */
+        .card-demo {
+            background: var(--color-white);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            max-width: 320px;
+        }
+
+        .card-demo h4 {
+            font-family: var(--font-heading);
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .card-demo p {
+            font-size: 14px;
+            color: var(--color-gray);
+        }
+
+        /* Form Elements */
+        .input-demo {
+            padding: 12px 16px;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            font-family: var(--font-body);
+            font-size: 14px;
+            width: 280px;
+            transition: all 0.15s;
+        }
+
+        .input-demo:focus {
+            outline: none;
+            border-color: var(--color-gold);
+            box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.1);
+        }
+
+        /* Badge */
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--color-light);
+            color: var(--color-gray);
+            border-radius: 9999px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .badge-accent {
+            background: rgba(184, 134, 11, 0.1);
+            color: var(--color-gold);
         }
 
         /* Code Block */
         .code-block {
-            background: #1E3A5F;
+            background: var(--color-navy);
             color: #F1F5F9;
             padding: 20px;
-            border-radius: 8px;
-            font-family: 'DM Sans', monospace;
+            border-radius: var(--radius-md);
+            font-family: 'JetBrains Mono', monospace;
             font-size: 13px;
             overflow-x: auto;
             position: relative;
@@ -405,14 +351,72 @@
             position: absolute;
             top: 12px;
             right: 12px;
-            background: rgba(255,255,255,0.1);
-            border-color: rgba(255,255,255,0.2);
-            color: #94A3B8;
         }
 
-        .code-block .copy-btn:hover {
-            background: rgba(255,255,255,0.2);
-            color: white;
+        /* Typography Scale */
+        .type-scale {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .type-sample {
+            display: flex;
+            align-items: baseline;
+            gap: 24px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .type-label {
+            width: 80px;
+            font-size: 12px;
+            color: var(--color-caption);
+            font-weight: 500;
+        }
+
+        /* Spacing Scale */
+        .spacing-demo {
+            display: flex;
+            align-items: flex-end;
+            gap: 12px;
+        }
+
+        .spacing-box {
+            background: var(--color-navy);
+            border-radius: 4px;
+        }
+
+        .spacing-label {
+            font-size: 11px;
+            color: var(--color-caption);
+            text-align: center;
+            margin-top: 4px;
+        }
+
+        /* Download Section */
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .download-card {
+            background: var(--color-light);
+            border-radius: var(--radius-lg);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .download-card img {
+            max-width: 100%;
+            max-height: 120px;
+            margin-bottom: 12px;
+            border-radius: var(--radius-md);
+        }
+
+        .download-card .asset-name {
+            margin-bottom: 8px;
         }
 
         /* Toast */
@@ -420,407 +424,363 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background: #1E3A5F;
+            background: var(--color-navy);
             color: white;
             padding: 12px 20px;
-            border-radius: 8px;
+            border-radius: var(--radius-md);
             font-size: 14px;
             opacity: 0;
             transform: translateY(10px);
             transition: all 0.3s ease;
             pointer-events: none;
+            z-index: 1000;
         }
 
         .toast.show {
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container { padding: 40px 20px; }
+            h1 { font-size: 32px; }
+            .nav { padding: 12px 20px; flex-wrap: wrap; }
+            .nav-links { gap: 16px; }
+        }
     </style>
 </head>
 <body>
-    <h1>FundOpsHQ Brand Kit</h1>
-    <p class="subtitle">Visual identity guidelines for FundOpsHQ and FundOpsHQ Interviews</p>
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="#" class="nav-logo">FundOps<span>HQ</span> Brand Kit</a>
+        <ul class="nav-links">
+            <li><a href="#colors">Colors</a></li>
+            <li><a href="#typography">Typography</a></li>
+            <li><a href="#logos">Logos</a></li>
+            <li><a href="#components">Components</a></li>
+            <li><a href="#downloads">Downloads</a></li>
+        </ul>
+    </nav>
 
-    <!-- Color Palette -->
-    <div class="section">
-        <h2>Color Palette</h2>
-        <p style="font-size: 14px; color: #64748B; margin-bottom: 20px;">Click any color to copy hex code</p>
-        <div class="color-grid">
-            <div class="color-card" onclick="copyToClipboard('#1E3A5F')">
-                <div class="color-swatch" style="background: #1E3A5F;"></div>
-                <div class="color-info">
-                    <div class="color-name">Deep Navy</div>
-                    <div class="color-hex">#1E3A5F</div>
-                    <div class="color-use">Primary brand color, headers, buttons</div>
-                </div>
-            </div>
-            <div class="color-card" onclick="copyToClipboard('#FFFFFF')">
-                <div class="color-swatch" style="background: #FFFFFF; border-bottom: 1px solid #E2E8F0;"></div>
-                <div class="color-info">
-                    <div class="color-name">White</div>
-                    <div class="color-hex">#FFFFFF</div>
-                    <div class="color-use">Primary background, clean space</div>
-                </div>
-            </div>
-            <div class="color-card" onclick="copyToClipboard('#64748B')">
-                <div class="color-swatch" style="background: #64748B;"></div>
-                <div class="color-info">
-                    <div class="color-name">Slate Gray</div>
-                    <div class="color-hex">#64748B</div>
-                    <div class="color-use">Body text, secondary elements</div>
-                </div>
-            </div>
-            <div class="color-card" onclick="copyToClipboard('#B8860B')">
-                <div class="color-swatch" style="background: #B8860B;"></div>
-                <div class="color-info">
-                    <div class="color-name">Muted Gold</div>
-                    <div class="color-hex">#B8860B</div>
-                    <div class="color-use">Accent, highlights, CTAs</div>
-                </div>
-            </div>
-            <div class="color-card" onclick="copyToClipboard('#F1F5F9')">
-                <div class="color-swatch" style="background: #F1F5F9;"></div>
-                <div class="color-info">
-                    <div class="color-name">Light Gray</div>
-                    <div class="color-hex">#F1F5F9</div>
-                    <div class="color-use">Alt backgrounds, cards, sections</div>
-                </div>
-            </div>
-            <div class="color-card" onclick="copyToClipboard('#94A3B8')">
-                <div class="color-swatch" style="background: #94A3B8;"></div>
-                <div class="color-info">
-                    <div class="color-name">Caption Gray</div>
-                    <div class="color-hex">#94A3B8</div>
-                    <div class="color-use">Captions, secondary text</div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="container">
+        <h1>FundOpsHQ Brand Kit</h1>
+        <p class="subtitle">Visual identity guidelines and assets for FundOpsHQ. Professional, trustworthy, authoritative.</p>
 
-    <!-- Typography -->
-    <div class="section">
-        <h2>Typography</h2>
+        <!-- Colors -->
+        <section class="section" id="colors">
+            <h2>Color Palette</h2>
+            <p style="color: var(--color-gray); margin-bottom: 24px;">Click any color to copy hex code</p>
+            <div class="color-grid">
+                <div class="color-card" onclick="copyToClipboard('#1E3A5F')">
+                    <div class="color-swatch" style="background: #1E3A5F;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Deep Navy</div>
+                        <div class="color-hex">#1E3A5F</div>
+                    </div>
+                </div>
+                <div class="color-card" onclick="copyToClipboard('#B8860B')">
+                    <div class="color-swatch" style="background: #B8860B;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Muted Gold</div>
+                        <div class="color-hex">#B8860B</div>
+                    </div>
+                </div>
+                <div class="color-card" onclick="copyToClipboard('#64748B')">
+                    <div class="color-swatch" style="background: #64748B;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Slate Gray</div>
+                        <div class="color-hex">#64748B</div>
+                    </div>
+                </div>
+                <div class="color-card" onclick="copyToClipboard('#F1F5F9')">
+                    <div class="color-swatch" style="background: #F1F5F9;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Light Gray</div>
+                        <div class="color-hex">#F1F5F9</div>
+                    </div>
+                </div>
+                <div class="color-card" onclick="copyToClipboard('#94A3B8')">
+                    <div class="color-swatch" style="background: #94A3B8;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Caption Gray</div>
+                        <div class="color-hex">#94A3B8</div>
+                    </div>
+                </div>
+                <div class="color-card" onclick="copyToClipboard('#FFFFFF')">
+                    <div class="color-swatch" style="background: #FFFFFF; border: 1px solid #E2E8F0;"></div>
+                    <div class="color-info">
+                        <div class="color-name">White</div>
+                        <div class="color-hex">#FFFFFF</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div class="font-specimen">
-            <div class="font-name">Headings — DM Sans</div>
-            <div class="font-display dm-sans" style="font-weight: 700;">FundOpsHQ</div>
-            <div class="font-weights">
-                <span class="font-weight-sample dm-sans" style="font-weight: 500;">Medium 500</span>
-                <span class="font-weight-sample dm-sans" style="font-weight: 600;">Semibold 600</span>
-                <span class="font-weight-sample dm-sans" style="font-weight: 700;">Bold 700</span>
-            </div>
-        </div>
+        <!-- Typography -->
+        <section class="section" id="typography">
+            <h2>Typography</h2>
 
-        <div class="font-specimen">
-            <div class="font-name">Body — Inter</div>
-            <div class="font-display inter" style="font-size: 32px; font-weight: 400;">The knowledge hub for investment fund operations.</div>
-            <div class="font-weights">
-                <span class="font-weight-sample inter" style="font-weight: 400;">Regular 400</span>
-                <span class="font-weight-sample inter" style="font-weight: 500;">Medium 500</span>
-                <span class="font-weight-sample inter" style="font-weight: 600;">Semibold 600</span>
-            </div>
-        </div>
-
-        <div class="code-block">
-            <button class="copy-btn" onclick="copyCode(this, 'font-import')">Copy</button>
-            <code id="font-import">@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');</code>
-        </div>
-
-        <table class="specs-table" style="margin-top: 24px;">
-            <thead>
-                <tr>
-                    <th>Element</th>
-                    <th>Font</th>
-                    <th>Weight</th>
-                    <th>Size (suggested)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>H1</td>
-                    <td>DM Sans</td>
-                    <td>700</td>
-                    <td><code>36-48px</code></td>
-                </tr>
-                <tr>
-                    <td>H2</td>
-                    <td>DM Sans</td>
-                    <td>600</td>
-                    <td><code>24-32px</code></td>
-                </tr>
-                <tr>
-                    <td>H3</td>
-                    <td>DM Sans</td>
-                    <td>600</td>
-                    <td><code>18-24px</code></td>
-                </tr>
-                <tr>
-                    <td>Body</td>
-                    <td>Inter</td>
-                    <td>400</td>
-                    <td><code>16-18px</code></td>
-                </tr>
-                <tr>
-                    <td>Small/Caption</td>
-                    <td>Inter</td>
-                    <td>500</td>
-                    <td><code>12-14px</code></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <!-- Patterns -->
-    <div class="section">
-        <h2>Patterns</h2>
-        <div class="pattern-grid">
-            <div class="pattern-card">
-                <div class="pattern-display"></div>
-                <div class="pattern-info">
-                    <span>Diagonal Stripes — Navy on Navy</span>
-                    <a href="patterns/diagonal-stripes.svg" download class="download-link">Download SVG</a>
-                </div>
-            </div>
-        </div>
-        <p style="font-size: 14px; color: #64748B; margin-top: 16px;">Tileable pattern for backgrounds. Use for podcast covers, video backgrounds, and presentation slides.</p>
-    </div>
-
-    <!-- Logos -->
-    <div class="section">
-        <h2>Logo — Primary Wordmark</h2>
-        <div class="logo-grid">
-            <div class="logo-card">
-                <div class="logo-display light">
-                    <img src="logos/fundopshq-primary-light.svg" alt="FundOpsHQ logo - light background">
-                </div>
-                <div class="logo-label">
-                    <span>Primary — Light background</span>
-                    <a href="logos/fundopshq-primary-light.svg" download class="download-link">Download SVG</a>
-                </div>
-            </div>
-            <div class="logo-card">
-                <div class="logo-display dark">
-                    <img src="logos/fundopshq-primary-dark.svg" alt="FundOpsHQ logo - dark background">
-                </div>
-                <div class="logo-label">
-                    <span>Primary — Dark background</span>
-                    <a href="logos/fundopshq-primary-dark.svg" download class="download-link">Download SVG</a>
-                </div>
-            </div>
-            <div class="logo-card">
-                <div class="logo-display light">
-                    <img src="logos/fundopshq-mono-light.svg" alt="FundOpsHQ logo monochrome - light background">
-                </div>
-                <div class="logo-label">
-                    <span>Monochrome — Light background</span>
-                    <a href="logos/fundopshq-mono-light.svg" download class="download-link">Download SVG</a>
-                </div>
-            </div>
-            <div class="logo-card">
-                <div class="logo-display dark">
-                    <img src="logos/fundopshq-mono-dark.svg" alt="FundOpsHQ logo monochrome - dark background">
-                </div>
-                <div class="logo-label">
-                    <span>Monochrome — Dark background</span>
-                    <a href="logos/fundopshq-mono-dark.svg" download class="download-link">Download SVG</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Short Mark -->
-    <div class="section">
-        <h2>Logo — Short Mark (FOHQ)</h2>
-        <div class="logo-grid">
-            <div class="logo-card">
-                <div class="logo-display light">
-                    <img src="logos/fohq-primary-light.svg" alt="FOHQ short mark - light background">
-                </div>
-                <div class="logo-label">
-                    <span>Short mark — Light background</span>
-                    <a href="logos/fohq-primary-light.svg" download class="download-link">Download SVG</a>
-                </div>
-            </div>
-            <div class="logo-card">
-                <div class="logo-display dark">
-                    <img src="logos/fohq-primary-dark.svg" alt="FOHQ short mark - dark background">
-                </div>
-                <div class="logo-label">
-                    <span>Short mark — Dark background</span>
-                    <a href="logos/fohq-primary-dark.svg" download class="download-link">Download SVG</a>
-                </div>
-            </div>
-            <div class="logo-card">
-                <div class="logo-display gray">
-                    <img src="logos/fohq-mono-light.svg" alt="FOHQ short mark monochrome">
-                </div>
-                <div class="logo-label">
-                    <span>Short mark monochrome</span>
-                    <a href="logos/fohq-mono-light.svg" download class="download-link">Download SVG</a>
-                </div>
-            </div>
-            <div class="logo-card">
-                <div class="logo-display dark">
-                    <img src="logos/fohq-mono-dark.svg" alt="FOHQ short mark monochrome - dark">
-                </div>
-                <div class="logo-label">
-                    <span>Short mark monochrome — Dark</span>
-                    <a href="logos/fohq-mono-dark.svg" download class="download-link">Download SVG</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Podcast Assets -->
-    <div class="section">
-        <h2>Podcast Assets — FundOpsHQ Interviews</h2>
-
-        <div style="display: grid; grid-template-columns: auto 1fr; gap: 40px; align-items: start;">
-            <div>
-                <div class="podcast-cover-preview">
-                    <img src="podcast/cover-3000x3000.svg" alt="Podcast cover art">
-                </div>
-                <div style="margin-top: 16px;">
-                    <a href="podcast/cover-3000x3000.svg" download class="download-link" style="font-size: 14px;">Download Cover Art (SVG)</a>
+            <div class="component-section">
+                <h3>Headings — DM Sans</h3>
+                <div class="type-scale">
+                    <div class="type-sample">
+                        <span class="type-label">H1 / 48px</span>
+                        <span style="font-family: 'DM Sans'; font-size: 48px; font-weight: 700;">FundOpsHQ</span>
+                    </div>
+                    <div class="type-sample">
+                        <span class="type-label">H2 / 36px</span>
+                        <span style="font-family: 'DM Sans'; font-size: 36px; font-weight: 600;">Section Title</span>
+                    </div>
+                    <div class="type-sample">
+                        <span class="type-label">H3 / 24px</span>
+                        <span style="font-family: 'DM Sans'; font-size: 24px; font-weight: 600;">Subsection</span>
+                    </div>
+                    <div class="type-sample">
+                        <span class="type-label">H4 / 20px</span>
+                        <span style="font-family: 'DM Sans'; font-size: 20px; font-weight: 500;">Card Title</span>
+                    </div>
                 </div>
             </div>
 
-            <div>
-                <h3 style="font-family: 'DM Sans', sans-serif; font-size: 18px; margin-bottom: 16px; color: #1E3A5F;">Documentation</h3>
+            <div class="component-section">
+                <h3>Body — Inter</h3>
+                <div class="type-scale">
+                    <div class="type-sample">
+                        <span class="type-label">Body / 16px</span>
+                        <span style="font-family: 'Inter'; font-size: 16px;">The knowledge hub for investment fund operations professionals.</span>
+                    </div>
+                    <div class="type-sample">
+                        <span class="type-label">Small / 14px</span>
+                        <span style="font-family: 'Inter'; font-size: 14px; color: var(--color-gray);">Secondary text and descriptions for supporting content.</span>
+                    </div>
+                    <div class="type-sample">
+                        <span class="type-label">Caption / 12px</span>
+                        <span style="font-family: 'Inter'; font-size: 12px; color: var(--color-caption);">Timestamps, metadata, and helper text</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <a href="podcast/EXPORT-INSTRUCTIONS.md" class="doc-link" style="margin-bottom: 12px;">
-                    Export Instructions
-                    <small>How to convert SVG cover to PNG for podcast platforms</small>
-                </a>
+        <!-- Logos -->
+        <section class="section" id="logos">
+            <h2>Logos</h2>
 
-                <a href="podcast/lower-thirds-specs.md" class="doc-link" style="margin-bottom: 12px;">
-                    Lower Thirds Specs
-                    <small>Design specs for video name/title overlays</small>
-                </a>
+            <h3>Primary Wordmark — FundOpsHQ</h3>
+            <div class="asset-grid">
+                <div class="asset-card">
+                    <div class="asset-preview light-bg">
+                        <img src="logos/fundopshq-primary-light.svg" alt="FundOpsHQ Primary Light">
+                    </div>
+                    <div class="asset-info">
+                        <span class="asset-name">Primary / Light BG</span>
+                        <div class="asset-actions">
+                            <a href="logos/fundopshq-primary-light.svg" download class="btn-download">SVG</a>
+                            <a href="exports/logos/fundopshq/fundopshq-primary-light.png" download class="btn-download">PNG</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="asset-card">
+                    <div class="asset-preview dark-bg">
+                        <img src="logos/fundopshq-primary-dark.svg" alt="FundOpsHQ Primary Dark">
+                    </div>
+                    <div class="asset-info">
+                        <span class="asset-name">Primary / Dark BG</span>
+                        <div class="asset-actions">
+                            <a href="logos/fundopshq-primary-dark.svg" download class="btn-download">SVG</a>
+                            <a href="exports/logos/fundopshq/fundopshq-primary-dark.png" download class="btn-download">PNG</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="asset-card">
+                    <div class="asset-preview light-bg">
+                        <img src="logos/fundopshq-mono-light.svg" alt="FundOpsHQ Mono Light">
+                    </div>
+                    <div class="asset-info">
+                        <span class="asset-name">Mono / Light BG</span>
+                        <div class="asset-actions">
+                            <a href="logos/fundopshq-mono-light.svg" download class="btn-download">SVG</a>
+                            <a href="exports/logos/fundopshq/fundopshq-mono-light.png" download class="btn-download">PNG</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="asset-card">
+                    <div class="asset-preview dark-bg">
+                        <img src="logos/fundopshq-mono-dark.svg" alt="FundOpsHQ Mono Dark">
+                    </div>
+                    <div class="asset-info">
+                        <span class="asset-name">Mono / Dark BG</span>
+                        <div class="asset-actions">
+                            <a href="logos/fundopshq-mono-dark.svg" download class="btn-download">SVG</a>
+                            <a href="exports/logos/fundopshq/fundopshq-mono-dark.png" download class="btn-download">PNG</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                <a href="podcast/riverside-setup.md" class="doc-link">
-                    Riverside FM Setup Guide
-                    <small>Font and color settings for captions and transcripts</small>
-                </a>
+            <h3 style="margin-top: 40px;">Short Mark — FOHQ</h3>
+            <div class="asset-grid">
+                <div class="asset-card">
+                    <div class="asset-preview light-bg">
+                        <img src="logos/fohq-primary-light.svg" alt="FOHQ Primary Light" style="max-height: 80px;">
+                    </div>
+                    <div class="asset-info">
+                        <span class="asset-name">Primary / Light BG</span>
+                        <div class="asset-actions">
+                            <a href="logos/fohq-primary-light.svg" download class="btn-download">SVG</a>
+                            <a href="exports/logos/fohq/fohq-primary-light.png" download class="btn-download">PNG</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="asset-card">
+                    <div class="asset-preview dark-bg">
+                        <img src="logos/fohq-primary-dark.svg" alt="FOHQ Primary Dark" style="max-height: 80px;">
+                    </div>
+                    <div class="asset-info">
+                        <span class="asset-name">Primary / Dark BG</span>
+                        <div class="asset-actions">
+                            <a href="logos/fohq-primary-dark.svg" download class="btn-download">SVG</a>
+                            <a href="exports/logos/fohq/fohq-primary-dark.png" download class="btn-download">PNG</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div style="margin-top: 32px;">
-            <div class="podcast-logo">
-                <img src="logos/fundopshq-interviews.svg" alt="FundOpsHQ Interviews podcast logo">
+            <h3 style="margin-top: 40px;">Podcast Cover — FundOpsHQ Interviews</h3>
+            <div class="preview-large">
+                <div class="asset-preview pattern-bg" style="height: 400px;">
+                    <img src="exports/logos/podcast/podcast-cover-500x500.png" alt="Podcast Cover" style="max-height: 350px; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.2);">
+                </div>
+                <div class="asset-info">
+                    <span class="asset-name">Podcast Cover (3000x3000)</span>
+                    <div class="asset-actions">
+                        <a href="podcast/cover-3000x3000.svg" download class="btn-download">SVG</a>
+                        <a href="exports/logos/podcast/podcast-cover-3000x3000.png" download class="btn-download">PNG 3000px</a>
+                        <a href="exports/logos/podcast/podcast-cover-1400x1400.png" download class="btn-download">PNG 1400px</a>
+                    </div>
+                </div>
             </div>
-            <p class="podcast-note">Podcast wordmark for use in video intros, outros, and thumbnails. <a href="logos/fundopshq-interviews.svg" download class="download-link">Download SVG</a></p>
-        </div>
-    </div>
+        </section>
 
-    <!-- Usage Guidelines -->
-    <div class="section">
-        <h2>Usage Guidelines</h2>
-        <div class="usage-grid">
-            <div class="usage-card">
-                <h3>Clear Space</h3>
-                <p>Maintain clear space around all logos equal to the height of the "H" in HQ. No other elements should intrude on this space.</p>
-            </div>
-            <div class="usage-card">
-                <h3>Minimum Size</h3>
-                <p>Full wordmark: minimum 120px wide. Short mark (FOHQ): minimum 60px wide. Below these sizes, legibility suffers.</p>
-            </div>
-            <div class="usage-card">
-                <h3>Color Usage</h3>
-                <p>Use the gold accent on "HQ" when possible for brand recognition. Fall back to monochrome versions when color printing isn't available or on complex backgrounds.</p>
-            </div>
-            <div class="usage-card">
-                <h3>Background Rules</h3>
-                <p>Use navy/dark logo on white or light gray backgrounds. Use white logo on navy or dark backgrounds. Avoid placing logos on busy images or patterns.</p>
-            </div>
-            <div class="usage-card">
-                <h3>Don't</h3>
-                <p>Don't stretch, rotate, add effects, change colors, or rearrange logo elements. Don't place on low-contrast backgrounds.</p>
-            </div>
-            <div class="usage-card">
-                <h3>File Formats</h3>
-                <p>Use SVG for web and digital. Use PNG with transparent background for documents and presentations. Request vector files (AI/EPS) for print production.</p>
-            </div>
-        </div>
-    </div>
+        <!-- Components -->
+        <section class="section" id="components">
+            <h2>Components</h2>
 
-    <!-- PNG Downloads -->
-    <div class="section">
-        <h2>PNG Downloads</h2>
-        <p style="font-size: 14px; color: #64748B; margin-bottom: 24px;">Pre-exported PNG files at multiple resolutions. Right-click to save or click to download.</p>
+            <div class="component-section">
+                <h3>Buttons</h3>
+                <div class="component-row">
+                    <button class="btn btn-primary">Primary</button>
+                    <button class="btn btn-secondary">Secondary</button>
+                    <button class="btn btn-accent">Accent</button>
+                    <button class="btn btn-ghost">Ghost</button>
+                </div>
+                <div class="component-row">
+                    <button class="btn btn-primary btn-sm">Small</button>
+                    <button class="btn btn-primary">Default</button>
+                    <button class="btn btn-primary btn-lg">Large</button>
+                </div>
+            </div>
 
-        <h3 style="font-family: 'DM Sans', sans-serif; font-size: 16px; margin-bottom: 12px; color: #1E3A5F;">Logos — @1x, @2x, @3x</h3>
-        <div class="usage-grid" style="margin-bottom: 32px;">
-            <div class="usage-card">
-                <h3>FundOpsHQ Wordmark</h3>
-                <p style="margin-bottom: 12px;">Full wordmark in all variants</p>
-                <a href="exports/logos/fundopshq/fundopshq-primary-light.png" download class="download-link" style="display: inline-block; margin: 4px;">Primary Light</a>
-                <a href="exports/logos/fundopshq/fundopshq-primary-dark.png" download class="download-link" style="display: inline-block; margin: 4px;">Primary Dark</a>
-                <a href="exports/logos/fundopshq/fundopshq-mono-light.png" download class="download-link" style="display: inline-block; margin: 4px;">Mono Light</a>
-                <a href="exports/logos/fundopshq/fundopshq-mono-dark.png" download class="download-link" style="display: inline-block; margin: 4px;">Mono Dark</a>
+            <div class="component-section">
+                <h3>Cards</h3>
+                <div class="component-row">
+                    <div class="card-demo">
+                        <h4>Card Title</h4>
+                        <p>This is a standard card component with proper padding and border radius.</p>
+                    </div>
+                </div>
             </div>
-            <div class="usage-card">
-                <h3>FOHQ Short Mark</h3>
-                <p style="margin-bottom: 12px;">Compact logo for small spaces</p>
-                <a href="exports/logos/fohq/fohq-primary-light.png" download class="download-link" style="display: inline-block; margin: 4px;">Primary Light</a>
-                <a href="exports/logos/fohq/fohq-primary-dark.png" download class="download-link" style="display: inline-block; margin: 4px;">Primary Dark</a>
-                <a href="exports/logos/fohq/fohq-mono-light.png" download class="download-link" style="display: inline-block; margin: 4px;">Mono Light</a>
-                <a href="exports/logos/fohq/fohq-mono-dark.png" download class="download-link" style="display: inline-block; margin: 4px;">Mono Dark</a>
-            </div>
-            <div class="usage-card">
-                <h3>Podcast Assets</h3>
-                <p style="margin-bottom: 12px;">Ready for podcast platforms</p>
-                <a href="exports/logos/podcast/podcast-cover-3000x3000.png" download class="download-link" style="display: inline-block; margin: 4px;">Cover 3000x3000</a>
-                <a href="exports/logos/podcast/podcast-cover-1400x1400.png" download class="download-link" style="display: inline-block; margin: 4px;">Cover 1400x1400</a>
-                <a href="exports/logos/podcast/fundopshq-interviews.png" download class="download-link" style="display: inline-block; margin: 4px;">Wordmark PNG</a>
-            </div>
-        </div>
 
-        <h3 style="font-family: 'DM Sans', sans-serif; font-size: 16px; margin-bottom: 12px; color: #1E3A5F;">Favicon Set</h3>
-        <div class="usage-grid" style="margin-bottom: 32px;">
-            <div class="usage-card">
-                <h3>Web Favicons</h3>
-                <p style="margin-bottom: 12px;">Standard favicon sizes</p>
-                <a href="exports/favicon/favicon-16x16.png" download class="download-link" style="display: inline-block; margin: 4px;">16x16</a>
-                <a href="exports/favicon/favicon-32x32.png" download class="download-link" style="display: inline-block; margin: 4px;">32x32</a>
-                <a href="exports/favicon/favicon-48x48.png" download class="download-link" style="display: inline-block; margin: 4px;">48x48</a>
-                <a href="exports/favicon/favicon-64x64.png" download class="download-link" style="display: inline-block; margin: 4px;">64x64</a>
+            <div class="component-section">
+                <h3>Form Elements</h3>
+                <div class="component-row">
+                    <input type="text" class="input-demo" placeholder="Enter text...">
+                </div>
             </div>
-            <div class="usage-card">
-                <h3>App Icons</h3>
-                <p style="margin-bottom: 12px;">Mobile and app icons</p>
-                <a href="exports/favicon/apple-touch-icon.png" download class="download-link" style="display: inline-block; margin: 4px;">Apple Touch (180px)</a>
-                <a href="exports/favicon/android-chrome-192x192.png" download class="download-link" style="display: inline-block; margin: 4px;">Android 192px</a>
-                <a href="exports/favicon/android-chrome-512x512.png" download class="download-link" style="display: inline-block; margin: 4px;">Android 512px</a>
-                <a href="exports/favicon/site.webmanifest" download class="download-link" style="display: inline-block; margin: 4px;">Manifest</a>
-            </div>
-        </div>
 
-        <h3 style="font-family: 'DM Sans', sans-serif; font-size: 16px; margin-bottom: 12px; color: #1E3A5F;">Social Media</h3>
-        <div class="usage-grid">
-            <div class="usage-card">
-                <h3>Social Templates</h3>
-                <p style="margin-bottom: 12px;">Ready-to-use social images</p>
-                <a href="exports/social/og-image-1200x630.png" download class="download-link" style="display: inline-block; margin: 4px;">OG Image (1200x630)</a>
-                <a href="exports/social/twitter-header-1500x500.png" download class="download-link" style="display: inline-block; margin: 4px;">Twitter Header</a>
-                <a href="exports/social/linkedin-banner-1584x396.png" download class="download-link" style="display: inline-block; margin: 4px;">LinkedIn Banner</a>
+            <div class="component-section">
+                <h3>Badges</h3>
+                <div class="component-row">
+                    <span class="badge">Default</span>
+                    <span class="badge badge-accent">Accent</span>
+                </div>
             </div>
-            <div class="usage-card">
-                <h3>Documentation</h3>
-                <p style="margin-bottom: 12px;">Brand guides and reference</p>
-                <a href="brand-guidelines.html" class="download-link" style="display: inline-block; margin: 4px;">Brand Guidelines (HTML)</a>
-                <a href="README.md" class="download-link" style="display: inline-block; margin: 4px;">README</a>
+        </section>
+
+        <!-- Downloads -->
+        <section class="section" id="downloads">
+            <h2>Downloads</h2>
+
+            <h3>Social Media Assets</h3>
+            <div class="download-grid">
+                <div class="download-card">
+                    <img src="exports/social/og-image-1200x630.png" alt="OG Image">
+                    <div class="asset-name">OG Image</div>
+                    <a href="exports/social/og-image-1200x630.png" download class="btn-download">1200x630</a>
+                </div>
+                <div class="download-card">
+                    <img src="exports/social/twitter-header-1500x500.png" alt="Twitter Header">
+                    <div class="asset-name">Twitter Header</div>
+                    <a href="exports/social/twitter-header-1500x500.png" download class="btn-download">1500x500</a>
+                </div>
+                <div class="download-card">
+                    <img src="exports/social/linkedin-banner-1584x396.png" alt="LinkedIn Banner">
+                    <div class="asset-name">LinkedIn Banner</div>
+                    <a href="exports/social/linkedin-banner-1584x396.png" download class="btn-download">1584x396</a>
+                </div>
             </div>
-        </div>
-    </div>
 
-    <!-- Quick Reference -->
-    <div class="section">
-        <h2>Quick Reference</h2>
+            <h3 style="margin-top: 40px;">Favicon Set</h3>
+            <div class="download-grid">
+                <div class="download-card">
+                    <img src="exports/favicon/favicon-32x32.png" alt="Favicon" style="width: 32px; height: 32px; image-rendering: pixelated;">
+                    <div class="asset-name">Favicon</div>
+                    <div class="asset-actions" style="justify-content: center;">
+                        <a href="exports/favicon/favicon-16x16.png" download class="btn-download">16px</a>
+                        <a href="exports/favicon/favicon-32x32.png" download class="btn-download">32px</a>
+                    </div>
+                </div>
+                <div class="download-card">
+                    <img src="exports/favicon/apple-touch-icon.png" alt="Apple Touch Icon" style="width: 60px; border-radius: 12px;">
+                    <div class="asset-name">Apple Touch Icon</div>
+                    <a href="exports/favicon/apple-touch-icon.png" download class="btn-download">180x180</a>
+                </div>
+                <div class="download-card">
+                    <img src="exports/favicon/android-chrome-192x192.png" alt="Android Chrome" style="width: 60px;">
+                    <div class="asset-name">Android Chrome</div>
+                    <div class="asset-actions" style="justify-content: center;">
+                        <a href="exports/favicon/android-chrome-192x192.png" download class="btn-download">192px</a>
+                        <a href="exports/favicon/android-chrome-512x512.png" download class="btn-download">512px</a>
+                    </div>
+                </div>
+            </div>
 
-        <h3 style="font-family: 'DM Sans', sans-serif; font-size: 16px; margin-bottom: 12px; color: #1E3A5F;">CSS Variables</h3>
-        <div class="code-block" style="margin-bottom: 24px;">
-            <button class="copy-btn" onclick="copyCode(this, 'css-vars')">Copy</button>
+            <h3 style="margin-top: 40px;">Documentation</h3>
+            <div class="download-grid">
+                <div class="download-card">
+                    <div style="font-size: 48px; margin-bottom: 12px;">📄</div>
+                    <div class="asset-name">Brand Guidelines</div>
+                    <a href="brand-guidelines.html" class="btn-download">View HTML</a>
+                </div>
+                <div class="download-card">
+                    <div style="font-size: 48px; margin-bottom: 12px;">📋</div>
+                    <div class="asset-name">Brand Tokens</div>
+                    <a href="brand-tokens.json" download class="btn-download">JSON</a>
+                </div>
+                <div class="download-card">
+                    <div style="font-size: 48px; margin-bottom: 12px;">📖</div>
+                    <div class="asset-name">README</div>
+                    <a href="README.md" class="btn-download">View</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Reference -->
+        <section class="section">
+            <h2>Quick Reference</h2>
+            <h3>CSS Variables</h3>
+            <div class="code-block">
+                <button class="btn-download copy-btn" onclick="copyCode(this, 'css-vars')">Copy</button>
 <pre id="css-vars">:root {
   --color-navy: #1E3A5F;
   --color-gold: #B8860B;
@@ -830,66 +790,17 @@
   --font-heading: 'DM Sans', sans-serif;
   --font-body: 'Inter', sans-serif;
 }</pre>
-        </div>
-
-        <table class="specs-table">
-            <thead>
-                <tr>
-                    <th>Asset</th>
-                    <th>Value</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Primary Color (Navy)</td>
-                    <td><code>#1E3A5F</code></td>
-                    <td><button class="copy-btn" onclick="copyToClipboard('#1E3A5F', this)">Copy</button></td>
-                </tr>
-                <tr>
-                    <td>Accent Color (Gold)</td>
-                    <td><code>#B8860B</code></td>
-                    <td><button class="copy-btn" onclick="copyToClipboard('#B8860B', this)">Copy</button></td>
-                </tr>
-                <tr>
-                    <td>Body Text Color</td>
-                    <td><code>#64748B</code></td>
-                    <td><button class="copy-btn" onclick="copyToClipboard('#64748B', this)">Copy</button></td>
-                </tr>
-                <tr>
-                    <td>Background (Light)</td>
-                    <td><code>#FFFFFF</code></td>
-                    <td><button class="copy-btn" onclick="copyToClipboard('#FFFFFF', this)">Copy</button></td>
-                </tr>
-                <tr>
-                    <td>Background (Alt)</td>
-                    <td><code>#F1F5F9</code></td>
-                    <td><button class="copy-btn" onclick="copyToClipboard('#F1F5F9', this)">Copy</button></td>
-                </tr>
-                <tr>
-                    <td>Caption Gray</td>
-                    <td><code>#94A3B8</code></td>
-                    <td><button class="copy-btn" onclick="copyToClipboard('#94A3B8', this)">Copy</button></td>
-                </tr>
-            </tbody>
-        </table>
+            </div>
+        </section>
     </div>
 
-    <!-- Toast notification -->
+    <!-- Toast -->
     <div class="toast" id="toast">Copied to clipboard!</div>
 
     <script>
-        function copyToClipboard(text, btn) {
+        function copyToClipboard(text) {
             navigator.clipboard.writeText(text).then(() => {
                 showToast('Copied ' + text);
-                if (btn) {
-                    btn.textContent = 'Copied!';
-                    btn.classList.add('copied');
-                    setTimeout(() => {
-                        btn.textContent = 'Copy';
-                        btn.classList.remove('copied');
-                    }, 2000);
-                }
             });
         }
 
@@ -898,11 +809,7 @@
             navigator.clipboard.writeText(code).then(() => {
                 showToast('Copied to clipboard!');
                 btn.textContent = 'Copied!';
-                btn.classList.add('copied');
-                setTimeout(() => {
-                    btn.textContent = 'Copy';
-                    btn.classList.remove('copied');
-                }, 2000);
+                setTimeout(() => btn.textContent = 'Copy', 2000);
             });
         }
 
@@ -910,9 +817,7 @@
             const toast = document.getElementById('toast');
             toast.textContent = message;
             toast.classList.add('show');
-            setTimeout(() => {
-                toast.classList.remove('show');
-            }, 2000);
+            setTimeout(() => toast.classList.remove('show'), 2000);
         }
     </script>
 </body>

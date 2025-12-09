@@ -1,0 +1,321 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "FundOpsHQ Brand Tokens",
+  "version": "1.0.0",
+  "description": "Design tokens for FundOpsHQ brand implementation",
+
+  "colors": {
+    "primary": {
+      "value": "#1E3A5F",
+      "name": "Deep Navy",
+      "usage": "Primary brand color, headers, buttons, navigation, dark backgrounds"
+    },
+    "accent": {
+      "value": "#B8860B",
+      "name": "Muted Gold",
+      "usage": "Accent highlights, CTAs, links hover, the 'HQ' in logo"
+    },
+    "text": {
+      "primary": {
+        "value": "#1E3A5F",
+        "name": "Deep Navy",
+        "usage": "Headings, important text on light backgrounds"
+      },
+      "secondary": {
+        "value": "#64748B",
+        "name": "Slate Gray",
+        "usage": "Body text, paragraphs, secondary content"
+      },
+      "muted": {
+        "value": "#94A3B8",
+        "name": "Caption Gray",
+        "usage": "Captions, metadata, timestamps, helper text"
+      },
+      "inverse": {
+        "value": "#FFFFFF",
+        "name": "White",
+        "usage": "Text on dark backgrounds"
+      }
+    },
+    "background": {
+      "primary": {
+        "value": "#FFFFFF",
+        "name": "White",
+        "usage": "Main page background"
+      },
+      "secondary": {
+        "value": "#F1F5F9",
+        "name": "Light Gray",
+        "usage": "Cards, sections, alternating rows"
+      },
+      "dark": {
+        "value": "#1E3A5F",
+        "name": "Deep Navy",
+        "usage": "Dark sections, footer, hero backgrounds"
+      }
+    },
+    "border": {
+      "light": {
+        "value": "#E2E8F0",
+        "usage": "Card borders, dividers, input borders"
+      },
+      "medium": {
+        "value": "#CBD5E1",
+        "usage": "Focused input borders, hover states"
+      }
+    },
+    "state": {
+      "hover": {
+        "primary": "#152d4a",
+        "accent": "#9a7209"
+      },
+      "focus": {
+        "ring": "#B8860B",
+        "ringOffset": "#FFFFFF"
+      }
+    }
+  },
+
+  "typography": {
+    "fontFamilies": {
+      "heading": {
+        "name": "DM Sans",
+        "fallback": "system-ui, -apple-system, sans-serif",
+        "googleFontsUrl": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&display=swap"
+      },
+      "body": {
+        "name": "Inter",
+        "fallback": "system-ui, -apple-system, sans-serif",
+        "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      },
+      "mono": {
+        "name": "JetBrains Mono",
+        "fallback": "ui-monospace, SFMono-Regular, monospace"
+      }
+    },
+    "fontWeights": {
+      "regular": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700
+    },
+    "scale": {
+      "h1": {
+        "fontSize": "48px",
+        "fontSizeRem": "3rem",
+        "lineHeight": 1.1,
+        "fontWeight": 700,
+        "fontFamily": "heading",
+        "letterSpacing": "-0.02em"
+      },
+      "h2": {
+        "fontSize": "36px",
+        "fontSizeRem": "2.25rem",
+        "lineHeight": 1.2,
+        "fontWeight": 600,
+        "fontFamily": "heading",
+        "letterSpacing": "-0.01em"
+      },
+      "h3": {
+        "fontSize": "24px",
+        "fontSizeRem": "1.5rem",
+        "lineHeight": 1.3,
+        "fontWeight": 600,
+        "fontFamily": "heading"
+      },
+      "h4": {
+        "fontSize": "20px",
+        "fontSizeRem": "1.25rem",
+        "lineHeight": 1.4,
+        "fontWeight": 500,
+        "fontFamily": "heading"
+      },
+      "body": {
+        "fontSize": "16px",
+        "fontSizeRem": "1rem",
+        "lineHeight": 1.6,
+        "fontWeight": 400,
+        "fontFamily": "body"
+      },
+      "bodyLarge": {
+        "fontSize": "18px",
+        "fontSizeRem": "1.125rem",
+        "lineHeight": 1.6,
+        "fontWeight": 400,
+        "fontFamily": "body"
+      },
+      "small": {
+        "fontSize": "14px",
+        "fontSizeRem": "0.875rem",
+        "lineHeight": 1.5,
+        "fontWeight": 400,
+        "fontFamily": "body"
+      },
+      "caption": {
+        "fontSize": "12px",
+        "fontSizeRem": "0.75rem",
+        "lineHeight": 1.4,
+        "fontWeight": 400,
+        "fontFamily": "body"
+      }
+    }
+  },
+
+  "spacing": {
+    "0": "0",
+    "1": "4px",
+    "2": "8px",
+    "3": "12px",
+    "4": "16px",
+    "5": "20px",
+    "6": "24px",
+    "8": "32px",
+    "10": "40px",
+    "12": "48px",
+    "16": "64px",
+    "20": "80px",
+    "24": "96px"
+  },
+
+  "borderRadius": {
+    "none": "0",
+    "sm": "4px",
+    "md": "8px",
+    "lg": "12px",
+    "xl": "16px",
+    "2xl": "24px",
+    "full": "9999px"
+  },
+
+  "shadows": {
+    "sm": "0 1px 2px rgba(0, 0, 0, 0.05)",
+    "md": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+    "lg": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+    "xl": "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+    "card": "0 2px 8px rgba(30, 58, 95, 0.08)",
+    "cardHover": "0 8px 24px rgba(30, 58, 95, 0.12)"
+  },
+
+  "transitions": {
+    "fast": "150ms ease",
+    "normal": "200ms ease",
+    "slow": "300ms ease"
+  },
+
+  "components": {
+    "button": {
+      "primary": {
+        "background": "#1E3A5F",
+        "color": "#FFFFFF",
+        "hoverBackground": "#152d4a",
+        "padding": "12px 24px",
+        "borderRadius": "8px",
+        "fontWeight": 600,
+        "fontFamily": "heading"
+      },
+      "secondary": {
+        "background": "transparent",
+        "color": "#1E3A5F",
+        "border": "1px solid #1E3A5F",
+        "hoverBackground": "#F1F5F9",
+        "padding": "12px 24px",
+        "borderRadius": "8px",
+        "fontWeight": 600
+      },
+      "accent": {
+        "background": "#B8860B",
+        "color": "#FFFFFF",
+        "hoverBackground": "#9a7209",
+        "padding": "12px 24px",
+        "borderRadius": "8px",
+        "fontWeight": 600
+      },
+      "ghost": {
+        "background": "transparent",
+        "color": "#64748B",
+        "hoverBackground": "#F1F5F9",
+        "padding": "12px 24px",
+        "borderRadius": "8px",
+        "fontWeight": 500
+      }
+    },
+    "card": {
+      "background": "#FFFFFF",
+      "border": "1px solid #E2E8F0",
+      "borderRadius": "12px",
+      "padding": "24px",
+      "shadow": "0 2px 8px rgba(30, 58, 95, 0.08)"
+    },
+    "input": {
+      "background": "#FFFFFF",
+      "border": "1px solid #E2E8F0",
+      "borderRadius": "8px",
+      "padding": "12px 16px",
+      "focusBorder": "#B8860B",
+      "focusRing": "0 0 0 3px rgba(184, 134, 11, 0.1)"
+    },
+    "badge": {
+      "background": "#F1F5F9",
+      "color": "#64748B",
+      "padding": "4px 12px",
+      "borderRadius": "9999px",
+      "fontSize": "12px",
+      "fontWeight": 500
+    },
+    "link": {
+      "color": "#1E3A5F",
+      "hoverColor": "#B8860B",
+      "underline": "none",
+      "hoverUnderline": "underline"
+    }
+  },
+
+  "logos": {
+    "full": {
+      "light": "logos/fundopshq-primary-light.svg",
+      "dark": "logos/fundopshq-primary-dark.svg",
+      "monoLight": "logos/fundopshq-mono-light.svg",
+      "monoDark": "logos/fundopshq-mono-dark.svg"
+    },
+    "short": {
+      "light": "logos/fohq-primary-light.svg",
+      "dark": "logos/fohq-primary-dark.svg",
+      "monoLight": "logos/fohq-mono-light.svg",
+      "monoDark": "logos/fohq-mono-dark.svg"
+    },
+    "podcast": "logos/fundopshq-interviews.svg",
+    "minSizes": {
+      "full": "120px",
+      "short": "32px"
+    }
+  },
+
+  "socialMedia": {
+    "ogImage": {
+      "width": 1200,
+      "height": 630,
+      "file": "exports/social/og-image-1200x630.png"
+    },
+    "twitterHeader": {
+      "width": 1500,
+      "height": 500,
+      "file": "exports/social/twitter-header-1500x500.png"
+    },
+    "linkedinBanner": {
+      "width": 1584,
+      "height": 396,
+      "file": "exports/social/linkedin-banner-1584x396.png"
+    },
+    "podcastCover": {
+      "width": 3000,
+      "height": 3000,
+      "file": "exports/logos/podcast/podcast-cover-3000x3000.png"
+    }
+  },
+
+  "brandVoice": {
+    "tone": ["professional", "knowledgeable", "trustworthy", "clear", "educational"],
+    "avoid": ["emojis in formal content", "casual slang", "overly technical jargon without explanation"],
+    "personality": "Expert advisor who explains complex fund operations concepts clearly and builds trust through accuracy and professionalism"
+  }
+}
