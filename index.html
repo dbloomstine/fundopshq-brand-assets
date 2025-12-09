@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FundOpsHQ Brand Kit</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #FFFFFF;
+            color: #1E3A5F;
+            line-height: 1.6;
+            padding: 60px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #1E3A5F;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            color: #64748B;
+            margin-bottom: 60px;
+        }
+        
+        h2 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: #1E3A5F;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #F1F5F9;
+        }
+        
+        .section {
+            margin-bottom: 60px;
+        }
+        
+        /* Color Palette */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .color-card {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .color-swatch {
+            height: 120px;
+        }
+        
+        .color-info {
+            padding: 16px;
+            background: #F8FAFC;
+        }
+        
+        .color-name {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+        
+        .color-hex {
+            font-family: 'DM Sans', monospace;
+            font-size: 14px;
+            color: #64748B;
+        }
+        
+        .color-use {
+            font-size: 12px;
+            color: #94A3B8;
+            margin-top: 8px;
+        }
+        
+        /* Typography */
+        .font-specimen {
+            background: #F8FAFC;
+            padding: 32px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .font-name {
+            font-size: 14px;
+            color: #64748B;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .font-display {
+            font-size: 48px;
+            margin-bottom: 16px;
+            color: #1E3A5F;
+        }
+        
+        .font-weights {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+        
+        .font-weight-sample {
+            font-size: 16px;
+            color: #64748B;
+        }
+        
+        .dm-sans { font-family: 'DM Sans', sans-serif; }
+        .inter { font-family: 'Inter', sans-serif; }
+        
+        /* Logos */
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+        
+        .logo-card {
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .logo-display {
+            padding: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 180px;
+        }
+        
+        .logo-display.light {
+            background: #FFFFFF;
+        }
+        
+        .logo-display.dark {
+            background: #1E3A5F;
+        }
+        
+        .logo-display.gray {
+            background: #F1F5F9;
+        }
+        
+        .logo-label {
+            padding: 12px 16px;
+            background: #F8FAFC;
+            font-size: 13px;
+            color: #64748B;
+            border-top: 1px solid #E2E8F0;
+        }
+        
+        .logo-display svg {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Usage Notes */
+        .usage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        
+        .usage-card {
+            background: #F8FAFC;
+            padding: 24px;
+            border-radius: 8px;
+        }
+        
+        .usage-card h3 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #1E3A5F;
+        }
+        
+        .usage-card p {
+            font-size: 14px;
+            color: #64748B;
+        }
+        
+        /* Podcast Section */
+        .podcast-logo {
+            background: #1E3A5F;
+            padding: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 500px;
+        }
+        
+        .podcast-note {
+            margin-top: 16px;
+            font-size: 14px;
+            color: #64748B;
+        }
+
+        /* Specs Table */
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+        }
+        
+        .specs-table th,
+        .specs-table td {
+            text-align: left;
+            padding: 12px 16px;
+            border-bottom: 1px solid #E2E8F0;
+            font-size: 14px;
+        }
+        
+        .specs-table th {
+            background: #F8FAFC;
+            font-weight: 600;
+            color: #1E3A5F;
+        }
+        
+        .specs-table td {
+            color: #64748B;
+        }
+        
+        .specs-table code {
+            font-family: 'DM Sans', monospace;
+            background: #F1F5F9;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <h1>FundOpsHQ Brand Kit</h1>
+    <p class="subtitle">Visual identity guidelines for FundOpsHQ and FundOpsHQ Interviews</p>
+    
+    <!-- Color Palette -->
+    <div class="section">
+        <h2>Color Palette</h2>
+        <div class="color-grid">
+            <div class="color-card">
+                <div class="color-swatch" style="background: #1E3A5F;"></div>
+                <div class="color-info">
+                    <div class="color-name">Deep Navy</div>
+                    <div class="color-hex">#1E3A5F</div>
+                    <div class="color-use">Primary brand color, headers, buttons</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #FFFFFF; border-bottom: 1px solid #E2E8F0;"></div>
+                <div class="color-info">
+                    <div class="color-name">White</div>
+                    <div class="color-hex">#FFFFFF</div>
+                    <div class="color-use">Primary background, clean space</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #64748B;"></div>
+                <div class="color-info">
+                    <div class="color-name">Slate Gray</div>
+                    <div class="color-hex">#64748B</div>
+                    <div class="color-use">Body text, secondary elements</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #B8860B;"></div>
+                <div class="color-info">
+                    <div class="color-name">Muted Gold</div>
+                    <div class="color-hex">#B8860B</div>
+                    <div class="color-use">Accent, highlights, CTAs</div>
+                </div>
+            </div>
+            <div class="color-card">
+                <div class="color-swatch" style="background: #F1F5F9;"></div>
+                <div class="color-info">
+                    <div class="color-name">Light Gray</div>
+                    <div class="color-hex">#F1F5F9</div>
+                    <div class="color-use">Alt backgrounds, cards, sections</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Typography -->
+    <div class="section">
+        <h2>Typography</h2>
+        
+        <div class="font-specimen">
+            <div class="font-name">Headings — DM Sans</div>
+            <div class="font-display dm-sans" style="font-weight: 700;">FundOpsHQ</div>
+            <div class="font-weights">
+                <span class="font-weight-sample dm-sans" style="font-weight: 500;">Medium 500</span>
+                <span class="font-weight-sample dm-sans" style="font-weight: 600;">Semibold 600</span>
+                <span class="font-weight-sample dm-sans" style="font-weight: 700;">Bold 700</span>
+            </div>
+        </div>
+        
+        <div class="font-specimen">
+            <div class="font-name">Body — Inter</div>
+            <div class="font-display inter" style="font-size: 32px; font-weight: 400;">The knowledge hub for investment fund operations.</div>
+            <div class="font-weights">
+                <span class="font-weight-sample inter" style="font-weight: 400;">Regular 400</span>
+                <span class="font-weight-sample inter" style="font-weight: 500;">Medium 500</span>
+                <span class="font-weight-sample inter" style="font-weight: 600;">Semibold 600</span>
+            </div>
+        </div>
+        
+        <table class="specs-table">
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>Font</th>
+                    <th>Weight</th>
+                    <th>Size (suggested)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>H1</td>
+                    <td>DM Sans</td>
+                    <td>700</td>
+                    <td><code>36-48px</code></td>
+                </tr>
+                <tr>
+                    <td>H2</td>
+                    <td>DM Sans</td>
+                    <td>600</td>
+                    <td><code>24-32px</code></td>
+                </tr>
+                <tr>
+                    <td>H3</td>
+                    <td>DM Sans</td>
+                    <td>600</td>
+                    <td><code>18-24px</code></td>
+                </tr>
+                <tr>
+                    <td>Body</td>
+                    <td>Inter</td>
+                    <td>400</td>
+                    <td><code>16-18px</code></td>
+                </tr>
+                <tr>
+                    <td>Small/Caption</td>
+                    <td>Inter</td>
+                    <td>500</td>
+                    <td><code>12-14px</code></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- Logos -->
+    <div class="section">
+        <h2>Logo — Primary Wordmark</h2>
+        <div class="logo-grid">
+            <div class="logo-card">
+                <div class="logo-display light">
+                    <svg width="280" height="48" viewBox="0 0 280 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <text x="0" y="36" font-family="DM Sans, sans-serif" font-size="36" font-weight="700" fill="#1E3A5F">Fund</text>
+                        <text x="78" y="36" font-family="DM Sans, sans-serif" font-size="36" font-weight="700" fill="#1E3A5F">Ops</text>
+                        <text x="148" y="36" font-family="DM Sans, sans-serif" font-size="36" font-weight="700" fill="#B8860B">HQ</text>
+                    </svg>
+                </div>
+                <div class="logo-label">Primary — Light background</div>
+            </div>
+            <div class="logo-card">
+                <div class="logo-display dark">
+                    <svg width="280" height="48" viewBox="0 0 280 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <text x="0" y="36" font-family="DM Sans, sans-serif" font-size="36" font-weight="700" fill="#FFFFFF">Fund</text>
+                        <text x="78" y="36" font-family="DM Sans, sans-serif" font-size="36" font-weight="700" fill="#FFFFFF">Ops</text>
+                        <text x="148" y="36" font-family="DM Sans, sans-serif" font-size="36" font-weight="700" fill="#B8860B">HQ</text>
+                    </svg>
+                </div>
+                <div class="logo-label">Primary — Dark background</div>
+            </div>
+            <div class="logo-card">
+                <div class="logo-display light">
+                    <svg width="280" height="48" viewBox="0 0 280 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <text x="0" y="36" font-family="DM Sans, sans-serif" font-size="36" font-weight="700" fill="#1E3A5F">FundOpsHQ</text>
+                    </svg>
+                </div>
+                <div class="logo-label">Monochrome — Light background</div>
+            </div>
+            <div class="logo-card">
+                <div class="logo-display dark">
+                    <svg width="280" height="48" viewBox="0 0 280 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <text x="0" y="36" font-family="DM Sans, sans-serif" font-size="36" font-weight="700" fill="#FFFFFF">FundOpsHQ</text>
+                    </svg>
+                </div>
+                <div class="logo-label">Monochrome — Dark background</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Short Mark -->
+    <div class="section">
+        <h2>Logo — Short Mark (FOHQ)</h2>
+        <div class="logo-grid">
+            <div class="logo-card">
+                <div class="logo-display light">
+                    <svg width="140" height="56" viewBox="0 0 140 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <text x="0" y="44" font-family="DM Sans, sans-serif" font-size="44" font-weight="700" fill="#1E3A5F">FO</text>
+                        <text x="62" y="44" font-family="DM Sans, sans-serif" font-size="44" font-weight="700" fill="#B8860B">HQ</text>
+                    </svg>
+                </div>
+                <div class="logo-label">Short mark — Light background</div>
+            </div>
+            <div class="logo-card">
+                <div class="logo-display dark">
+                    <svg width="140" height="56" viewBox="0 0 140 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <text x="0" y="44" font-family="DM Sans, sans-serif" font-size="44" font-weight="700" fill="#FFFFFF">FO</text>
+                        <text x="62" y="44" font-family="DM Sans, sans-serif" font-size="44" font-weight="700" fill="#B8860B">HQ</text>
+                    </svg>
+                </div>
+                <div class="logo-label">Short mark — Dark background</div>
+            </div>
+            <div class="logo-card">
+                <div class="logo-display gray">
+                    <svg width="140" height="56" viewBox="0 0 140 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <text x="0" y="44" font-family="DM Sans, sans-serif" font-size="44" font-weight="700" fill="#1E3A5F">FOHQ</text>
+                    </svg>
+                </div>
+                <div class="logo-label">Short mark monochrome</div>
+            </div>
+            <div class="logo-card">
+                <div class="logo-display dark">
+                    <svg width="140" height="56" viewBox="0 0 140 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <text x="0" y="44" font-family="DM Sans, sans-serif" font-size="44" font-weight="700" fill="#FFFFFF">FOHQ</text>
+                    </svg>
+                </div>
+                <div class="logo-label">Short mark monochrome — Dark</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Podcast Logo -->
+    <div class="section">
+        <h2>Logo — FundOpsHQ Interviews (Podcast)</h2>
+        <div class="podcast-logo">
+            <svg width="320" height="80" viewBox="0 0 320 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <text x="0" y="36" font-family="DM Sans, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">Fund</text>
+                <text x="70" y="36" font-family="DM Sans, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">Ops</text>
+                <text x="132" y="36" font-family="DM Sans, sans-serif" font-size="32" font-weight="700" fill="#B8860B">HQ</text>
+                <text x="0" y="68" font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#94A3B8" letter-spacing="3">INTERVIEWS</text>
+            </svg>
+        </div>
+        <p class="podcast-note">For podcast cover art, use this stacked layout on the navy background. Minimum recommended size: 3000x3000px for podcast platforms.</p>
+    </div>
+    
+    <!-- Usage Guidelines -->
+    <div class="section">
+        <h2>Usage Guidelines</h2>
+        <div class="usage-grid">
+            <div class="usage-card">
+                <h3>Clear Space</h3>
+                <p>Maintain clear space around all logos equal to the height of the "H" in HQ. No other elements should intrude on this space.</p>
+            </div>
+            <div class="usage-card">
+                <h3>Minimum Size</h3>
+                <p>Full wordmark: minimum 120px wide. Short mark (FOHQ): minimum 60px wide. Below these sizes, legibility suffers.</p>
+            </div>
+            <div class="usage-card">
+                <h3>Color Usage</h3>
+                <p>Use the gold accent on "HQ" when possible for brand recognition. Fall back to monochrome versions when color printing isn't available or on complex backgrounds.</p>
+            </div>
+            <div class="usage-card">
+                <h3>Background Rules</h3>
+                <p>Use navy/dark logo on white or light gray backgrounds. Use white logo on navy or dark backgrounds. Avoid placing logos on busy images or patterns.</p>
+            </div>
+            <div class="usage-card">
+                <h3>Don't</h3>
+                <p>Don't stretch, rotate, add effects, change colors, or rearrange logo elements. Don't place on low-contrast backgrounds.</p>
+            </div>
+            <div class="usage-card">
+                <h3>File Formats</h3>
+                <p>Use SVG for web and digital. Use PNG with transparent background for documents and presentations. Request vector files (AI/EPS) for print production.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Quick Reference -->
+    <div class="section">
+        <h2>Quick Reference</h2>
+        <table class="specs-table">
+            <thead>
+                <tr>
+                    <th>Asset</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Primary Color (Navy)</td>
+                    <td><code>#1E3A5F</code></td>
+                </tr>
+                <tr>
+                    <td>Accent Color (Gold)</td>
+                    <td><code>#B8860B</code></td>
+                </tr>
+                <tr>
+                    <td>Body Text Color</td>
+                    <td><code>#64748B</code></td>
+                </tr>
+                <tr>
+                    <td>Background (Light)</td>
+                    <td><code>#FFFFFF</code></td>
+                </tr>
+                <tr>
+                    <td>Background (Alt)</td>
+                    <td><code>#F1F5F9</code></td>
+                </tr>
+                <tr>
+                    <td>Heading Font</td>
+                    <td><code>DM Sans</code> — Google Fonts</td>
+                </tr>
+                <tr>
+                    <td>Body Font</td>
+                    <td><code>Inter</code> — Google Fonts</td>
+                </tr>
+                <tr>
+                    <td>Google Fonts Import</td>
+                    <td><code>fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Inter:wght@400;500;600</code></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>

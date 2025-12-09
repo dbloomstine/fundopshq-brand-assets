@@ -1,0 +1,8 @@
+<svg width="320" height="80" viewBox="0 0 320 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&amp;family=Inter:wght@500&amp;display=swap');
+    </style>
+    <text x="0" y="36" font-family="DM Sans, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">FundOps</text>
+    <text x="157" y="36" font-family="DM Sans, sans-serif" font-size="32" font-weight="700" fill="#B8860B">HQ</text>
+    <text x="0" y="68" font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#94A3B8" letter-spacing="3">INTERVIEWS</text>
+</svg>
