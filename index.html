@@ -61,6 +61,12 @@
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            cursor: pointer;
+            transition: transform 0.15s ease;
+        }
+
+        .color-card:hover {
+            transform: translateY(-2px);
         }
 
         .color-swatch {
@@ -159,6 +165,10 @@
             background: #F1F5F9;
         }
 
+        .logo-display.pattern {
+            background: url('patterns/diagonal-stripes.svg');
+        }
+
         .logo-label {
             padding: 12px 16px;
             background: #F8FAFC;
@@ -233,6 +243,95 @@
             color: #64748B;
         }
 
+        /* Pattern Section */
+        .pattern-preview {
+            width: 100%;
+            height: 200px;
+            border-radius: 8px;
+            background: url('patterns/diagonal-stripes.svg');
+            margin-bottom: 16px;
+        }
+
+        .pattern-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .pattern-card {
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .pattern-display {
+            height: 160px;
+            background: url('patterns/diagonal-stripes.svg');
+        }
+
+        .pattern-info {
+            padding: 16px;
+            background: #F8FAFC;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .pattern-info span {
+            font-size: 14px;
+            color: #64748B;
+        }
+
+        /* Podcast Assets */
+        .podcast-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .podcast-card {
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .podcast-cover-preview {
+            aspect-ratio: 1;
+            max-width: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .podcast-cover-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .doc-link {
+            display: block;
+            padding: 16px 20px;
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #1E3A5F;
+            font-weight: 500;
+            transition: background 0.15s ease;
+        }
+
+        .doc-link:hover {
+            background: #F1F5F9;
+        }
+
+        .doc-link small {
+            display: block;
+            color: #64748B;
+            font-weight: 400;
+            margin-top: 4px;
+        }
+
         /* Specs Table */
         .specs-table {
             width: 100%;
@@ -265,6 +364,77 @@
             border-radius: 4px;
             font-size: 13px;
         }
+
+        /* Copy Button */
+        .copy-btn {
+            background: none;
+            border: 1px solid #E2E8F0;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            color: #64748B;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .copy-btn:hover {
+            background: #F1F5F9;
+            border-color: #B8860B;
+            color: #B8860B;
+        }
+
+        .copy-btn.copied {
+            background: #B8860B;
+            border-color: #B8860B;
+            color: white;
+        }
+
+        /* Code Block */
+        .code-block {
+            background: #1E3A5F;
+            color: #F1F5F9;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'DM Sans', monospace;
+            font-size: 13px;
+            overflow-x: auto;
+            position: relative;
+        }
+
+        .code-block .copy-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.2);
+            color: #94A3B8;
+        }
+
+        .code-block .copy-btn:hover {
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+
+        /* Toast */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #1E3A5F;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
@@ -274,8 +444,9 @@
     <!-- Color Palette -->
     <div class="section">
         <h2>Color Palette</h2>
+        <p style="font-size: 14px; color: #64748B; margin-bottom: 20px;">Click any color to copy hex code</p>
         <div class="color-grid">
-            <div class="color-card">
+            <div class="color-card" onclick="copyToClipboard('#1E3A5F')">
                 <div class="color-swatch" style="background: #1E3A5F;"></div>
                 <div class="color-info">
                     <div class="color-name">Deep Navy</div>
@@ -283,7 +454,7 @@
                     <div class="color-use">Primary brand color, headers, buttons</div>
                 </div>
             </div>
-            <div class="color-card">
+            <div class="color-card" onclick="copyToClipboard('#FFFFFF')">
                 <div class="color-swatch" style="background: #FFFFFF; border-bottom: 1px solid #E2E8F0;"></div>
                 <div class="color-info">
                     <div class="color-name">White</div>
@@ -291,7 +462,7 @@
                     <div class="color-use">Primary background, clean space</div>
                 </div>
             </div>
-            <div class="color-card">
+            <div class="color-card" onclick="copyToClipboard('#64748B')">
                 <div class="color-swatch" style="background: #64748B;"></div>
                 <div class="color-info">
                     <div class="color-name">Slate Gray</div>
@@ -299,7 +470,7 @@
                     <div class="color-use">Body text, secondary elements</div>
                 </div>
             </div>
-            <div class="color-card">
+            <div class="color-card" onclick="copyToClipboard('#B8860B')">
                 <div class="color-swatch" style="background: #B8860B;"></div>
                 <div class="color-info">
                     <div class="color-name">Muted Gold</div>
@@ -307,12 +478,20 @@
                     <div class="color-use">Accent, highlights, CTAs</div>
                 </div>
             </div>
-            <div class="color-card">
+            <div class="color-card" onclick="copyToClipboard('#F1F5F9')">
                 <div class="color-swatch" style="background: #F1F5F9;"></div>
                 <div class="color-info">
                     <div class="color-name">Light Gray</div>
                     <div class="color-hex">#F1F5F9</div>
                     <div class="color-use">Alt backgrounds, cards, sections</div>
+                </div>
+            </div>
+            <div class="color-card" onclick="copyToClipboard('#94A3B8')">
+                <div class="color-swatch" style="background: #94A3B8;"></div>
+                <div class="color-info">
+                    <div class="color-name">Caption Gray</div>
+                    <div class="color-hex">#94A3B8</div>
+                    <div class="color-use">Captions, secondary text</div>
                 </div>
             </div>
         </div>
@@ -342,7 +521,12 @@
             </div>
         </div>
 
-        <table class="specs-table">
+        <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this, 'font-import')">Copy</button>
+            <code id="font-import">@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');</code>
+        </div>
+
+        <table class="specs-table" style="margin-top: 24px;">
             <thead>
                 <tr>
                     <th>Element</th>
@@ -384,6 +568,21 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+
+    <!-- Patterns -->
+    <div class="section">
+        <h2>Patterns</h2>
+        <div class="pattern-grid">
+            <div class="pattern-card">
+                <div class="pattern-display"></div>
+                <div class="pattern-info">
+                    <span>Diagonal Stripes — Navy on Navy</span>
+                    <a href="patterns/diagonal-stripes.svg" download class="download-link">Download SVG</a>
+                </div>
+            </div>
+        </div>
+        <p style="font-size: 14px; color: #64748B; margin-top: 16px;">Tileable pattern for backgrounds. Use for podcast covers, video backgrounds, and presentation slides.</p>
     </div>
 
     <!-- Logos -->
@@ -472,13 +671,46 @@
         </div>
     </div>
 
-    <!-- Podcast Logo -->
+    <!-- Podcast Assets -->
     <div class="section">
-        <h2>Logo — FundOpsHQ Interviews (Podcast)</h2>
-        <div class="podcast-logo">
-            <img src="logos/fundopshq-interviews.svg" alt="FundOpsHQ Interviews podcast logo">
+        <h2>Podcast Assets — FundOpsHQ Interviews</h2>
+
+        <div style="display: grid; grid-template-columns: auto 1fr; gap: 40px; align-items: start;">
+            <div>
+                <div class="podcast-cover-preview">
+                    <img src="podcast/cover-3000x3000.svg" alt="Podcast cover art">
+                </div>
+                <div style="margin-top: 16px;">
+                    <a href="podcast/cover-3000x3000.svg" download class="download-link" style="font-size: 14px;">Download Cover Art (SVG)</a>
+                </div>
+            </div>
+
+            <div>
+                <h3 style="font-family: 'DM Sans', sans-serif; font-size: 18px; margin-bottom: 16px; color: #1E3A5F;">Documentation</h3>
+
+                <a href="podcast/EXPORT-INSTRUCTIONS.md" class="doc-link" style="margin-bottom: 12px;">
+                    Export Instructions
+                    <small>How to convert SVG cover to PNG for podcast platforms</small>
+                </a>
+
+                <a href="podcast/lower-thirds-specs.md" class="doc-link" style="margin-bottom: 12px;">
+                    Lower Thirds Specs
+                    <small>Design specs for video name/title overlays</small>
+                </a>
+
+                <a href="podcast/riverside-setup.md" class="doc-link">
+                    Riverside FM Setup Guide
+                    <small>Font and color settings for captions and transcripts</small>
+                </a>
+            </div>
         </div>
-        <p class="podcast-note">For podcast cover art, use this stacked layout on the navy background. Minimum recommended size: 3000x3000px for podcast platforms. <a href="logos/fundopshq-interviews.svg" download class="download-link">Download SVG</a></p>
+
+        <div style="margin-top: 32px;">
+            <div class="podcast-logo">
+                <img src="logos/fundopshq-interviews.svg" alt="FundOpsHQ Interviews podcast logo">
+            </div>
+            <p class="podcast-note">Podcast wordmark for use in video intros, outros, and thumbnails. <a href="logos/fundopshq-interviews.svg" download class="download-link">Download SVG</a></p>
+        </div>
     </div>
 
     <!-- Usage Guidelines -->
@@ -515,49 +747,103 @@
     <!-- Quick Reference -->
     <div class="section">
         <h2>Quick Reference</h2>
+
+        <h3 style="font-family: 'DM Sans', sans-serif; font-size: 16px; margin-bottom: 12px; color: #1E3A5F;">CSS Variables</h3>
+        <div class="code-block" style="margin-bottom: 24px;">
+            <button class="copy-btn" onclick="copyCode(this, 'css-vars')">Copy</button>
+<pre id="css-vars">:root {
+  --color-navy: #1E3A5F;
+  --color-gold: #B8860B;
+  --color-gray: #64748B;
+  --color-light: #F1F5F9;
+  --color-caption: #94A3B8;
+  --font-heading: 'DM Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}</pre>
+        </div>
+
         <table class="specs-table">
             <thead>
                 <tr>
                     <th>Asset</th>
                     <th>Value</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>Primary Color (Navy)</td>
                     <td><code>#1E3A5F</code></td>
+                    <td><button class="copy-btn" onclick="copyToClipboard('#1E3A5F', this)">Copy</button></td>
                 </tr>
                 <tr>
                     <td>Accent Color (Gold)</td>
                     <td><code>#B8860B</code></td>
+                    <td><button class="copy-btn" onclick="copyToClipboard('#B8860B', this)">Copy</button></td>
                 </tr>
                 <tr>
                     <td>Body Text Color</td>
                     <td><code>#64748B</code></td>
+                    <td><button class="copy-btn" onclick="copyToClipboard('#64748B', this)">Copy</button></td>
                 </tr>
                 <tr>
                     <td>Background (Light)</td>
                     <td><code>#FFFFFF</code></td>
+                    <td><button class="copy-btn" onclick="copyToClipboard('#FFFFFF', this)">Copy</button></td>
                 </tr>
                 <tr>
                     <td>Background (Alt)</td>
                     <td><code>#F1F5F9</code></td>
+                    <td><button class="copy-btn" onclick="copyToClipboard('#F1F5F9', this)">Copy</button></td>
                 </tr>
                 <tr>
-                    <td>Heading Font</td>
-                    <td><code>DM Sans</code> — Google Fonts</td>
-                </tr>
-                <tr>
-                    <td>Body Font</td>
-                    <td><code>Inter</code> — Google Fonts</td>
-                </tr>
-                <tr>
-                    <td>Google Fonts Import</td>
-                    <td><code>fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Inter:wght@400;500;600</code></td>
+                    <td>Caption Gray</td>
+                    <td><code>#94A3B8</code></td>
+                    <td><button class="copy-btn" onclick="copyToClipboard('#94A3B8', this)">Copy</button></td>
                 </tr>
             </tbody>
         </table>
     </div>
 
+    <!-- Toast notification -->
+    <div class="toast" id="toast">Copied to clipboard!</div>
+
+    <script>
+        function copyToClipboard(text, btn) {
+            navigator.clipboard.writeText(text).then(() => {
+                showToast('Copied ' + text);
+                if (btn) {
+                    btn.textContent = 'Copied!';
+                    btn.classList.add('copied');
+                    setTimeout(() => {
+                        btn.textContent = 'Copy';
+                        btn.classList.remove('copied');
+                    }, 2000);
+                }
+            });
+        }
+
+        function copyCode(btn, elementId) {
+            const code = document.getElementById(elementId).textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                showToast('Copied to clipboard!');
+                btn.textContent = 'Copied!';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = 'Copy';
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2000);
+        }
+    </script>
 </body>
 </html>
