@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FundOpsHQ Brand Guidelines</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: letter;
+      margin: 0.75in;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 11pt;
+      line-height: 1.6;
+      color: #1E3A5F;
+      background: white;
+    }
+
+    .page {
+      page-break-after: always;
+      min-height: 9in;
+      padding: 0.5in 0;
+    }
+
+    .page:last-child {
+      page-break-after: auto;
+    }
+
+    h1 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 32pt;
+      font-weight: 700;
+      margin-bottom: 0.5em;
+    }
+
+    h2 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18pt;
+      font-weight: 600;
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+      color: #1E3A5F;
+      border-bottom: 2px solid #B8860B;
+      padding-bottom: 0.25em;
+    }
+
+    h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14pt;
+      font-weight: 600;
+      margin-top: 1em;
+      margin-bottom: 0.5em;
+    }
+
+    p {
+      margin-bottom: 1em;
+    }
+
+    .cover {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 8in;
+      text-align: center;
+    }
+
+    .cover-logo {
+      margin-bottom: 2em;
+    }
+
+    .cover h1 {
+      font-size: 48pt;
+      margin-bottom: 0.25em;
+    }
+
+    .cover .subtitle {
+      font-size: 14pt;
+      color: #64748B;
+    }
+
+    .cover .version {
+      margin-top: 3em;
+      font-size: 10pt;
+      color: #94A3B8;
+    }
+
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1em;
+      margin: 1em 0;
+    }
+
+    .color-swatch {
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #E2E8F0;
+    }
+
+    .color-preview {
+      height: 80px;
+    }
+
+    .color-info {
+      padding: 0.75em;
+      background: #F8FAFC;
+    }
+
+    .color-name {
+      font-weight: 600;
+      font-size: 10pt;
+    }
+
+    .color-hex {
+      font-family: monospace;
+      font-size: 10pt;
+      color: #64748B;
+    }
+
+    .color-usage {
+      font-size: 9pt;
+      color: #94A3B8;
+      margin-top: 0.25em;
+    }
+
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5em;
+      margin: 1em 0;
+    }
+
+    .logo-item {
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .logo-preview {
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1em;
+    }
+
+    .logo-preview.light-bg {
+      background: white;
+    }
+
+    .logo-preview.dark-bg {
+      background: #1E3A5F;
+    }
+
+    .logo-preview img {
+      max-width: 100%;
+      max-height: 60px;
+    }
+
+    .logo-label {
+      padding: 0.5em;
+      background: #F8FAFC;
+      font-size: 9pt;
+      text-align: center;
+    }
+
+    .font-sample {
+      margin: 1em 0;
+      padding: 1em;
+      background: #F8FAFC;
+      border-radius: 8px;
+    }
+
+    .font-name {
+      font-size: 10pt;
+      color: #64748B;
+      margin-bottom: 0.5em;
+    }
+
+    .font-preview {
+      font-size: 24pt;
+    }
+
+    .font-preview.dm-sans {
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .font-preview.inter {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .font-weights {
+      display: flex;
+      gap: 2em;
+      margin-top: 0.5em;
+      font-size: 10pt;
+    }
+
+    .do-dont {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5em;
+      margin: 1em 0;
+    }
+
+    .do-section, .dont-section {
+      padding: 1em;
+      border-radius: 8px;
+    }
+
+    .do-section {
+      background: #F0FDF4;
+      border: 1px solid #BBF7D0;
+    }
+
+    .dont-section {
+      background: #FEF2F2;
+      border: 1px solid #FECACA;
+    }
+
+    .do-section h4 {
+      color: #166534;
+      margin-bottom: 0.5em;
+    }
+
+    .dont-section h4 {
+      color: #991B1B;
+      margin-bottom: 0.5em;
+    }
+
+    ul {
+      padding-left: 1.5em;
+    }
+
+    li {
+      margin-bottom: 0.25em;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1em 0;
+      font-size: 10pt;
+    }
+
+    th, td {
+      border: 1px solid #E2E8F0;
+      padding: 0.5em;
+      text-align: left;
+    }
+
+    th {
+      background: #F8FAFC;
+      font-weight: 600;
+    }
+
+    code {
+      font-family: monospace;
+      background: #F1F5F9;
+      padding: 0.1em 0.3em;
+      border-radius: 3px;
+      font-size: 9pt;
+    }
+
+    .footer {
+      margin-top: 2em;
+      padding-top: 1em;
+      border-top: 1px solid #E2E8F0;
+      font-size: 9pt;
+      color: #94A3B8;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cover Page -->
+  <div class="page cover">
+    <div class="cover-logo">
+      <svg width="300" height="45" viewBox="0 0 279 40" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.8147e-06 34.56V0.959995H21.888V6.192H6.48V15.168H18.816V20.256H6.48V34.56H3.8147e-06ZM35.5519 35.136C33.5999 35.136 31.9199 34.736 30.5119 33.936C29.1359 33.104 28.0799 31.904 27.3439 30.336C26.6079 28.736 26.2399 26.768 26.2399 24.432V10.368H32.7199V23.76C32.7199 25.712 33.1199 27.184 33.9199 28.176C34.7519 29.168 36.0159 29.664 37.7119 29.664C38.7999 29.664 39.7599 29.424 40.5919 28.944C41.4239 28.432 42.0799 27.712 42.5599 26.784C43.0719 25.824 43.3279 24.656 43.3279 23.28V10.368H49.7599V34.56H44.0959L43.5679 30.624C42.8639 32 41.8239 33.104 40.4479 33.936C39.0719 34.736 37.4399 35.136 35.5519 35.136ZM56.106 34.56V10.368H61.818L62.298 14.304C63.034 12.96 64.074 11.872 65.418 11.04C66.794 10.208 68.426 9.792 70.314 9.792C72.33 9.792 74.026 10.208 75.402 11.04C76.778 11.872 77.818 13.088 78.522 14.688C79.258 16.288 79.626 18.256 79.626 20.592V34.56H73.194V21.216C73.194 19.296 72.778 17.824 71.946 16.8C71.146 15.776 69.898 15.264 68.202 15.264C67.114 15.264 66.138 15.52 65.274 16.032C64.442 16.544 63.786 17.28 63.306 18.24C62.826 19.168 62.586 20.304 62.586 21.648V34.56H56.106ZM96.483 35.136C94.275 35.136 92.291 34.592 90.531 33.504C88.803 32.416 87.443 30.912 86.451 28.992C85.459 27.072 84.963 24.912 84.963 22.512C84.963 20.048 85.459 17.872 86.451 15.984C87.475 14.064 88.867 12.56 90.627 11.472C92.419 10.352 94.419 9.792 96.627 9.792C98.355 9.792 99.875 10.112 101.187 10.752C102.499 11.392 103.555 12.304 104.355 13.488V-3.8147e-06H110.835V34.56H105.075L104.355 31.248C103.875 31.92 103.267 32.56 102.531 33.168C101.827 33.776 100.979 34.256 99.987 34.608C98.995 34.96 97.827 35.136 96.483 35.136ZM98.019 29.472C99.299 29.472 100.419 29.184 101.379 28.608C102.371 28 103.139 27.168 103.683 26.112C104.227 25.056 104.499 23.84 104.499 22.464C104.499 21.088 104.227 19.872 103.683 18.816C103.139 17.76 102.371 16.944 101.379 16.368C100.419 15.76 99.299 15.456 98.019 15.456C96.803 15.456 95.699 15.76 94.707 16.368C93.715 16.944 92.931 17.76 92.355 18.816C91.811 19.872 91.539 21.072 91.539 22.416C91.539 23.824 91.811 25.056 92.355 26.112C92.931 27.168 93.699 28 94.659 28.608C95.651 29.184 96.771 29.472 98.019 29.472ZM132.832 35.136C129.568 35.136 126.688 34.4 124.192 32.928C121.696 31.456 119.744 29.424 118.336 26.832C116.928 24.208 116.224 21.184 116.224 17.76C116.224 14.336 116.928 11.328 118.336 8.736C119.744 6.112 121.696 4.064 124.192 2.592C126.688 1.12 129.568 0.383997 132.832 0.383997C136.128 0.383997 139.024 1.12 141.52 2.592C144.016 4.064 145.952 6.112 147.328 8.736C148.736 11.328 149.44 14.336 149.44 17.76C149.44 21.184 148.736 24.208 147.328 26.832C145.952 29.424 144.016 31.456 141.52 32.928C139.024 34.4 136.128 35.136 132.832 35.136ZM132.832 29.328C134.88 29.328 136.64 28.864 138.112 27.936C139.616 26.976 140.784 25.632 141.616 23.904C142.448 22.176 142.864 20.128 142.864 17.76C142.864 15.36 142.448 13.312 141.616 11.616C140.784 9.888 139.616 8.56 138.112 7.632C136.64 6.704 134.88 6.24 132.832 6.24C130.816 6.24 129.056 6.704 127.552 7.632C126.048 8.56 124.88 9.888 124.048 11.616C123.216 13.312 122.8 15.36 122.8 17.76C122.8 20.128 123.216 22.176 124.048 23.904C124.88 25.632 126.048 26.976 127.552 27.936C129.056 28.864 130.816 29.328 132.832 29.328ZM154.825 45.12V10.368H160.585L161.305 13.728C161.817 13.024 162.425 12.384 163.129 11.808C163.833 11.2 164.665 10.72 165.625 10.368C166.617 9.984 167.769 9.792 169.081 9.792C171.353 9.792 173.353 10.352 175.081 11.472C176.809 12.592 178.169 14.112 179.161 16.032C180.185 17.92 180.697 20.08 180.697 22.512C180.697 24.944 180.185 27.12 179.161 29.04C178.137 30.928 176.761 32.416 175.033 33.504C173.305 34.592 171.337 35.136 169.129 35.136C167.337 35.136 165.785 34.816 164.473 34.176C163.193 33.504 162.137 32.592 161.305 31.44V45.12H154.825ZM167.593 29.472C168.873 29.472 169.993 29.184 170.953 28.608C171.945 28.032 172.713 27.216 173.257 26.16C173.801 25.104 174.073 23.888 174.073 22.512C174.073 21.136 173.801 19.92 173.257 18.864C172.713 17.776 171.945 16.944 170.953 16.368C169.993 15.76 168.873 15.456 167.593 15.456C166.345 15.456 165.225 15.76 164.233 16.368C163.273 16.944 162.505 17.76 161.929 18.816C161.385 19.872 161.113 21.088 161.113 22.464C161.113 23.84 161.385 25.072 161.929 26.16C162.505 27.216 163.273 28.032 164.233 28.608C165.225 29.184 166.345 29.472 167.593 29.472ZM196.166 35.136C193.958 35.136 192.038 34.784 190.406 34.08C188.774 33.376 187.494 32.4 186.566 31.152C185.638 29.904 185.11 28.496 184.982 26.928H191.414C191.574 27.536 191.846 28.096 192.23 28.608C192.614 29.088 193.126 29.472 193.766 29.76C194.406 30.048 195.174 30.192 196.07 30.192C196.934 30.192 197.638 30.08 198.182 29.856C198.726 29.6 199.126 29.264 199.382 28.848C199.67 28.432 199.814 28 199.814 27.552C199.814 26.88 199.622 26.368 199.238 26.016C198.854 25.632 198.294 25.328 197.558 25.104C196.822 24.88 195.926 24.656 194.87 24.432C193.718 24.208 192.582 23.936 191.462 23.616C190.374 23.264 189.398 22.832 188.534 22.32C187.67 21.808 186.982 21.152 186.47 20.352C185.958 19.552 185.702 18.56 185.702 17.376C185.702 15.936 186.086 14.656 186.854 13.536C187.622 12.384 188.742 11.472 190.214 10.8C191.686 10.128 193.462 9.792 195.542 9.792C198.454 9.792 200.758 10.448 202.454 11.76C204.15 13.072 205.158 14.88 205.478 17.184H199.382C199.19 16.448 198.758 15.872 198.086 15.456C197.446 15.008 196.582 14.784 195.494 14.784C194.342 14.784 193.462 14.992 192.854 15.408C192.246 15.824 191.942 16.368 191.942 17.04C191.942 17.488 192.134 17.888 192.518 18.24C192.934 18.592 193.51 18.896 194.246 19.152C194.982 19.376 195.878 19.6 196.934 19.824C198.79 20.208 200.422 20.656 201.83 21.168C203.238 21.648 204.342 22.352 205.142 23.28C205.942 24.176 206.342 25.488 206.342 27.216C206.342 28.752 205.926 30.128 205.094 31.344C204.262 32.528 203.078 33.456 201.542 34.128C200.038 34.8 198.246 35.136 196.166 35.136Z" fill="#1E3A5F"/>
+        <path d="M233.137 34.56V0.959995H239.617V34.56H233.137ZM211.969 34.56V0.959995H218.449V34.56H211.969ZM217.537 20.016V14.784H234.241V20.016H217.537ZM269.658 39.84L257.418 20.592H264.858L277.386 39.84H269.658ZM261.738 35.136C258.474 35.136 255.594 34.4 253.098 32.928C250.602 31.456 248.65 29.424 247.242 26.832C245.834 24.208 245.13 21.184 245.13 17.76C245.13 14.336 245.834 11.328 247.242 8.736C248.65 6.112 250.602 4.064 253.098 2.592C255.594 1.12 258.474 0.383997 261.738 0.383997C265.034 0.383997 267.93 1.12 270.426 2.592C272.922 4.064 274.858 6.112 276.234 8.736C277.642 11.328 278.346 14.336 278.346 17.76C278.346 21.184 277.642 24.208 276.234 26.832C274.858 29.424 272.922 31.456 270.426 32.928C267.93 34.4 265.034 35.136 261.738 35.136ZM261.738 29.328C263.786 29.328 265.546 28.864 267.018 27.936C268.522 26.976 269.69 25.632 270.522 23.904C271.354 22.176 271.77 20.128 271.77 17.76C271.77 15.36 271.354 13.312 270.522 11.616C269.69 9.888 268.522 8.56 267.018 7.632C265.546 6.704 263.786 6.24 261.738 6.24C259.722 6.24 257.962 6.704 256.458 7.632C254.954 8.56 253.786 9.888 252.954 11.616C252.122 13.312 251.706 15.36 251.706 17.76C251.706 20.128 252.122 22.176 252.954 23.904C253.786 25.632 254.954 26.976 256.458 27.936C257.962 28.864 259.722 29.328 261.738 29.328Z" fill="#B8860B"/>
+      </svg>
+    </div>
+    <h1>Brand Guidelines</h1>
+    <p class="subtitle">Visual identity standards for FundOpsHQ</p>
+    <p class="version">Version 1.0 | December 2024</p>
+  </div>
+
+  <!-- Color Palette -->
+  <div class="page">
+    <h2>Color Palette</h2>
+    <p>Our color palette reflects professionalism, trust, and expertise in fund operations.</p>
+
+    <div class="color-grid">
+      <div class="color-swatch">
+        <div class="color-preview" style="background: #1E3A5F;"></div>
+        <div class="color-info">
+          <div class="color-name">Deep Navy</div>
+          <div class="color-hex">#1E3A5F</div>
+          <div class="color-usage">Primary brand, headers, buttons</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-preview" style="background: #FFFFFF; border-bottom: 1px solid #E2E8F0;"></div>
+        <div class="color-info">
+          <div class="color-name">White</div>
+          <div class="color-hex">#FFFFFF</div>
+          <div class="color-usage">Primary background</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-preview" style="background: #64748B;"></div>
+        <div class="color-info">
+          <div class="color-name">Slate Gray</div>
+          <div class="color-hex">#64748B</div>
+          <div class="color-usage">Body text, secondary elements</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-preview" style="background: #B8860B;"></div>
+        <div class="color-info">
+          <div class="color-name">Muted Gold</div>
+          <div class="color-hex">#B8860B</div>
+          <div class="color-usage">Accent, highlights, CTAs</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-preview" style="background: #F1F5F9;"></div>
+        <div class="color-info">
+          <div class="color-name">Light Gray</div>
+          <div class="color-hex">#F1F5F9</div>
+          <div class="color-usage">Alt backgrounds, cards</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-preview" style="background: #94A3B8;"></div>
+        <div class="color-info">
+          <div class="color-name">Caption Gray</div>
+          <div class="color-hex">#94A3B8</div>
+          <div class="color-usage">Captions, secondary text</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Typography</h2>
+
+    <div class="font-sample">
+      <div class="font-name">DM Sans - Headings</div>
+      <div class="font-preview dm-sans" style="font-weight: 700;">The quick brown fox jumps</div>
+      <div class="font-weights">
+        <span><strong>Medium (500)</strong> Subheadings</span>
+        <span><strong>Semibold (600)</strong> Section titles</span>
+        <span><strong>Bold (700)</strong> Main headings</span>
+      </div>
+    </div>
+
+    <div class="font-sample">
+      <div class="font-name">Inter - Body Text</div>
+      <div class="font-preview inter">The quick brown fox jumps</div>
+      <div class="font-weights">
+        <span><strong>Regular (400)</strong> Body text</span>
+        <span><strong>Medium (500)</strong> Emphasis</span>
+        <span><strong>Semibold (600)</strong> Labels</span>
+      </div>
+    </div>
+
+    <h3>Type Scale</h3>
+    <table>
+      <tr>
+        <th>Element</th>
+        <th>Font</th>
+        <th>Size</th>
+        <th>Weight</th>
+      </tr>
+      <tr>
+        <td>H1</td>
+        <td>DM Sans</td>
+        <td>48px</td>
+        <td>700</td>
+      </tr>
+      <tr>
+        <td>H2</td>
+        <td>DM Sans</td>
+        <td>36px</td>
+        <td>600</td>
+      </tr>
+      <tr>
+        <td>H3</td>
+        <td>DM Sans</td>
+        <td>24px</td>
+        <td>600</td>
+      </tr>
+      <tr>
+        <td>Body</td>
+        <td>Inter</td>
+        <td>16px</td>
+        <td>400</td>
+      </tr>
+      <tr>
+        <td>Small</td>
+        <td>Inter</td>
+        <td>14px</td>
+        <td>400</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Logo System -->
+  <div class="page">
+    <h2>Logo System</h2>
+
+    <h3>Full Wordmark</h3>
+    <p>The primary logo for most applications. Use when space permits.</p>
+
+    <div class="logo-grid">
+      <div class="logo-item">
+        <div class="logo-preview light-bg">
+          <img src="exports/logos/fundopshq/fundopshq-primary-light.png" alt="Primary Light">
+        </div>
+        <div class="logo-label">Primary Light - Light backgrounds</div>
+      </div>
+      <div class="logo-item">
+        <div class="logo-preview dark-bg">
+          <img src="exports/logos/fundopshq/fundopshq-primary-dark.png" alt="Primary Dark">
+        </div>
+        <div class="logo-label">Primary Dark - Dark backgrounds</div>
+      </div>
+      <div class="logo-item">
+        <div class="logo-preview light-bg">
+          <img src="exports/logos/fundopshq/fundopshq-mono-light.png" alt="Mono Light">
+        </div>
+        <div class="logo-label">Mono Light - Single color, light bg</div>
+      </div>
+      <div class="logo-item">
+        <div class="logo-preview dark-bg">
+          <img src="exports/logos/fundopshq/fundopshq-mono-dark.png" alt="Mono Dark">
+        </div>
+        <div class="logo-label">Mono Dark - Single color, dark bg</div>
+      </div>
+    </div>
+
+    <h3>Short Mark (FOHQ)</h3>
+    <p>For small spaces, favicons, and app icons.</p>
+
+    <div class="logo-grid">
+      <div class="logo-item">
+        <div class="logo-preview light-bg">
+          <img src="exports/logos/fohq/fohq-primary-light.png" alt="FOHQ Primary Light">
+        </div>
+        <div class="logo-label">Primary Light</div>
+      </div>
+      <div class="logo-item">
+        <div class="logo-preview dark-bg">
+          <img src="exports/logos/fohq/fohq-primary-dark.png" alt="FOHQ Primary Dark">
+        </div>
+        <div class="logo-label">Primary Dark</div>
+      </div>
+    </div>
+
+    <h2>Logo Usage Guidelines</h2>
+
+    <h3>Clear Space</h3>
+    <p>Maintain minimum clear space around the logo equal to the height of the "F" in FundOps.</p>
+
+    <h3>Minimum Sizes</h3>
+    <table>
+      <tr>
+        <th>Logo Type</th>
+        <th>Minimum Width</th>
+      </tr>
+      <tr>
+        <td>Full Wordmark</td>
+        <td>120px</td>
+      </tr>
+      <tr>
+        <td>Short Mark (FOHQ)</td>
+        <td>32px</td>
+      </tr>
+    </table>
+
+    <div class="do-dont">
+      <div class="do-section">
+        <h4>Do</h4>
+        <ul>
+          <li>Use on solid backgrounds (navy, white, light gray)</li>
+          <li>Maintain aspect ratio when scaling</li>
+          <li>Use appropriate variant for background color</li>
+          <li>Ensure adequate contrast</li>
+        </ul>
+      </div>
+      <div class="dont-section">
+        <h4>Don't</h4>
+        <ul>
+          <li>Rotate or skew the logo</li>
+          <li>Change the logo colors</li>
+          <li>Add effects (shadows, gradients, outlines)</li>
+          <li>Place on busy or low-contrast backgrounds</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Digital Assets -->
+  <div class="page">
+    <h2>Digital Assets</h2>
+
+    <h3>Favicon Implementation</h3>
+    <p>Include these tags in your HTML <code>&lt;head&gt;</code>:</p>
+
+    <pre style="background: #F8FAFC; padding: 1em; border-radius: 8px; font-size: 9pt; overflow-x: auto;"><code>&lt;link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"&gt;
+&lt;link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"&gt;
+&lt;link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"&gt;
+&lt;link rel="manifest" href="/site.webmanifest"&gt;
+&lt;meta name="theme-color" content="#1E3A5F"&gt;</code></pre>
+
+    <h3>Social Media Sizes</h3>
+    <table>
+      <tr>
+        <th>Platform</th>
+        <th>Asset</th>
+        <th>Dimensions</th>
+      </tr>
+      <tr>
+        <td>Open Graph</td>
+        <td>OG Image</td>
+        <td>1200 x 630</td>
+      </tr>
+      <tr>
+        <td>Twitter/X</td>
+        <td>Header</td>
+        <td>1500 x 500</td>
+      </tr>
+      <tr>
+        <td>LinkedIn</td>
+        <td>Banner</td>
+        <td>1584 x 396</td>
+      </tr>
+      <tr>
+        <td>Podcast</td>
+        <td>Cover Art</td>
+        <td>3000 x 3000</td>
+      </tr>
+    </table>
+
+    <h2>File Formats</h2>
+
+    <table>
+      <tr>
+        <th>Format</th>
+        <th>Use Case</th>
+      </tr>
+      <tr>
+        <td>SVG</td>
+        <td>Web, responsive designs, editing</td>
+      </tr>
+      <tr>
+        <td>PNG</td>
+        <td>Social media, presentations, documents</td>
+      </tr>
+      <tr>
+        <td>PNG @2x/@3x</td>
+        <td>High-DPI displays (Retina)</td>
+      </tr>
+    </table>
+
+    <div class="footer">
+      <p>FundOpsHQ Brand Guidelines | Confidential</p>
+      <p>For questions, contact brand@fundopshq.com</p>
+    </div>
+  </div>
+
+</body>
+</html>

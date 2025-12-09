@@ -1,0 +1,26 @@
+{
+  "name": "fundopshq-brand-assets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbloomstine/fundopshq-brand-assets.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/dbloomstine/fundopshq-brand-assets/issues"
+  },
+  "homepage": "https://github.com/dbloomstine/fundopshq-brand-assets#readme",
+  "dependencies": {
+    "fontkit": "^2.0.4",
+    "sharp": "^0.34.5",
+    "text-to-svg": "^3.1.5"
+  }
+}
