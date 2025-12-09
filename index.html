@@ -11,7 +11,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Inter', sans-serif;
             background: #FFFFFF;
@@ -21,7 +21,7 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         h1 {
             font-family: 'DM Sans', sans-serif;
             font-size: 42px;
@@ -29,13 +29,13 @@
             margin-bottom: 8px;
             color: #1E3A5F;
         }
-        
+
         .subtitle {
             font-size: 18px;
             color: #64748B;
             margin-bottom: 60px;
         }
-        
+
         h2 {
             font-family: 'DM Sans', sans-serif;
             font-size: 24px;
@@ -45,51 +45,51 @@
             padding-bottom: 12px;
             border-bottom: 2px solid #F1F5F9;
         }
-        
+
         .section {
             margin-bottom: 60px;
         }
-        
+
         /* Color Palette */
         .color-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
         }
-        
+
         .color-card {
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
-        
+
         .color-swatch {
             height: 120px;
         }
-        
+
         .color-info {
             padding: 16px;
             background: #F8FAFC;
         }
-        
+
         .color-name {
             font-weight: 600;
             font-size: 14px;
             margin-bottom: 4px;
         }
-        
+
         .color-hex {
             font-family: 'DM Sans', monospace;
             font-size: 14px;
             color: #64748B;
         }
-        
+
         .color-use {
             font-size: 12px;
             color: #94A3B8;
             margin-top: 8px;
         }
-        
+
         /* Typography */
         .font-specimen {
             background: #F8FAFC;
@@ -97,7 +97,7 @@
             border-radius: 8px;
             margin-bottom: 20px;
         }
-        
+
         .font-name {
             font-size: 14px;
             color: #64748B;
@@ -105,40 +105,40 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        
+
         .font-display {
             font-size: 48px;
             margin-bottom: 16px;
             color: #1E3A5F;
         }
-        
+
         .font-weights {
             display: flex;
             gap: 32px;
             flex-wrap: wrap;
         }
-        
+
         .font-weight-sample {
             font-size: 16px;
             color: #64748B;
         }
-        
+
         .dm-sans { font-family: 'DM Sans', sans-serif; }
         .inter { font-family: 'Inter', sans-serif; }
-        
+
         /* Logos */
         .logo-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 24px;
         }
-        
+
         .logo-card {
             border: 1px solid #E2E8F0;
             border-radius: 8px;
             overflow: hidden;
         }
-        
+
         .logo-display {
             padding: 48px;
             display: flex;
@@ -146,45 +146,58 @@
             justify-content: center;
             min-height: 180px;
         }
-        
+
         .logo-display.light {
             background: #FFFFFF;
         }
-        
+
         .logo-display.dark {
             background: #1E3A5F;
         }
-        
+
         .logo-display.gray {
             background: #F1F5F9;
         }
-        
+
         .logo-label {
             padding: 12px 16px;
             background: #F8FAFC;
             font-size: 13px;
             color: #64748B;
             border-top: 1px solid #E2E8F0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        
-        .logo-display svg {
+
+        .logo-display img {
             max-width: 100%;
             height: auto;
         }
-        
+
+        .download-link {
+            font-size: 12px;
+            color: #B8860B;
+            text-decoration: none;
+        }
+
+        .download-link:hover {
+            text-decoration: underline;
+        }
+
         /* Usage Notes */
         .usage-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 24px;
         }
-        
+
         .usage-card {
             background: #F8FAFC;
             padding: 24px;
             border-radius: 8px;
         }
-        
+
         .usage-card h3 {
             font-family: 'DM Sans', sans-serif;
             font-size: 16px;
@@ -192,12 +205,12 @@
             margin-bottom: 12px;
             color: #1E3A5F;
         }
-        
+
         .usage-card p {
             font-size: 14px;
             color: #64748B;
         }
-        
+
         /* Podcast Section */
         .podcast-logo {
             background: #1E3A5F;
@@ -208,7 +221,12 @@
             justify-content: center;
             max-width: 500px;
         }
-        
+
+        .podcast-logo img {
+            max-width: 100%;
+            height: auto;
+        }
+
         .podcast-note {
             margin-top: 16px;
             font-size: 14px;
@@ -221,7 +239,7 @@
             border-collapse: collapse;
             margin-top: 16px;
         }
-        
+
         .specs-table th,
         .specs-table td {
             text-align: left;
@@ -229,17 +247,17 @@
             border-bottom: 1px solid #E2E8F0;
             font-size: 14px;
         }
-        
+
         .specs-table th {
             background: #F8FAFC;
             font-weight: 600;
             color: #1E3A5F;
         }
-        
+
         .specs-table td {
             color: #64748B;
         }
-        
+
         .specs-table code {
             font-family: 'DM Sans', monospace;
             background: #F1F5F9;
@@ -252,7 +270,7 @@
 <body>
     <h1>FundOpsHQ Brand Kit</h1>
     <p class="subtitle">Visual identity guidelines for FundOpsHQ and FundOpsHQ Interviews</p>
-    
+
     <!-- Color Palette -->
     <div class="section">
         <h2>Color Palette</h2>
@@ -299,11 +317,11 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Typography -->
     <div class="section">
         <h2>Typography</h2>
-        
+
         <div class="font-specimen">
             <div class="font-name">Headings — DM Sans</div>
             <div class="font-display dm-sans" style="font-weight: 700;">FundOpsHQ</div>
@@ -313,7 +331,7 @@
                 <span class="font-weight-sample dm-sans" style="font-weight: 700;">Bold 700</span>
             </div>
         </div>
-        
+
         <div class="font-specimen">
             <div class="font-name">Body — Inter</div>
             <div class="font-display inter" style="font-size: 32px; font-weight: 400;">The knowledge hub for investment fund operations.</div>
@@ -323,7 +341,7 @@
                 <span class="font-weight-sample inter" style="font-weight: 600;">Semibold 600</span>
             </div>
         </div>
-        
+
         <table class="specs-table">
             <thead>
                 <tr>
@@ -367,105 +385,102 @@
             </tbody>
         </table>
     </div>
-    
+
     <!-- Logos -->
     <div class="section">
         <h2>Logo — Primary Wordmark</h2>
         <div class="logo-grid">
             <div class="logo-card">
                 <div class="logo-display light">
-                    <svg width="280" height="48" viewBox="0 0 280 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <text x="0" y="36" font-family="DM Sans, sans-serif" font-size="36" font-weight="700" fill="#1E3A5F">Fund</text>
-                        <text x="78" y="36" font-family="DM Sans, sans-serif" font-size="36" font-weight="700" fill="#1E3A5F">Ops</text>
-                        <text x="148" y="36" font-family="DM Sans, sans-serif" font-size="36" font-weight="700" fill="#B8860B">HQ</text>
-                    </svg>
+                    <img src="logos/fundopshq-primary-light.svg" alt="FundOpsHQ logo - light background">
                 </div>
-                <div class="logo-label">Primary — Light background</div>
+                <div class="logo-label">
+                    <span>Primary — Light background</span>
+                    <a href="logos/fundopshq-primary-light.svg" download class="download-link">Download SVG</a>
+                </div>
             </div>
             <div class="logo-card">
                 <div class="logo-display dark">
-                    <svg width="280" height="48" viewBox="0 0 280 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <text x="0" y="36" font-family="DM Sans, sans-serif" font-size="36" font-weight="700" fill="#FFFFFF">Fund</text>
-                        <text x="78" y="36" font-family="DM Sans, sans-serif" font-size="36" font-weight="700" fill="#FFFFFF">Ops</text>
-                        <text x="148" y="36" font-family="DM Sans, sans-serif" font-size="36" font-weight="700" fill="#B8860B">HQ</text>
-                    </svg>
+                    <img src="logos/fundopshq-primary-dark.svg" alt="FundOpsHQ logo - dark background">
                 </div>
-                <div class="logo-label">Primary — Dark background</div>
+                <div class="logo-label">
+                    <span>Primary — Dark background</span>
+                    <a href="logos/fundopshq-primary-dark.svg" download class="download-link">Download SVG</a>
+                </div>
             </div>
             <div class="logo-card">
                 <div class="logo-display light">
-                    <svg width="280" height="48" viewBox="0 0 280 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <text x="0" y="36" font-family="DM Sans, sans-serif" font-size="36" font-weight="700" fill="#1E3A5F">FundOpsHQ</text>
-                    </svg>
+                    <img src="logos/fundopshq-mono-light.svg" alt="FundOpsHQ logo monochrome - light background">
                 </div>
-                <div class="logo-label">Monochrome — Light background</div>
+                <div class="logo-label">
+                    <span>Monochrome — Light background</span>
+                    <a href="logos/fundopshq-mono-light.svg" download class="download-link">Download SVG</a>
+                </div>
             </div>
             <div class="logo-card">
                 <div class="logo-display dark">
-                    <svg width="280" height="48" viewBox="0 0 280 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <text x="0" y="36" font-family="DM Sans, sans-serif" font-size="36" font-weight="700" fill="#FFFFFF">FundOpsHQ</text>
-                    </svg>
+                    <img src="logos/fundopshq-mono-dark.svg" alt="FundOpsHQ logo monochrome - dark background">
                 </div>
-                <div class="logo-label">Monochrome — Dark background</div>
+                <div class="logo-label">
+                    <span>Monochrome — Dark background</span>
+                    <a href="logos/fundopshq-mono-dark.svg" download class="download-link">Download SVG</a>
+                </div>
             </div>
         </div>
     </div>
-    
+
     <!-- Short Mark -->
     <div class="section">
         <h2>Logo — Short Mark (FOHQ)</h2>
         <div class="logo-grid">
             <div class="logo-card">
                 <div class="logo-display light">
-                    <svg width="140" height="56" viewBox="0 0 140 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <text x="0" y="44" font-family="DM Sans, sans-serif" font-size="44" font-weight="700" fill="#1E3A5F">FO</text>
-                        <text x="62" y="44" font-family="DM Sans, sans-serif" font-size="44" font-weight="700" fill="#B8860B">HQ</text>
-                    </svg>
+                    <img src="logos/fohq-primary-light.svg" alt="FOHQ short mark - light background">
                 </div>
-                <div class="logo-label">Short mark — Light background</div>
+                <div class="logo-label">
+                    <span>Short mark — Light background</span>
+                    <a href="logos/fohq-primary-light.svg" download class="download-link">Download SVG</a>
+                </div>
             </div>
             <div class="logo-card">
                 <div class="logo-display dark">
-                    <svg width="140" height="56" viewBox="0 0 140 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <text x="0" y="44" font-family="DM Sans, sans-serif" font-size="44" font-weight="700" fill="#FFFFFF">FO</text>
-                        <text x="62" y="44" font-family="DM Sans, sans-serif" font-size="44" font-weight="700" fill="#B8860B">HQ</text>
-                    </svg>
+                    <img src="logos/fohq-primary-dark.svg" alt="FOHQ short mark - dark background">
                 </div>
-                <div class="logo-label">Short mark — Dark background</div>
+                <div class="logo-label">
+                    <span>Short mark — Dark background</span>
+                    <a href="logos/fohq-primary-dark.svg" download class="download-link">Download SVG</a>
+                </div>
             </div>
             <div class="logo-card">
                 <div class="logo-display gray">
-                    <svg width="140" height="56" viewBox="0 0 140 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <text x="0" y="44" font-family="DM Sans, sans-serif" font-size="44" font-weight="700" fill="#1E3A5F">FOHQ</text>
-                    </svg>
+                    <img src="logos/fohq-mono-light.svg" alt="FOHQ short mark monochrome">
                 </div>
-                <div class="logo-label">Short mark monochrome</div>
+                <div class="logo-label">
+                    <span>Short mark monochrome</span>
+                    <a href="logos/fohq-mono-light.svg" download class="download-link">Download SVG</a>
+                </div>
             </div>
             <div class="logo-card">
                 <div class="logo-display dark">
-                    <svg width="140" height="56" viewBox="0 0 140 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <text x="0" y="44" font-family="DM Sans, sans-serif" font-size="44" font-weight="700" fill="#FFFFFF">FOHQ</text>
-                    </svg>
+                    <img src="logos/fohq-mono-dark.svg" alt="FOHQ short mark monochrome - dark">
                 </div>
-                <div class="logo-label">Short mark monochrome — Dark</div>
+                <div class="logo-label">
+                    <span>Short mark monochrome — Dark</span>
+                    <a href="logos/fohq-mono-dark.svg" download class="download-link">Download SVG</a>
+                </div>
             </div>
         </div>
     </div>
-    
+
     <!-- Podcast Logo -->
     <div class="section">
         <h2>Logo — FundOpsHQ Interviews (Podcast)</h2>
         <div class="podcast-logo">
-            <svg width="320" height="80" viewBox="0 0 320 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <text x="0" y="36" font-family="DM Sans, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">Fund</text>
-                <text x="70" y="36" font-family="DM Sans, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">Ops</text>
-                <text x="132" y="36" font-family="DM Sans, sans-serif" font-size="32" font-weight="700" fill="#B8860B">HQ</text>
-                <text x="0" y="68" font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#94A3B8" letter-spacing="3">INTERVIEWS</text>
-            </svg>
+            <img src="logos/fundopshq-interviews.svg" alt="FundOpsHQ Interviews podcast logo">
         </div>
-        <p class="podcast-note">For podcast cover art, use this stacked layout on the navy background. Minimum recommended size: 3000x3000px for podcast platforms.</p>
+        <p class="podcast-note">For podcast cover art, use this stacked layout on the navy background. Minimum recommended size: 3000x3000px for podcast platforms. <a href="logos/fundopshq-interviews.svg" download class="download-link">Download SVG</a></p>
     </div>
-    
+
     <!-- Usage Guidelines -->
     <div class="section">
         <h2>Usage Guidelines</h2>
@@ -496,7 +511,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Quick Reference -->
     <div class="section">
         <h2>Quick Reference</h2>
@@ -543,6 +558,6 @@
             </tbody>
         </table>
     </div>
-    
+
 </body>
 </html>
