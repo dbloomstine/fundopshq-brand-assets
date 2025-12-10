@@ -1,0 +1,40 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+  <!-- YouTube Thumbnail Template - 1280x720 -->
+  <!-- Variables: TITLE_LINE_1, TITLE_LINE_2, SUBTITLE, EPISODE_NUM -->
+
+  <defs>
+    <linearGradient id="ytBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A5F"/>
+      <stop offset="100%" stop-color="#152d4a"/>
+    </linearGradient>
+    <pattern id="ytStripes" patternUnits="userSpaceOnUse" width="20" height="20" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="20" stroke="#264466" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#ytBg)"/>
+  <rect width="1280" height="720" fill="url(#ytStripes)" opacity="0.3"/>
+
+  <!-- Content Area -->
+  <g transform="translate(80, 0)">
+    <!-- Episode Badge -->
+    <rect x="0" y="80" width="120" height="32" rx="4" fill="#264466"/>
+    <text x="60" y="102" text-anchor="middle" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" letter-spacing="0.05em">EPISODE 01</text>
+
+    <!-- Title -->
+    <text x="0" y="280" fill="#FFFFFF" font-family="DM Sans, system-ui, sans-serif" font-size="72" font-weight="700" letter-spacing="-0.02em">Title Line One</text>
+    <text x="0" y="370" fill="#FFFFFF" font-family="DM Sans, system-ui, sans-serif" font-size="72" font-weight="700" letter-spacing="-0.02em">Goes Here</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="460" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="500">with Guest Name, Title at Company</text>
+  </g>
+
+  <!-- Logo Bottom Right -->
+  <rect x="1000" y="620" width="240" height="60" rx="8" fill="#152d4a" opacity="0.9"/>
+  <text x="1120" y="660" text-anchor="middle" fill="#FFFFFF" font-family="DM Sans, system-ui, sans-serif" font-size="28" font-weight="700">FundOpsHQ</text>
+
+  <!-- Play Button Indicator (optional) -->
+  <circle cx="1180" cy="360" r="50" fill="#FFFFFF" opacity="0.15"/>
+  <polygon points="1165,330 1165,390 1205,360" fill="#FFFFFF" opacity="0.9"/>
+</svg>

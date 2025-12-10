@@ -360,26 +360,200 @@
     "note": "Logo is fully monochrome - FundOpsHQ in single color (white on dark, navy on light)"
   },
 
+  "patterns": {
+    "diagonalStripes": {
+      "name": "Diagonal Stripes",
+      "usage": "Hero sections, podcast covers, dark backgrounds",
+      "angle": 45,
+      "spacing": "20px",
+      "strokeWidth": "1px",
+      "strokeColor": "#264466",
+      "opacity": 0.3,
+      "css": "background-image: repeating-linear-gradient(45deg, transparent, transparent 19px, rgba(38, 68, 102, 0.3) 19px, rgba(38, 68, 102, 0.3) 20px);"
+    },
+    "fineGrid": {
+      "name": "Fine Grid",
+      "usage": "Data sections, dashboards, tables",
+      "spacing": "24px",
+      "strokeWidth": "0.5px",
+      "strokeColor": "#264466",
+      "opacity": 0.4,
+      "css": "background-image: linear-gradient(rgba(38, 68, 102, 0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(38, 68, 102, 0.2) 1px, transparent 1px); background-size: 24px 24px;"
+    },
+    "dotGrid": {
+      "name": "Dot Grid",
+      "usage": "Light backgrounds, cards, subtle texture",
+      "spacing": "20px",
+      "dotSize": "2px",
+      "dotColor": "#D4CDC4",
+      "opacity": 1,
+      "css": "background-image: radial-gradient(#D4CDC4 1px, transparent 1px); background-size: 20px 20px;"
+    },
+    "horizontalLines": {
+      "name": "Horizontal Lines",
+      "usage": "Paper texture, warm backgrounds",
+      "spacing": "8px",
+      "strokeWidth": "1px",
+      "strokeColor": "#D4CDC4",
+      "css": "background-image: linear-gradient(#D4CDC4 1px, transparent 1px); background-size: 100% 8px;"
+    }
+  },
+
   "socialMedia": {
-    "ogImage": {
-      "width": 1200,
-      "height": 630,
-      "file": "exports/social/og-image-1200x630.png"
+    "youtube": {
+      "thumbnail": {
+        "width": 1280,
+        "height": 720,
+        "template": "templates/social/youtube-thumbnail.svg",
+        "description": "Video thumbnails"
+      },
+      "channelBanner": {
+        "width": 2560,
+        "height": 1440,
+        "safeArea": { "width": 1546, "height": 423 },
+        "template": "templates/social/youtube-banner.svg",
+        "description": "Channel art/banner"
+      },
+      "profilePhoto": {
+        "width": 800,
+        "height": 800,
+        "template": "templates/social/youtube-profile.svg",
+        "description": "Channel profile picture"
+      },
+      "endScreen": {
+        "width": 1920,
+        "height": 1080,
+        "template": "templates/social/youtube-endscreen.svg",
+        "description": "Video end screen template"
+      }
     },
-    "twitterHeader": {
-      "width": 1500,
-      "height": 500,
-      "file": "exports/social/twitter-header-1500x500.png"
+    "linkedin": {
+      "postImage": {
+        "width": 1200,
+        "height": 627,
+        "template": "templates/social/linkedin-post.svg",
+        "description": "Standard post image"
+      },
+      "banner": {
+        "width": 1584,
+        "height": 396,
+        "template": "templates/social/linkedin-banner.svg",
+        "description": "Profile/company banner"
+      },
+      "articleCover": {
+        "width": 1200,
+        "height": 644,
+        "template": "templates/social/linkedin-article.svg",
+        "description": "Article/newsletter cover"
+      },
+      "profilePhoto": {
+        "width": 400,
+        "height": 400,
+        "template": "templates/social/linkedin-profile.svg",
+        "description": "Profile picture"
+      }
     },
-    "linkedinBanner": {
-      "width": 1584,
-      "height": 396,
-      "file": "exports/social/linkedin-banner-1584x396.png"
+    "twitter": {
+      "postImage": {
+        "width": 1200,
+        "height": 675,
+        "template": "templates/social/twitter-post.svg",
+        "description": "Standard post image (16:9)"
+      },
+      "header": {
+        "width": 1500,
+        "height": 500,
+        "template": "templates/social/twitter-header.svg",
+        "description": "Profile header/banner"
+      },
+      "profilePhoto": {
+        "width": 400,
+        "height": 400,
+        "template": "templates/social/twitter-profile.svg",
+        "description": "Profile picture"
+      }
     },
-    "podcastCover": {
-      "width": 3000,
-      "height": 3000,
-      "file": "exports/logos/podcast/podcast-cover-3000x3000.png"
+    "instagram": {
+      "postSquare": {
+        "width": 1080,
+        "height": 1080,
+        "template": "templates/social/instagram-post-square.svg",
+        "description": "Square post (1:1)"
+      },
+      "postPortrait": {
+        "width": 1080,
+        "height": 1350,
+        "template": "templates/social/instagram-post-portrait.svg",
+        "description": "Portrait post (4:5)"
+      },
+      "story": {
+        "width": 1080,
+        "height": 1920,
+        "template": "templates/social/instagram-story.svg",
+        "description": "Story/Reel (9:16)"
+      },
+      "profilePhoto": {
+        "width": 320,
+        "height": 320,
+        "template": "templates/social/instagram-profile.svg",
+        "description": "Profile picture"
+      }
+    },
+    "tiktok": {
+      "video": {
+        "width": 1080,
+        "height": 1920,
+        "template": "templates/social/tiktok-video.svg",
+        "description": "Video cover (9:16)"
+      },
+      "profilePhoto": {
+        "width": 200,
+        "height": 200,
+        "template": "templates/social/tiktok-profile.svg",
+        "description": "Profile picture"
+      }
+    },
+    "podcast": {
+      "applePodcasts": {
+        "width": 3000,
+        "height": 3000,
+        "template": "templates/social/podcast-cover.svg",
+        "description": "Apple Podcasts cover art"
+      },
+      "spotify": {
+        "width": 3000,
+        "height": 3000,
+        "template": "templates/social/podcast-cover.svg",
+        "description": "Spotify cover art (same as Apple)"
+      },
+      "episodeCard": {
+        "width": 1200,
+        "height": 630,
+        "template": "templates/social/podcast-episode.svg",
+        "description": "Episode share card"
+      }
+    },
+    "og": {
+      "default": {
+        "width": 1200,
+        "height": 630,
+        "template": "templates/social/og-default.svg",
+        "description": "Default Open Graph image"
+      },
+      "article": {
+        "width": 1200,
+        "height": 630,
+        "template": "templates/social/og-article.svg",
+        "description": "Article share image"
+      }
+    },
+    "favicon": {
+      "ico": { "sizes": [16, 32, 48], "file": "exports/favicon/favicon.ico" },
+      "png16": { "width": 16, "height": 16, "file": "exports/favicon/favicon-16x16.png" },
+      "png32": { "width": 32, "height": 32, "file": "exports/favicon/favicon-32x32.png" },
+      "png192": { "width": 192, "height": 192, "file": "exports/favicon/android-chrome-192x192.png" },
+      "png512": { "width": 512, "height": 512, "file": "exports/favicon/android-chrome-512x512.png" },
+      "appleTouchIcon": { "width": 180, "height": 180, "file": "exports/favicon/apple-touch-icon.png" }
     }
   },
 

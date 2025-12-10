@@ -1,0 +1,40 @@
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+  <!-- Instagram Square Post Template - 1080x1080 (1:1) -->
+  <!-- Variables: HEADLINE, SUBTITLE, CATEGORY -->
+
+  <defs>
+    <linearGradient id="igBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A5F"/>
+      <stop offset="100%" stop-color="#152d4a"/>
+    </linearGradient>
+    <pattern id="igStripes" patternUnits="userSpaceOnUse" width="24" height="24" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="24" stroke="#264466" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1080" fill="url(#igBg)"/>
+  <rect width="1080" height="1080" fill="url(#igStripes)" opacity="0.25"/>
+
+  <!-- Top Section -->
+  <g transform="translate(60, 80)">
+    <!-- Category Badge -->
+    <rect x="0" y="0" width="160" height="40" rx="20" fill="#2d4a6f"/>
+    <text x="80" y="28" text-anchor="middle" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" letter-spacing="0.05em">HEDGE FUNDS</text>
+  </g>
+
+  <!-- Center Content -->
+  <g transform="translate(60, 380)">
+    <!-- Headline -->
+    <text x="0" y="0" fill="#FFFFFF" font-family="DM Sans, system-ui, sans-serif" font-size="64" font-weight="700" letter-spacing="-0.02em">Your Headline</text>
+    <text x="0" y="80" fill="#FFFFFF" font-family="DM Sans, system-ui, sans-serif" font-size="64" font-weight="700" letter-spacing="-0.02em">Goes Here</text>
+    <text x="0" y="160" fill="#FFFFFF" font-family="DM Sans, system-ui, sans-serif" font-size="64" font-weight="700" letter-spacing="-0.02em">Today</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="260" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="400">Supporting text or call to action</text>
+  </g>
+
+  <!-- Bottom Branding -->
+  <rect x="0" y="960" width="1080" height="120" fill="#152d4a"/>
+  <text x="540" y="1030" text-anchor="middle" fill="#FFFFFF" font-family="DM Sans, system-ui, sans-serif" font-size="32" font-weight="700">FundOpsHQ</text>
+</svg>

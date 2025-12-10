@@ -1,0 +1,29 @@
+<svg width="1584" height="396" viewBox="0 0 1584 396" xmlns="http://www.w3.org/2000/svg">
+  <!-- LinkedIn Profile/Company Banner - 1584x396 -->
+
+  <defs>
+    <linearGradient id="liBannerBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A5F"/>
+      <stop offset="100%" stop-color="#152d4a"/>
+    </linearGradient>
+    <pattern id="liBannerStripes" patternUnits="userSpaceOnUse" width="20" height="20" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="20" stroke="#264466" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1584" height="396" fill="url(#liBannerBg)"/>
+  <rect width="1584" height="396" fill="url(#liBannerStripes)" opacity="0.25"/>
+
+  <!-- Content (centered, avoiding profile photo area on left) -->
+  <g transform="translate(400, 0)">
+    <!-- Logo -->
+    <text x="392" y="170" text-anchor="middle" fill="#FFFFFF" font-family="DM Sans, system-ui, sans-serif" font-size="48" font-weight="700" letter-spacing="-0.02em">FundOpsHQ</text>
+
+    <!-- Tagline -->
+    <text x="392" y="230" text-anchor="middle" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="400">Professional Resources for Fund Operations</text>
+
+    <!-- Topics -->
+    <text x="392" y="300" text-anchor="middle" fill="#64748B" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="500">Compliance  |  Investor Relations  |  Fund Administration  |  Tax  |  Audit</text>
+  </g>
+</svg>

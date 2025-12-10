@@ -1,0 +1,41 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Article Open Graph Image - 1200x630 -->
+  <!-- Variables: CATEGORY, TITLE_LINE_1, TITLE_LINE_2, READ_TIME -->
+
+  <defs>
+    <linearGradient id="ogArtBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A5F"/>
+      <stop offset="100%" stop-color="#152d4a"/>
+    </linearGradient>
+    <pattern id="ogArtGrid" patternUnits="userSpaceOnUse" width="24" height="24">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#264466" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#ogArtBg)"/>
+  <rect width="1200" height="630" fill="url(#ogArtGrid)" opacity="0.3"/>
+
+  <!-- Left Accent -->
+  <rect x="0" y="0" width="6" height="630" fill="#3d5a7f"/>
+
+  <!-- Content -->
+  <g transform="translate(60, 0)">
+    <!-- Category Badge -->
+    <rect x="0" y="80" width="120" height="32" rx="16" fill="#2d4a6f"/>
+    <text x="60" y="102" text-anchor="middle" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600" letter-spacing="0.05em">COMPLIANCE</text>
+
+    <!-- Title -->
+    <text x="0" y="240" fill="#FFFFFF" font-family="DM Sans, system-ui, sans-serif" font-size="56" font-weight="700" letter-spacing="-0.02em">Article Title Line</text>
+    <text x="0" y="310" fill="#FFFFFF" font-family="DM Sans, system-ui, sans-serif" font-size="56" font-weight="700" letter-spacing="-0.02em">One Goes Here</text>
+
+    <!-- Read Time -->
+    <text x="0" y="400" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="400">8 min read</text>
+
+    <!-- Divider -->
+    <line x1="0" y1="480" x2="300" y2="480" stroke="#2d4a6f" stroke-width="2"/>
+
+    <!-- Logo -->
+    <text x="0" y="550" fill="#FFFFFF" font-family="DM Sans, system-ui, sans-serif" font-size="28" font-weight="700">FundOpsHQ</text>
+  </g>
+</svg>

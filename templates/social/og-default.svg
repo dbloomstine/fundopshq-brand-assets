@@ -1,0 +1,27 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Default Open Graph Image - 1200x630 -->
+  <!-- Used when no specific OG image is set -->
+
+  <defs>
+    <linearGradient id="ogBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A5F"/>
+      <stop offset="100%" stop-color="#152d4a"/>
+    </linearGradient>
+    <pattern id="ogStripes" patternUnits="userSpaceOnUse" width="20" height="20" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="20" stroke="#264466" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#ogBg)"/>
+  <rect width="1200" height="630" fill="url(#ogStripes)" opacity="0.3"/>
+
+  <!-- Centered Logo -->
+  <text x="600" y="280" text-anchor="middle" fill="#FFFFFF" font-family="DM Sans, system-ui, sans-serif" font-size="72" font-weight="700" letter-spacing="-0.02em">FundOpsHQ</text>
+
+  <!-- Tagline -->
+  <text x="600" y="360" text-anchor="middle" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="400">Professional Resources for Fund Operations</text>
+
+  <!-- URL -->
+  <text x="600" y="520" text-anchor="middle" fill="#64748B" font-family="Inter, system-ui, sans-serif" font-size="20">fundopshq.com</text>
+</svg>

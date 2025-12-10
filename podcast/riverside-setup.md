@@ -37,18 +37,18 @@ Use these system font fallbacks:
 | Name | Hex | Use For |
 |------|-----|---------|
 | Deep Navy | `#1E3A5F` | Backgrounds, headers |
-| Muted Gold | `#B8860B` | Accents, highlights |
+| Slate Gray | `#64748B` | Accents, secondary elements |
 | White | `#FFFFFF` | Primary text on dark |
-| Slate Gray | `#64748B` | Body text on light |
 | Light Gray | `#F1F5F9` | Alt backgrounds |
 | Caption Gray | `#94A3B8` | Secondary text, captions |
+| Navy Light | `#2d4a6f` | Hover states, highlights |
 
 ### For Riverside Caption Styling
 
 **Recommended Settings:**
 - Background: `#1E3A5F` (Deep Navy) at 90% opacity
 - Text Color: `#FFFFFF` (White)
-- Highlight/Active Word: `#B8860B` (Muted Gold)
+- Highlight/Active Word: `#94A3B8` (Light Gray) or bold white
 - Font Size: 24-32px depending on video resolution
 
 ## Caption Style Options
@@ -63,7 +63,7 @@ Use these system font fallbacks:
 - Navy background box (`#1E3A5F`)
 - White text
 - Rounded corners (4px)
-- Gold accent for active word
+- Light accent for active word
 
 ### Option C: Subtitle Style
 - Semi-transparent dark bar at bottom
@@ -83,7 +83,7 @@ When exporting clips for social:
 **Brand Elements to Include:**
 - FundOpsHQ logo (use `logos/fundopshq-primary-dark.svg` on navy backgrounds)
 - Or FOHQ short mark for small spaces (`logos/fohq-primary-dark.svg`)
-- Muted gold accent where possible
+- Keep branding subtle and professional
 
 ## Recording Background
 

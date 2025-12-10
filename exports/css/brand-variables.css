@@ -1,0 +1,172 @@
+/**
+ * FundOpsHQ Brand Variables
+ * Version: 2.0.0
+ *
+ * Copy these CSS custom properties into your project's :root or base stylesheet.
+ * Usage: var(--fohq-navy) or var(--fohq-text-primary)
+ */
+
+:root {
+  /* ============================================
+     COLORS
+     ============================================ */
+
+  /* Navy Scale */
+  --fohq-navy-dark: #152d4a;
+  --fohq-navy: #1E3A5F;
+  --fohq-navy-light: #2d4a6f;
+  --fohq-navy-lighter: #3d5a7f;
+
+  /* Gray Scale (Cool) */
+  --fohq-slate: #64748B;
+  --fohq-gray: #94A3B8;
+  --fohq-gray-light: #CBD5E1;
+  --fohq-gray-lighter: #E2E8F0;
+  --fohq-gray-cool: #F1F5F9;
+
+  /* Warm Neutrals */
+  --fohq-cream: #FAF9F7;
+  --fohq-beige: #E8E4DE;
+  --fohq-stone: #D4CDC4;
+  --fohq-taupe: #A39E93;
+  --fohq-warm-dark: #78736A;
+
+  /* Base */
+  --fohq-white: #FFFFFF;
+  --fohq-black: #0f172a;
+
+  /* Semantic Colors */
+  --fohq-text-primary: #1E3A5F;
+  --fohq-text-secondary: #64748B;
+  --fohq-text-muted: #94A3B8;
+  --fohq-text-inverse: #FFFFFF;
+
+  --fohq-bg-primary: #FFFFFF;
+  --fohq-bg-secondary: #F1F5F9;
+  --fohq-bg-warm: #FAF9F7;
+  --fohq-bg-dark: #1E3A5F;
+
+  --fohq-border-light: #E2E8F0;
+  --fohq-border-medium: #CBD5E1;
+  --fohq-border-warm: #D4CDC4;
+
+  /* ============================================
+     TYPOGRAPHY
+     ============================================ */
+
+  /* Font Families */
+  --fohq-font-heading: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --fohq-font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --fohq-font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+  /* Font Sizes */
+  --fohq-text-xs: 0.75rem;    /* 12px */
+  --fohq-text-sm: 0.875rem;   /* 14px */
+  --fohq-text-base: 1rem;     /* 16px */
+  --fohq-text-lg: 1.125rem;   /* 18px */
+  --fohq-text-xl: 1.25rem;    /* 20px */
+  --fohq-text-2xl: 1.5rem;    /* 24px */
+  --fohq-text-3xl: 2.25rem;   /* 36px */
+  --fohq-text-4xl: 3rem;      /* 48px */
+  --fohq-text-5xl: 4rem;      /* 64px */
+
+  /* Font Weights */
+  --fohq-font-regular: 400;
+  --fohq-font-medium: 500;
+  --fohq-font-semibold: 600;
+  --fohq-font-bold: 700;
+
+  /* Line Heights */
+  --fohq-leading-tight: 1.1;
+  --fohq-leading-snug: 1.25;
+  --fohq-leading-normal: 1.5;
+  --fohq-leading-relaxed: 1.625;
+  --fohq-leading-loose: 1.75;
+
+  /* Letter Spacing */
+  --fohq-tracking-tight: -0.02em;
+  --fohq-tracking-normal: 0;
+  --fohq-tracking-wide: 0.05em;
+  --fohq-tracking-wider: 0.1em;
+
+  /* ============================================
+     SPACING
+     ============================================ */
+
+  --fohq-space-0: 0;
+  --fohq-space-1: 0.25rem;   /* 4px */
+  --fohq-space-2: 0.5rem;    /* 8px */
+  --fohq-space-3: 0.75rem;   /* 12px */
+  --fohq-space-4: 1rem;      /* 16px */
+  --fohq-space-5: 1.25rem;   /* 20px */
+  --fohq-space-6: 1.5rem;    /* 24px */
+  --fohq-space-8: 2rem;      /* 32px */
+  --fohq-space-10: 2.5rem;   /* 40px */
+  --fohq-space-12: 3rem;     /* 48px */
+  --fohq-space-16: 4rem;     /* 64px */
+  --fohq-space-20: 5rem;     /* 80px */
+  --fohq-space-24: 6rem;     /* 96px */
+
+  /* ============================================
+     BORDERS & RADIUS
+     ============================================ */
+
+  --fohq-radius-none: 0;
+  --fohq-radius-sm: 0.25rem;   /* 4px */
+  --fohq-radius-md: 0.5rem;    /* 8px */
+  --fohq-radius-lg: 0.75rem;   /* 12px */
+  --fohq-radius-xl: 1rem;      /* 16px */
+  --fohq-radius-2xl: 1.5rem;   /* 24px */
+  --fohq-radius-full: 9999px;
+
+  /* ============================================
+     SHADOWS
+     ============================================ */
+
+  --fohq-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --fohq-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --fohq-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --fohq-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --fohq-shadow-card: 0 2px 8px rgba(30, 58, 95, 0.08);
+  --fohq-shadow-card-hover: 0 8px 24px rgba(30, 58, 95, 0.12);
+
+  /* ============================================
+     TRANSITIONS
+     ============================================ */
+
+  --fohq-transition-fast: 150ms ease;
+  --fohq-transition-normal: 200ms ease;
+  --fohq-transition-slow: 300ms ease;
+
+  /* ============================================
+     Z-INDEX
+     ============================================ */
+
+  --fohq-z-dropdown: 1000;
+  --fohq-z-sticky: 1100;
+  --fohq-z-fixed: 1200;
+  --fohq-z-modal-backdrop: 1300;
+  --fohq-z-modal: 1400;
+  --fohq-z-popover: 1500;
+  --fohq-z-tooltip: 1600;
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+/* Text Colors */
+.fohq-text-navy { color: var(--fohq-navy); }
+.fohq-text-slate { color: var(--fohq-slate); }
+.fohq-text-gray { color: var(--fohq-gray); }
+.fohq-text-white { color: var(--fohq-white); }
+
+/* Background Colors */
+.fohq-bg-navy { background-color: var(--fohq-navy); }
+.fohq-bg-cream { background-color: var(--fohq-cream); }
+.fohq-bg-white { background-color: var(--fohq-white); }
+.fohq-bg-cool { background-color: var(--fohq-gray-cool); }
+
+/* Font Families */
+.fohq-font-heading { font-family: var(--fohq-font-heading); }
+.fohq-font-body { font-family: var(--fohq-font-body); }

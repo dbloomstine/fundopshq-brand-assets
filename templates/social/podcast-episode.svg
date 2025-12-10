@@ -1,0 +1,42 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Podcast Episode Share Card - 1200x630 -->
+  <!-- Variables: EPISODE_NUM, TITLE_LINE_1, TITLE_LINE_2, GUEST_NAME, GUEST_TITLE -->
+
+  <defs>
+    <linearGradient id="podBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A5F"/>
+      <stop offset="100%" stop-color="#0f1f30"/>
+    </linearGradient>
+    <pattern id="podStripes" patternUnits="userSpaceOnUse" width="20" height="20" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="20" stroke="#264466" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#podBg)"/>
+  <rect width="1200" height="630" fill="url(#podStripes)" opacity="0.3"/>
+
+  <!-- Left Content -->
+  <g transform="translate(60, 0)">
+    <!-- Show Title -->
+    <text x="0" y="80" fill="#FFFFFF" font-family="DM Sans, system-ui, sans-serif" font-size="28" font-weight="700">FundOpsHQ<tspan fill="#64748B" font-size="24" font-weight="500"> Interviews</tspan></text>
+
+    <!-- Episode Number -->
+    <text x="0" y="220" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="500" letter-spacing="0.1em">EPISODE 01</text>
+
+    <!-- Episode Title -->
+    <text x="0" y="300" fill="#FFFFFF" font-family="DM Sans, system-ui, sans-serif" font-size="52" font-weight="700" letter-spacing="-0.02em">Episode Title</text>
+    <text x="0" y="365" fill="#FFFFFF" font-family="DM Sans, system-ui, sans-serif" font-size="52" font-weight="700" letter-spacing="-0.02em">Goes Here</text>
+
+    <!-- Guest Info -->
+    <text x="0" y="460" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="500">with Guest Name</text>
+    <text x="0" y="495" fill="#64748B" font-family="Inter, system-ui, sans-serif" font-size="18">Title at Company</text>
+
+    <!-- Platforms -->
+    <text x="0" y="580" fill="#64748B" font-family="Inter, system-ui, sans-serif" font-size="14">Available on Apple Podcasts, Spotify, and YouTube</text>
+  </g>
+
+  <!-- Play Button Right Side -->
+  <circle cx="1020" cy="315" r="70" fill="#2d4a6f"/>
+  <polygon points="1000,280 1000,350 1055,315" fill="#FFFFFF"/>
+</svg>

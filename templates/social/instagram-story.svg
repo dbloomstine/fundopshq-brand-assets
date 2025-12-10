@@ -1,0 +1,45 @@
+<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+  <!-- Instagram Story / TikTok Template - 1080x1920 (9:16) -->
+  <!-- Variables: HEADLINE, SUBTITLE, CTA -->
+
+  <defs>
+    <linearGradient id="storyBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A5F"/>
+      <stop offset="50%" stop-color="#152d4a"/>
+      <stop offset="100%" stop-color="#0f1f30"/>
+    </linearGradient>
+    <pattern id="storyDots" patternUnits="userSpaceOnUse" width="30" height="30">
+      <circle cx="15" cy="15" r="1.5" fill="#2d4a6f"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1920" fill="url(#storyBg)"/>
+  <rect width="1080" height="1920" fill="url(#storyDots)" opacity="0.3"/>
+
+  <!-- Top Logo -->
+  <text x="540" y="180" text-anchor="middle" fill="#FFFFFF" font-family="DM Sans, system-ui, sans-serif" font-size="36" font-weight="700">FundOpsHQ</text>
+
+  <!-- Center Content -->
+  <g transform="translate(60, 700)">
+    <!-- Category -->
+    <text x="0" y="0" fill="#64748B" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="600" letter-spacing="0.1em">NEW ARTICLE</text>
+
+    <!-- Headline -->
+    <text x="0" y="100" fill="#FFFFFF" font-family="DM Sans, system-ui, sans-serif" font-size="72" font-weight="700" letter-spacing="-0.02em">Your Big</text>
+    <text x="0" y="190" fill="#FFFFFF" font-family="DM Sans, system-ui, sans-serif" font-size="72" font-weight="700" letter-spacing="-0.02em">Headline</text>
+    <text x="0" y="280" fill="#FFFFFF" font-family="DM Sans, system-ui, sans-serif" font-size="72" font-weight="700" letter-spacing="-0.02em">Here</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="400" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="400">Supporting text that provides</text>
+    <text x="0" y="445" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="400">additional context</text>
+  </g>
+
+  <!-- CTA Button -->
+  <rect x="60" y="1600" width="960" height="80" rx="40" fill="#FFFFFF"/>
+  <text x="540" y="1652" text-anchor="middle" fill="#1E3A5F" font-family="DM Sans, system-ui, sans-serif" font-size="24" font-weight="700">Read Full Article</text>
+
+  <!-- Swipe Up Indicator -->
+  <text x="540" y="1780" text-anchor="middle" fill="#64748B" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="500">Swipe up to read</text>
+  <path d="M530 1820 L540 1800 L550 1820" fill="none" stroke="#64748B" stroke-width="2" stroke-linecap="round"/>
+</svg>

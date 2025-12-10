@@ -11,10 +11,10 @@ Interactive brand kit: https://dbloomstine.github.io/fundopshq-brand-assets/
 |------|-----|--------------|-------|
 | Deep Navy | `#1E3A5F` | `--color-deep-navy` | Primary brand, headers, buttons, dark backgrounds |
 | White | `#FFFFFF` | `--color-white` | Primary backgrounds, text on dark |
-| Slate Gray | `#64748B` | `--color-slate-gray` | Body text, secondary elements |
-| Muted Gold | `#B8860B` | `--color-muted-gold` | Accents, highlights, CTAs, "HQ" in logo |
+| Slate Gray | `#64748B` | `--color-slate-gray` | Body text, secondary elements, "HQ" accent (light bg) |
 | Light Gray | `#F1F5F9` | `--color-light-gray` | Alt backgrounds, cards, sections |
 | Caption Gray | `#94A3B8` | `--color-caption-gray` | Captions, metadata, secondary text |
+| Navy Light | `#2d4a6f` | `--color-navy-light` | Hover states, subtle variations |
 
 ### CSS Variables
 
@@ -23,9 +23,9 @@ Interactive brand kit: https://dbloomstine.github.io/fundopshq-brand-assets/
   --color-deep-navy: #1E3A5F;
   --color-white: #FFFFFF;
   --color-slate-gray: #64748B;
-  --color-muted-gold: #B8860B;
   --color-light-gray: #F1F5F9;
   --color-caption-gray: #94A3B8;
+  --color-navy-light: #2d4a6f;
 }
 ```
 
@@ -35,9 +35,9 @@ Interactive brand kit: https://dbloomstine.github.io/fundopshq-brand-assets/
 colors: {
   'deep-navy': '#1E3A5F',
   'slate-gray': '#64748B',
-  'muted-gold': '#B8860B',
   'light-gray': '#F1F5F9',
   'caption-gray': '#94A3B8',
+  'navy-light': '#2d4a6f',
 }
 ```
 
@@ -78,8 +78,8 @@ h1, h2, h3, h4, h5, h6 {
 ## Logo Files
 
 ### Full Wordmark (FundOpsHQ)
-- `fundopshq-primary-light.svg` - Light backgrounds (navy FundOps + gold HQ)
-- `fundopshq-primary-dark.svg` - Dark backgrounds (white FundOps + gold HQ)
+- `fundopshq-primary-light.svg` - Light backgrounds (navy FundOps + slate HQ)
+- `fundopshq-primary-dark.svg` - Dark backgrounds (all white, monochrome)
 - `fundopshq-mono-light.svg` - Single color, light backgrounds (all navy)
 - `fundopshq-mono-dark.svg` - Single color, dark backgrounds (all white)
 
@@ -120,7 +120,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-accent {
-  background: #B8860B;
+  background: #64748B;
   color: white;
 }
 ```
@@ -148,7 +148,7 @@ a {
 }
 
 a:hover {
-  color: #B8860B;
+  color: #2d4a6f;
 }
 ```
 

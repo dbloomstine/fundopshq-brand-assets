@@ -31,10 +31,10 @@ Vector source files (SVG) are in the root directories:
 |-------|-----|-------|
 | Deep Navy | `#1E3A5F` | Primary brand color, headers, buttons |
 | White | `#FFFFFF` | Primary background, clean space |
-| Slate Gray | `#64748B` | Body text, secondary elements |
-| Muted Gold | `#B8860B` | Accent, highlights, CTAs |
+| Slate Gray | `#64748B` | Body text, secondary elements, HQ accent |
 | Light Gray | `#F1F5F9` | Alt backgrounds, cards, sections |
 | Caption Gray | `#94A3B8` | Captions, secondary text |
+| Navy Light | `#2d4a6f` | Hover states, subtle variations |
 
 ### CSS Variables
 
@@ -43,9 +43,9 @@ Vector source files (SVG) are in the root directories:
   --color-deep-navy: #1E3A5F;
   --color-white: #FFFFFF;
   --color-slate-gray: #64748B;
-  --color-muted-gold: #B8860B;
   --color-light-gray: #F1F5F9;
   --color-caption-gray: #94A3B8;
+  --color-navy-light: #2d4a6f;
 }
 ```
 

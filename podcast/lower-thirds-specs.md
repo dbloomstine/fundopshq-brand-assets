@@ -20,8 +20,8 @@ Design specifications for name/title overlays in FundOpsHQ Interviews podcast vi
 - **Corner Radius:** 4px
 - **Padding:** 20px horizontal, 16px vertical
 
-### Gold Accent Line
-- **Color:** Muted Gold `#B8860B`
+### Accent Line
+- **Color:** Navy Light `#2d4a6f`
 - **Width:** 4px
 - **Position:** Left edge of the bar (full height)
 
@@ -52,7 +52,7 @@ Design specifications for name/title overlays in FundOpsHQ Interviews podcast vi
 │ ▌ CFO, ABC Capital Partners        │  ← Inter Regular 18px Gray
 └────────────────────────────────────┘
   ↑
-  Gold accent bar (#B8860B)
+  Navy accent bar (#2d4a6f)
 ```
 
 ## Animation Suggestions
@@ -80,7 +80,7 @@ Keep lower thirds within these safe areas:
 | Element | Hex | RGB |
 |---------|-----|-----|
 | Background | `#1E3A5F` | 30, 58, 95 |
-| Accent | `#B8860B` | 184, 134, 11 |
+| Accent | `#2d4a6f` | 45, 74, 111 |
 | Name Text | `#FFFFFF` | 255, 255, 255 |
 | Title Text | `#94A3B8` | 148, 163, 184 |
 

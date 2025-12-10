@@ -1,0 +1,18 @@
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Universal Square Profile Image - 800x800 -->
+  <!-- Works for: YouTube (800x800), LinkedIn (400x400), Twitter (400x400), Instagram (320x320), TikTok (200x200) -->
+  <!-- Scale down as needed -->
+
+  <defs>
+    <linearGradient id="profBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A5F"/>
+      <stop offset="100%" stop-color="#152d4a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="800" fill="url(#profBg)"/>
+
+  <!-- Centered Lettermark -->
+  <text x="400" y="480" text-anchor="middle" fill="#FFFFFF" font-family="DM Sans, system-ui, sans-serif" font-size="400" font-weight="700">F</text>
+</svg>

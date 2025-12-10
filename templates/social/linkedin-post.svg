@@ -1,0 +1,36 @@
+<svg width="1200" height="627" viewBox="0 0 1200 627" xmlns="http://www.w3.org/2000/svg">
+  <!-- LinkedIn Post Image Template - 1200x627 -->
+  <!-- Variables: HEADLINE, SUBHEADLINE, CATEGORY -->
+
+  <defs>
+    <linearGradient id="liBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A5F"/>
+      <stop offset="100%" stop-color="#152d4a"/>
+    </linearGradient>
+    <pattern id="liDots" patternUnits="userSpaceOnUse" width="24" height="24">
+      <circle cx="12" cy="12" r="1.5" fill="#2d4a6f"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="627" fill="url(#liBg)"/>
+  <rect width="1200" height="627" fill="url(#liDots)" opacity="0.4"/>
+
+  <!-- Category Badge -->
+  <rect x="60" y="60" width="140" height="36" rx="18" fill="#2d4a6f"/>
+  <text x="130" y="85" text-anchor="middle" fill="#FFFFFF" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="600" letter-spacing="0.05em">HEDGE FUNDS</text>
+
+  <!-- Headline -->
+  <text x="60" y="280" fill="#FFFFFF" font-family="DM Sans, system-ui, sans-serif" font-size="56" font-weight="700" letter-spacing="-0.02em">Your Compelling</text>
+  <text x="60" y="350" fill="#FFFFFF" font-family="DM Sans, system-ui, sans-serif" font-size="56" font-weight="700" letter-spacing="-0.02em">Headline Here</text>
+
+  <!-- Subheadline -->
+  <text x="60" y="420" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="400">Supporting text that adds context to the headline</text>
+
+  <!-- Divider -->
+  <line x1="60" y1="500" x2="400" y2="500" stroke="#2d4a6f" stroke-width="2"/>
+
+  <!-- Logo and CTA -->
+  <text x="60" y="560" fill="#FFFFFF" font-family="DM Sans, system-ui, sans-serif" font-size="24" font-weight="700">FundOpsHQ</text>
+  <text x="60" y="590" fill="#64748B" font-family="Inter, system-ui, sans-serif" font-size="16">fundopshq.com</text>
+</svg>
