@@ -2,6 +2,12 @@
 
 Official brand assets for FundOpsHQ - the trusted resource for fund operations professionals.
 
+## Quick Links
+
+- **Visual Brand Guide**: Open `index.html` in a browser for the interactive brand guide
+- **Design Tokens**: `brand-tokens.json` for programmatic access to colors, typography, spacing
+- **AI Reference**: `.claude/skills/fundopshq-brand.md` for Claude Code integration
+
 ## Quick Start
 
 ### Using Pre-exported Assets
@@ -15,7 +21,8 @@ exports/
 │   ├── fohq/        # Short mark (FOHQ)
 │   └── podcast/     # Podcast branding
 ├── favicon/         # Favicon set for web
-└── social/          # Social media templates
+└── social/          # Social media templates & exports
+    └── templates/   # PNG exports of social templates
 ```
 
 ### Using Source Files
@@ -24,6 +31,7 @@ Vector source files (SVG) are in the root directories:
 - `/logos` - All logo variants
 - `/podcast` - Podcast cover and specs
 - `/patterns` - Background patterns
+- `/templates/social` - Social media template SVGs
 
 ## Color Palette
 
@@ -134,7 +142,14 @@ If you modify source SVG files, regenerate exports:
 
 ```bash
 npm install
-node scripts/export-assets.js
+
+# Export all assets (logos, podcast cover, social templates)
+npm run export
+
+# Or run individual exports:
+npm run export:logos      # Logo PNGs
+npm run export:favicon    # Favicon set
+npm run export:social     # Social media templates
 ```
 
 ## File Structure
@@ -142,11 +157,13 @@ node scripts/export-assets.js
 ```
 fundopshq-brand-assets/
 ├── README.md
-├── index.html              # Interactive brand kit
+├── index.html              # Interactive brand guide (main entry point)
+├── brand-tokens.json       # Design tokens for programmatic use
 ├── logos/                  # SVG source files
-│   ├── fundopshq-*.svg
-│   ├── fohq-*.svg
-│   └── fundopshq-interviews.svg
+│   ├── fundopshq-*.svg     # Full wordmark variants
+│   ├── fohq-*.svg          # Short mark variants
+│   ├── fundopshq-interviews.svg
+│   └── favicon-source.svg  # Favicon source
 ├── podcast/
 │   ├── cover-3000x3000.svg
 │   ├── EXPORT-INSTRUCTIONS.md
@@ -154,12 +171,18 @@ fundopshq-brand-assets/
 │   └── riverside-setup.md
 ├── patterns/
 │   └── diagonal-stripes.svg
-├── exports/                # Pre-generated assets
+├── templates/
+│   └── social/             # Social media template SVGs
+├── exports/                # Pre-generated PNG assets
 │   ├── logos/
 │   ├── favicon/
 │   └── social/
 ├── fonts/                  # Font files (for build tools)
-└── scripts/                # Build scripts
+├── scripts/                # Build/export scripts
+├── archive/                # Deprecated files (for reference)
+└── .claude/
+    └── skills/
+        └── fundopshq-brand.md  # Claude Code AI reference
 ```
 
 ## License

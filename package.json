@@ -1,9 +1,14 @@
 {
   "name": "fundopshq-brand-assets",
-  "version": "1.0.0",
-  "description": "",
+  "version": "2.0.0",
+  "description": "Official brand assets for FundOpsHQ - monochrome palette",
   "main": "index.js",
   "scripts": {
+    "export": "npm run export:logos && npm run export:favicon && npm run export:social",
+    "export:logos": "node scripts/export-assets.js",
+    "export:favicon": "node scripts/export-favicon.js",
+    "export:social": "node scripts/export-social-templates.js",
+    "serve": "npx http-server -p 8080 -c-1",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -1,824 +1,2204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FundOpsHQ Brand Kit</title>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --color-navy: #1E3A5F;
-            --color-navy-dark: #152d4a;
-            --color-slate: #64748B;
-            --color-slate-dark: #475569;
-            --color-gray: #64748B;
-            --color-light: #F1F5F9;
-            --color-caption: #94A3B8;
-            --color-border: #E2E8F0;
-            --color-white: #FFFFFF;
-            --font-heading: 'DM Sans', sans-serif;
-            --font-body: 'Inter', sans-serif;
-            --shadow-card: 0 2px 8px rgba(30, 58, 95, 0.08);
-            --shadow-card-hover: 0 8px 24px rgba(30, 58, 95, 0.12);
-            --radius-md: 8px;
-            --radius-lg: 12px;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FundOpsHQ Brand Workshop</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Navy Scale */
+      --navy-dark: #152d4a;
+      --navy: #1E3A5F;
+      --navy-light: #2d4a6f;
+      --navy-lighter: #3d5a7f;
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+      /* Gray Scale (Cool) */
+      --slate: #64748B;
+      --gray: #94A3B8;
+      --gray-light: #CBD5E1;
+      --gray-lighter: #E2E8F0;
+      --gray-cool: #F1F5F9;
 
-        body {
-            font-family: var(--font-body);
-            background: var(--color-white);
-            color: var(--color-navy);
-            line-height: 1.6;
-        }
+      /* Warm Neutrals */
+      --cream: #FAF9F7;
+      --beige: #E8E4DE;
+      --stone: #D4CDC4;
+      --taupe: #A39E93;
+      --warm-dark: #78736A;
 
-        /* Navigation */
-        .nav {
-            position: sticky;
-            top: 0;
-            background: var(--color-white);
-            border-bottom: 1px solid var(--color-border);
-            padding: 16px 40px;
-            z-index: 100;
-            display: flex;
-            align-items: center;
-            gap: 32px;
-        }
+      /* Base */
+      --white: #FFFFFF;
+      --black: #0f172a;
+    }
 
-        .nav-logo {
-            font-family: var(--font-heading);
-            font-weight: 700;
-            font-size: 18px;
-            color: var(--color-navy);
-            text-decoration: none;
-        }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-        .nav-logo span { color: var(--color-slate); }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--cream);
+      color: var(--navy);
+      line-height: 1.6;
+    }
 
-        .nav-links {
-            display: flex;
-            gap: 24px;
-            list-style: none;
-        }
+    /* Header */
+    header {
+      background: var(--navy);
+      color: white;
+      padding: 32px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-        .nav-links a {
-            color: var(--color-gray);
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: color 0.15s;
-        }
+    header h1 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
 
-        .nav-links a:hover { color: var(--color-navy); }
+    .nav-tabs {
+      display: flex;
+      gap: 8px;
+    }
 
-        /* Main Content */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 60px 40px;
-        }
+    .nav-tabs a {
+      color: var(--gray);
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
 
-        h1 {
-            font-family: var(--font-heading);
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 12px;
-            letter-spacing: -0.02em;
-        }
+    .nav-tabs a:hover, .nav-tabs a.active {
+      background: var(--navy-light);
+      color: white;
+    }
 
-        .subtitle {
-            font-size: 18px;
-            color: var(--color-gray);
-            margin-bottom: 48px;
-        }
+    /* Main */
+    main {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 48px;
+    }
 
-        h2 {
-            font-family: var(--font-heading);
-            font-size: 28px;
-            font-weight: 600;
-            margin-bottom: 24px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid var(--color-light);
-        }
+    section {
+      margin-bottom: 64px;
+    }
 
-        h3 {
-            font-family: var(--font-heading);
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 16px;
-            color: var(--color-navy);
-        }
+    section > h2 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
 
-        .section { margin-bottom: 80px; }
+    section > p.subtitle {
+      color: var(--slate);
+      font-size: 16px;
+      margin-bottom: 32px;
+    }
 
-        /* Color Palette */
-        .color-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 16px;
-        }
+    /* Color Swatches */
+    .color-section {
+      margin-bottom: 48px;
+    }
 
-        .color-card {
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-card);
-            cursor: pointer;
-            transition: all 0.2s;
-        }
+    .color-section h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: var(--navy);
+    }
 
-        .color-card:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-card-hover);
-        }
+    .swatch-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
 
-        .color-swatch { height: 100px; }
-        .color-info { padding: 16px; background: var(--color-light); }
-        .color-name { font-weight: 600; font-size: 14px; margin-bottom: 4px; }
-        .color-hex { font-family: monospace; font-size: 13px; color: var(--color-gray); }
+    .swatch {
+      width: 160px;
+    }
 
-        /* Asset Grid */
-        .asset-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-        }
+    .swatch-color {
+      height: 100px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: flex-end;
+      padding: 12px;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: 'JetBrains Mono', monospace;
+    }
 
-        .asset-card {
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            transition: all 0.2s;
-        }
+    .swatch-info h4 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
 
-        .asset-card:hover {
-            box-shadow: var(--shadow-card-hover);
-        }
+    .swatch-info p {
+      font-size: 12px;
+      color: var(--slate);
+    }
 
-        .asset-preview {
-            height: 160px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 24px;
-        }
+    /* Example Cards */
+    .examples-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 32px;
+    }
 
-        .asset-preview.light-bg { background: var(--color-white); }
-        .asset-preview.dark-bg { background: var(--color-navy); }
-        .asset-preview.gray-bg { background: var(--color-light); }
-        .asset-preview.pattern-bg { background: url('patterns/diagonal-stripes.svg'); }
+    .example-card {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);
+    }
 
-        .asset-preview img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-        }
+    .example-card .card-header {
+      padding: 24px;
+    }
 
-        .asset-info {
-            padding: 16px;
-            background: var(--color-light);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    .example-card .card-body {
+      padding: 24px;
+    }
 
-        .asset-name { font-size: 13px; font-weight: 500; }
+    .example-card h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
 
-        .asset-actions {
-            display: flex;
-            gap: 8px;
-        }
+    .example-card p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
 
-        .btn-download {
-            background: none;
-            border: 1px solid var(--color-border);
-            padding: 6px 12px;
-            border-radius: 6px;
-            font-size: 12px;
-            color: var(--color-gray);
-            cursor: pointer;
-            transition: all 0.15s;
-            text-decoration: none;
-        }
+    /* Combo Examples */
+    .combo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+    }
 
-        .btn-download:hover {
-            background: var(--color-white);
-            border-color: var(--color-navy);
-            color: var(--color-navy);
-        }
+    .combo-card {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(30, 58, 95, 0.1);
+    }
 
-        /* Large Preview Card */
-        .preview-large {
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            margin-bottom: 24px;
-        }
+    .combo-header {
+      padding: 32px 24px;
+      text-align: center;
+    }
 
-        .preview-large .asset-preview {
-            height: 300px;
-        }
+    .combo-header h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
 
-        /* Component Library */
-        .component-section {
-            background: var(--color-light);
-            padding: 32px;
-            border-radius: var(--radius-lg);
-            margin-bottom: 24px;
-        }
+    .combo-header p {
+      font-size: 14px;
+      opacity: 0.8;
+    }
 
-        .component-row {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-            align-items: center;
-            margin-bottom: 24px;
-        }
+    .combo-body {
+      padding: 24px;
+    }
 
-        .component-row:last-child { margin-bottom: 0; }
+    .combo-body .label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
 
-        /* Buttons */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px 24px;
-            border-radius: var(--radius-md);
-            font-family: var(--font-heading);
-            font-size: 14px;
-            font-weight: 600;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all 0.15s;
-            border: none;
-        }
+    .combo-body p {
+      font-size: 14px;
+      line-height: 1.7;
+    }
 
-        .btn-primary {
-            background: var(--color-navy);
-            color: var(--color-white);
-        }
-        .btn-primary:hover { background: var(--color-navy-dark); }
+    /* Reference Section */
+    .reference-note {
+      background: var(--beige);
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 48px;
+    }
 
-        .btn-secondary {
-            background: transparent;
-            color: var(--color-navy);
-            border: 1px solid var(--color-navy);
-        }
-        .btn-secondary:hover { background: var(--color-light); }
+    .reference-note h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--navy);
+    }
 
-        .btn-accent {
-            background: var(--color-slate);
-            color: var(--color-white);
-        }
-        .btn-accent:hover { background: var(--color-slate-dark); }
+    .reference-note p {
+      font-size: 14px;
+      color: var(--slate);
+      line-height: 1.7;
+    }
 
-        .btn-ghost {
-            background: transparent;
-            color: var(--color-gray);
-        }
-        .btn-ghost:hover { background: var(--color-light); }
+    /* Button Examples */
+    .button-row {
+      display: flex;
+      gap: 16px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
 
-        .btn-sm { padding: 8px 16px; font-size: 13px; }
-        .btn-lg { padding: 16px 32px; font-size: 16px; }
+    .btn {
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
 
-        /* Cards */
-        .card-demo {
-            background: var(--color-white);
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius-lg);
-            padding: 24px;
-            max-width: 320px;
-        }
+    .btn-navy {
+      background: var(--navy);
+      color: white;
+    }
 
-        .card-demo h4 {
-            font-family: var(--font-heading);
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
+    .btn-navy:hover {
+      background: var(--navy-dark);
+    }
 
-        .card-demo p {
-            font-size: 14px;
-            color: var(--color-gray);
-        }
+    .btn-outline {
+      background: transparent;
+      color: var(--navy);
+      border: 1px solid var(--navy);
+    }
 
-        /* Form Elements */
-        .input-demo {
-            padding: 12px 16px;
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius-md);
-            font-family: var(--font-body);
-            font-size: 14px;
-            width: 280px;
-            transition: all 0.15s;
-        }
+    .btn-outline:hover {
+      background: var(--gray-cool);
+    }
 
-        .input-demo:focus {
-            outline: none;
-            border-color: var(--color-navy);
-            box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
-        }
+    .btn-ghost {
+      background: transparent;
+      color: var(--slate);
+    }
 
-        /* Badge */
-        .badge {
-            display: inline-block;
-            padding: 4px 12px;
-            background: var(--color-light);
-            color: var(--color-gray);
-            border-radius: 9999px;
-            font-size: 12px;
-            font-weight: 500;
-        }
+    .btn-ghost:hover {
+      background: var(--gray-cool);
+      color: var(--navy);
+    }
 
-        .badge-accent {
-            background: rgba(30, 58, 95, 0.1);
-            color: var(--color-navy);
-        }
+    /* Status indicator */
+    .status {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--navy);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
 
-        /* Code Block */
-        .code-block {
-            background: var(--color-navy);
-            color: #F1F5F9;
-            padding: 20px;
-            border-radius: var(--radius-md);
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 13px;
-            overflow-x: auto;
-            position: relative;
-        }
+    /* Pattern Grid */
+    .pattern-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
 
-        .code-block .copy-btn {
-            position: absolute;
-            top: 12px;
-            right: 12px;
-        }
+    .pattern-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);
+    }
 
-        /* Typography Scale */
-        .type-scale {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-        }
+    .pattern-preview {
+      height: 160px;
+      position: relative;
+    }
 
-        .type-sample {
-            display: flex;
-            align-items: baseline;
-            gap: 24px;
-            padding: 16px 0;
-            border-bottom: 1px solid var(--color-border);
-        }
+    .pattern-preview svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
 
-        .type-label {
-            width: 80px;
-            font-size: 12px;
-            color: var(--color-caption);
-            font-weight: 500;
-        }
+    .pattern-info {
+      padding: 16px;
+    }
 
-        /* Spacing Scale */
-        .spacing-demo {
-            display: flex;
-            align-items: flex-end;
-            gap: 12px;
-        }
+    .pattern-info h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: var(--navy);
+    }
 
-        .spacing-box {
-            background: var(--color-navy);
-            border-radius: 4px;
-        }
+    .pattern-info p {
+      font-size: 13px;
+      color: var(--slate);
+      margin-bottom: 8px;
+    }
 
-        .spacing-label {
-            font-size: 11px;
-            color: var(--color-caption);
-            text-align: center;
-            margin-top: 4px;
-        }
+    .pattern-info code {
+      font-size: 11px;
+      background: var(--gray-cool);
+      padding: 4px 8px;
+      border-radius: 4px;
+      color: var(--slate);
+    }
 
-        /* Download Section */
-        .download-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 16px;
-        }
+    /* Pattern Context Grid */
+    .pattern-context-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
 
-        .download-card {
-            background: var(--color-light);
-            border-radius: var(--radius-lg);
-            padding: 20px;
-            text-align: center;
-        }
+    .pattern-context-card {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);
+    }
 
-        .download-card img {
-            max-width: 100%;
-            max-height: 120px;
-            margin-bottom: 12px;
-            border-radius: var(--radius-md);
-        }
+    .pattern-context-preview {
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-        .download-card .asset-name {
-            margin-bottom: 8px;
-        }
+    .pattern-context-label {
+      background: white;
+      padding: 12px 16px;
+      font-size: 13px;
+      color: var(--slate);
+      text-align: center;
+    }
 
-        /* Toast */
-        .toast {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: var(--color-navy);
-            color: white;
-            padding: 12px 20px;
-            border-radius: var(--radius-md);
-            font-size: 14px;
-            opacity: 0;
-            transform: translateY(10px);
-            transition: all 0.3s ease;
-            pointer-events: none;
-            z-index: 1000;
-        }
+    /* Icon Grid */
+    .icon-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 24px;
+    }
 
-        .toast.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    .icon-card {
+      text-align: center;
+    }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .container { padding: 40px 20px; }
-            h1 { font-size: 32px; }
-            .nav { padding: 12px 20px; flex-wrap: wrap; }
-            .nav-links { gap: 16px; }
-        }
-    </style>
+    .icon-preview {
+      height: 100px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    .icon-card span {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--slate);
+    }
+
+    .icon-dark-row {
+      display: flex;
+      gap: 32px;
+      padding: 40px;
+      background: var(--navy);
+      border-radius: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Logo Grid */
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .logo-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);
+    }
+
+    .logo-preview {
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .logo-info {
+      padding: 16px;
+      border-top: 1px solid var(--gray-lighter);
+    }
+
+    .logo-info h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: var(--navy);
+    }
+
+    .logo-info p {
+      font-size: 12px;
+      color: var(--slate);
+    }
+
+    .logo-bg-row {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 16px;
+    }
+
+    .logo-bg-card {
+      height: 80px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    /* Typography Styles */
+    .type-scale {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .type-row {
+      display: flex;
+      align-items: baseline;
+      gap: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--gray-lighter);
+    }
+
+    .type-label {
+      width: 120px;
+      flex-shrink: 0;
+    }
+
+    .type-label h4 {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--slate);
+      margin-bottom: 4px;
+    }
+
+    .type-label code {
+      font-size: 11px;
+      color: var(--gray);
+    }
+
+    .type-sample {
+      flex: 1;
+    }
+
+    .type-combo-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      margin-top: 32px;
+    }
+
+    .type-combo-card {
+      padding: 32px;
+      border-radius: 12px;
+    }
+
+    /* Photography Styles */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .photo-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);
+    }
+
+    .photo-preview {
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: var(--slate);
+    }
+
+    .photo-info {
+      padding: 16px;
+      border-top: 1px solid var(--gray-lighter);
+    }
+
+    .photo-info h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: var(--navy);
+    }
+
+    .photo-info p {
+      font-size: 12px;
+      color: var(--slate);
+    }
+
+    .mood-strip {
+      display: flex;
+      height: 120px;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+
+    .mood-strip div {
+      flex: 1;
+    }
+  </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav">
-        <a href="#" class="nav-logo">FundOps<span>HQ</span> Brand Kit</a>
-        <ul class="nav-links">
-            <li><a href="#colors">Colors</a></li>
-            <li><a href="#typography">Typography</a></li>
-            <li><a href="#logos">Logos</a></li>
-            <li><a href="#components">Components</a></li>
-            <li><a href="#downloads">Downloads</a></li>
-        </ul>
-    </nav>
-
-    <div class="container">
-        <h1>FundOpsHQ Brand Kit</h1>
-        <p class="subtitle">Visual identity guidelines and assets for FundOpsHQ. Professional, trustworthy, authoritative.</p>
-
-        <!-- Colors -->
-        <section class="section" id="colors">
-            <h2>Color Palette</h2>
-            <p style="color: var(--color-gray); margin-bottom: 24px;">Click any color to copy hex code</p>
-            <div class="color-grid">
-                <div class="color-card" onclick="copyToClipboard('#1E3A5F')">
-                    <div class="color-swatch" style="background: #1E3A5F;"></div>
-                    <div class="color-info">
-                        <div class="color-name">Deep Navy</div>
-                        <div class="color-hex">#1E3A5F</div>
-                    </div>
-                </div>
-                <div class="color-card" onclick="copyToClipboard('#64748B')">
-                    <div class="color-swatch" style="background: #64748B;"></div>
-                    <div class="color-info">
-                        <div class="color-name">Slate Gray</div>
-                        <div class="color-hex">#64748B</div>
-                    </div>
-                </div>
-                <div class="color-card" onclick="copyToClipboard('#64748B')">
-                    <div class="color-swatch" style="background: #64748B;"></div>
-                    <div class="color-info">
-                        <div class="color-name">Slate Gray</div>
-                        <div class="color-hex">#64748B</div>
-                    </div>
-                </div>
-                <div class="color-card" onclick="copyToClipboard('#F1F5F9')">
-                    <div class="color-swatch" style="background: #F1F5F9;"></div>
-                    <div class="color-info">
-                        <div class="color-name">Light Gray</div>
-                        <div class="color-hex">#F1F5F9</div>
-                    </div>
-                </div>
-                <div class="color-card" onclick="copyToClipboard('#94A3B8')">
-                    <div class="color-swatch" style="background: #94A3B8;"></div>
-                    <div class="color-info">
-                        <div class="color-name">Caption Gray</div>
-                        <div class="color-hex">#94A3B8</div>
-                    </div>
-                </div>
-                <div class="color-card" onclick="copyToClipboard('#FFFFFF')">
-                    <div class="color-swatch" style="background: #FFFFFF; border: 1px solid #E2E8F0;"></div>
-                    <div class="color-info">
-                        <div class="color-name">White</div>
-                        <div class="color-hex">#FFFFFF</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Typography -->
-        <section class="section" id="typography">
-            <h2>Typography</h2>
-
-            <div class="component-section">
-                <h3>Headings — DM Sans</h3>
-                <div class="type-scale">
-                    <div class="type-sample">
-                        <span class="type-label">H1 / 48px</span>
-                        <span style="font-family: 'DM Sans'; font-size: 48px; font-weight: 700;">FundOpsHQ</span>
-                    </div>
-                    <div class="type-sample">
-                        <span class="type-label">H2 / 36px</span>
-                        <span style="font-family: 'DM Sans'; font-size: 36px; font-weight: 600;">Section Title</span>
-                    </div>
-                    <div class="type-sample">
-                        <span class="type-label">H3 / 24px</span>
-                        <span style="font-family: 'DM Sans'; font-size: 24px; font-weight: 600;">Subsection</span>
-                    </div>
-                    <div class="type-sample">
-                        <span class="type-label">H4 / 20px</span>
-                        <span style="font-family: 'DM Sans'; font-size: 20px; font-weight: 500;">Card Title</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="component-section">
-                <h3>Body — Inter</h3>
-                <div class="type-scale">
-                    <div class="type-sample">
-                        <span class="type-label">Body / 16px</span>
-                        <span style="font-family: 'Inter'; font-size: 16px;">The knowledge hub for investment fund operations professionals.</span>
-                    </div>
-                    <div class="type-sample">
-                        <span class="type-label">Small / 14px</span>
-                        <span style="font-family: 'Inter'; font-size: 14px; color: var(--color-gray);">Secondary text and descriptions for supporting content.</span>
-                    </div>
-                    <div class="type-sample">
-                        <span class="type-label">Caption / 12px</span>
-                        <span style="font-family: 'Inter'; font-size: 12px; color: var(--color-caption);">Timestamps, metadata, and helper text</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Logos -->
-        <section class="section" id="logos">
-            <h2>Logos</h2>
-
-            <h3>Primary Wordmark — FundOpsHQ</h3>
-            <div class="asset-grid">
-                <div class="asset-card">
-                    <div class="asset-preview light-bg">
-                        <img src="logos/fundopshq-primary-light.svg" alt="FundOpsHQ Primary Light">
-                    </div>
-                    <div class="asset-info">
-                        <span class="asset-name">Primary / Light BG</span>
-                        <div class="asset-actions">
-                            <a href="logos/fundopshq-primary-light.svg" download class="btn-download">SVG</a>
-                            <a href="exports/logos/fundopshq/fundopshq-primary-light.png" download class="btn-download">PNG</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="asset-card">
-                    <div class="asset-preview dark-bg">
-                        <img src="logos/fundopshq-primary-dark.svg" alt="FundOpsHQ Primary Dark">
-                    </div>
-                    <div class="asset-info">
-                        <span class="asset-name">Primary / Dark BG</span>
-                        <div class="asset-actions">
-                            <a href="logos/fundopshq-primary-dark.svg" download class="btn-download">SVG</a>
-                            <a href="exports/logos/fundopshq/fundopshq-primary-dark.png" download class="btn-download">PNG</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="asset-card">
-                    <div class="asset-preview light-bg">
-                        <img src="logos/fundopshq-mono-light.svg" alt="FundOpsHQ Mono Light">
-                    </div>
-                    <div class="asset-info">
-                        <span class="asset-name">Mono / Light BG</span>
-                        <div class="asset-actions">
-                            <a href="logos/fundopshq-mono-light.svg" download class="btn-download">SVG</a>
-                            <a href="exports/logos/fundopshq/fundopshq-mono-light.png" download class="btn-download">PNG</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="asset-card">
-                    <div class="asset-preview dark-bg">
-                        <img src="logos/fundopshq-mono-dark.svg" alt="FundOpsHQ Mono Dark">
-                    </div>
-                    <div class="asset-info">
-                        <span class="asset-name">Mono / Dark BG</span>
-                        <div class="asset-actions">
-                            <a href="logos/fundopshq-mono-dark.svg" download class="btn-download">SVG</a>
-                            <a href="exports/logos/fundopshq/fundopshq-mono-dark.png" download class="btn-download">PNG</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <h3 style="margin-top: 40px;">Short Mark — FOHQ</h3>
-            <div class="asset-grid">
-                <div class="asset-card">
-                    <div class="asset-preview light-bg">
-                        <img src="logos/fohq-primary-light.svg" alt="FOHQ Primary Light" style="max-height: 80px;">
-                    </div>
-                    <div class="asset-info">
-                        <span class="asset-name">Primary / Light BG</span>
-                        <div class="asset-actions">
-                            <a href="logos/fohq-primary-light.svg" download class="btn-download">SVG</a>
-                            <a href="exports/logos/fohq/fohq-primary-light.png" download class="btn-download">PNG</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="asset-card">
-                    <div class="asset-preview dark-bg">
-                        <img src="logos/fohq-primary-dark.svg" alt="FOHQ Primary Dark" style="max-height: 80px;">
-                    </div>
-                    <div class="asset-info">
-                        <span class="asset-name">Primary / Dark BG</span>
-                        <div class="asset-actions">
-                            <a href="logos/fohq-primary-dark.svg" download class="btn-download">SVG</a>
-                            <a href="exports/logos/fohq/fohq-primary-dark.png" download class="btn-download">PNG</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <h3 style="margin-top: 40px;">Podcast Cover — FundOpsHQ Interviews</h3>
-            <div class="preview-large">
-                <div class="asset-preview pattern-bg" style="height: 400px;">
-                    <img src="exports/logos/podcast/podcast-cover-500x500.png" alt="Podcast Cover" style="max-height: 350px; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.2);">
-                </div>
-                <div class="asset-info">
-                    <span class="asset-name">Podcast Cover (3000x3000)</span>
-                    <div class="asset-actions">
-                        <a href="podcast/cover-3000x3000.svg" download class="btn-download">SVG</a>
-                        <a href="exports/logos/podcast/podcast-cover-3000x3000.png" download class="btn-download">PNG 3000px</a>
-                        <a href="exports/logos/podcast/podcast-cover-1400x1400.png" download class="btn-download">PNG 1400px</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Components -->
-        <section class="section" id="components">
-            <h2>Components</h2>
-
-            <div class="component-section">
-                <h3>Buttons</h3>
-                <div class="component-row">
-                    <button class="btn btn-primary">Primary</button>
-                    <button class="btn btn-secondary">Secondary</button>
-                    <button class="btn btn-accent">Accent</button>
-                    <button class="btn btn-ghost">Ghost</button>
-                </div>
-                <div class="component-row">
-                    <button class="btn btn-primary btn-sm">Small</button>
-                    <button class="btn btn-primary">Default</button>
-                    <button class="btn btn-primary btn-lg">Large</button>
-                </div>
-            </div>
-
-            <div class="component-section">
-                <h3>Cards</h3>
-                <div class="component-row">
-                    <div class="card-demo">
-                        <h4>Card Title</h4>
-                        <p>This is a standard card component with proper padding and border radius.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="component-section">
-                <h3>Form Elements</h3>
-                <div class="component-row">
-                    <input type="text" class="input-demo" placeholder="Enter text...">
-                </div>
-            </div>
-
-            <div class="component-section">
-                <h3>Badges</h3>
-                <div class="component-row">
-                    <span class="badge">Default</span>
-                    <span class="badge badge-accent">Accent</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Downloads -->
-        <section class="section" id="downloads">
-            <h2>Downloads</h2>
-
-            <h3>Social Media Assets</h3>
-            <div class="download-grid">
-                <div class="download-card">
-                    <img src="exports/social/og-image-1200x630.png" alt="OG Image">
-                    <div class="asset-name">OG Image</div>
-                    <a href="exports/social/og-image-1200x630.png" download class="btn-download">1200x630</a>
-                </div>
-                <div class="download-card">
-                    <img src="exports/social/twitter-header-1500x500.png" alt="Twitter Header">
-                    <div class="asset-name">Twitter Header</div>
-                    <a href="exports/social/twitter-header-1500x500.png" download class="btn-download">1500x500</a>
-                </div>
-                <div class="download-card">
-                    <img src="exports/social/linkedin-banner-1584x396.png" alt="LinkedIn Banner">
-                    <div class="asset-name">LinkedIn Banner</div>
-                    <a href="exports/social/linkedin-banner-1584x396.png" download class="btn-download">1584x396</a>
-                </div>
-            </div>
-
-            <h3 style="margin-top: 40px;">Favicon Set</h3>
-            <div class="download-grid">
-                <div class="download-card">
-                    <img src="exports/favicon/favicon-32x32.png" alt="Favicon" style="width: 32px; height: 32px; image-rendering: pixelated;">
-                    <div class="asset-name">Favicon</div>
-                    <div class="asset-actions" style="justify-content: center;">
-                        <a href="exports/favicon/favicon-16x16.png" download class="btn-download">16px</a>
-                        <a href="exports/favicon/favicon-32x32.png" download class="btn-download">32px</a>
-                    </div>
-                </div>
-                <div class="download-card">
-                    <img src="exports/favicon/apple-touch-icon.png" alt="Apple Touch Icon" style="width: 60px; border-radius: 12px;">
-                    <div class="asset-name">Apple Touch Icon</div>
-                    <a href="exports/favicon/apple-touch-icon.png" download class="btn-download">180x180</a>
-                </div>
-                <div class="download-card">
-                    <img src="exports/favicon/android-chrome-192x192.png" alt="Android Chrome" style="width: 60px;">
-                    <div class="asset-name">Android Chrome</div>
-                    <div class="asset-actions" style="justify-content: center;">
-                        <a href="exports/favicon/android-chrome-192x192.png" download class="btn-download">192px</a>
-                        <a href="exports/favicon/android-chrome-512x512.png" download class="btn-download">512px</a>
-                    </div>
-                </div>
-            </div>
-
-            <h3 style="margin-top: 40px;">Documentation</h3>
-            <div class="download-grid">
-                <div class="download-card">
-                    <div style="font-size: 48px; margin-bottom: 12px;">📄</div>
-                    <div class="asset-name">Brand Guidelines</div>
-                    <a href="brand-guidelines.html" class="btn-download">View HTML</a>
-                </div>
-                <div class="download-card">
-                    <div style="font-size: 48px; margin-bottom: 12px;">📋</div>
-                    <div class="asset-name">Brand Tokens</div>
-                    <a href="brand-tokens.json" download class="btn-download">JSON</a>
-                </div>
-                <div class="download-card">
-                    <div style="font-size: 48px; margin-bottom: 12px;">📖</div>
-                    <div class="asset-name">README</div>
-                    <a href="README.md" class="btn-download">View</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Quick Reference -->
-        <section class="section">
-            <h2>Quick Reference</h2>
-            <h3>CSS Variables</h3>
-            <div class="code-block">
-                <button class="btn-download copy-btn" onclick="copyCode(this, 'css-vars')">Copy</button>
-<pre id="css-vars">:root {
-  --color-navy: #1E3A5F;
-  --color-slate: #64748B;
-  --color-gray: #94A3B8;
-  --color-light: #F1F5F9;
-  --color-caption: #94A3B8;
-  --font-heading: 'DM Sans', sans-serif;
-  --font-body: 'Inter', sans-serif;
-}</pre>
-            </div>
-        </section>
+  <header>
+    <h1>FundOpsHQ Brand Workshop</h1>
+    <div class="nav-tabs">
+      <a href="#colors" class="active">Colors</a>
+      <a href="#patterns">Patterns</a>
+      <a href="#icons">Icons</a>
+      <a href="#logos">Logos</a>
+      <a href="#typography">Type</a>
+      <a href="#photography">Photo</a>
+      <a href="#components">Components</a>
+      <a href="#voice">Voice</a>
+      <a href="#templates">Templates</a>
     </div>
+  </header>
 
-    <!-- Toast -->
-    <div class="toast" id="toast">Copied to clipboard!</div>
+  <main>
+    <!-- COLORS SECTION -->
+    <section id="colors">
+      <h2>Color Palette</h2>
+      <p class="subtitle">Institutional, elegant, trustworthy. Think McKinsey, Goldman Sachs, private banks.</p>
 
-    <script>
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                showToast('Copied ' + text);
-            });
-        }
+      <!-- Navy Scale -->
+      <div class="color-section">
+        <h3>Navy Scale</h3>
+        <div class="swatch-row">
+          <div class="swatch">
+            <div class="swatch-color" style="background: var(--navy-dark); color: white;">#152d4a</div>
+            <div class="swatch-info">
+              <h4>Navy Dark</h4>
+              <p>Hover states, emphasis</p>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: var(--navy); color: white;">#1E3A5F</div>
+            <div class="swatch-info">
+              <h4>Navy Primary</h4>
+              <p>Headers, buttons, brand</p>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: var(--navy-light); color: white;">#2d4a6f</div>
+            <div class="swatch-info">
+              <h4>Navy Light</h4>
+              <p>Secondary elements</p>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: var(--navy-lighter); color: white;">#3d5a7f</div>
+            <div class="swatch-info">
+              <h4>Navy Lighter</h4>
+              <p>Subtle accents</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        function copyCode(btn, elementId) {
-            const code = document.getElementById(elementId).textContent;
-            navigator.clipboard.writeText(code).then(() => {
-                showToast('Copied to clipboard!');
-                btn.textContent = 'Copied!';
-                setTimeout(() => btn.textContent = 'Copy', 2000);
-            });
-        }
+      <!-- Gray Scale -->
+      <div class="color-section">
+        <h3>Gray Scale (Cool)</h3>
+        <div class="swatch-row">
+          <div class="swatch">
+            <div class="swatch-color" style="background: var(--slate); color: white;">#64748B</div>
+            <div class="swatch-info">
+              <h4>Slate</h4>
+              <p>Body text</p>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: var(--gray); color: white;">#94A3B8</div>
+            <div class="swatch-info">
+              <h4>Gray</h4>
+              <p>Captions, muted</p>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: var(--gray-light); color: var(--navy);">#CBD5E1</div>
+            <div class="swatch-info">
+              <h4>Gray Light</h4>
+              <p>Borders, dividers</p>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: var(--gray-lighter); color: var(--navy);">#E2E8F0</div>
+            <div class="swatch-info">
+              <h4>Gray Lighter</h4>
+              <p>Input borders</p>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: var(--gray-cool); color: var(--navy);">#F1F5F9</div>
+            <div class="swatch-info">
+              <h4>Cool Gray</h4>
+              <p>Card backgrounds</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        function showToast(message) {
-            const toast = document.getElementById('toast');
-            toast.textContent = message;
-            toast.classList.add('show');
-            setTimeout(() => toast.classList.remove('show'), 2000);
-        }
-    </script>
+      <!-- Warm Neutrals -->
+      <div class="color-section">
+        <h3>Warm Neutrals</h3>
+        <div class="swatch-row">
+          <div class="swatch">
+            <div class="swatch-color" style="background: var(--warm-dark); color: white;">#78736A</div>
+            <div class="swatch-info">
+              <h4>Warm Dark</h4>
+              <p>Warm text accent</p>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: var(--taupe); color: white;">#A39E93</div>
+            <div class="swatch-info">
+              <h4>Taupe</h4>
+              <p>Sophisticated muted</p>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: var(--stone); color: var(--navy);">#D4CDC4</div>
+            <div class="swatch-info">
+              <h4>Stone</h4>
+              <p>Warm borders</p>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: var(--beige); color: var(--navy);">#E8E4DE</div>
+            <div class="swatch-info">
+              <h4>Beige</h4>
+              <p>Warm cards</p>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: var(--cream); color: var(--navy); border: 1px solid var(--stone);">#FAF9F7</div>
+            <div class="swatch-info">
+              <h4>Cream</h4>
+              <p>Page background</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Color Combinations -->
+      <div class="color-section">
+        <h3>Color Combinations in Use</h3>
+
+        <div class="combo-grid">
+          <!-- Navy on White -->
+          <div class="combo-card">
+            <div class="combo-header" style="background: var(--navy); color: white;">
+              <h4>FundOpsHQ</h4>
+              <p>Professional Excellence</p>
+            </div>
+            <div class="combo-body" style="background: white;">
+              <div class="label" style="color: var(--gray);">Featured Content</div>
+              <p style="color: var(--slate);">Our team of experienced professionals delivers comprehensive fund operations solutions tailored to your specific needs.</p>
+              <div class="button-row">
+                <button class="btn btn-navy">Learn More</button>
+                <button class="btn btn-outline">Contact Us</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navy on Cream -->
+          <div class="combo-card">
+            <div class="combo-header" style="background: var(--navy); color: white;">
+              <h4>FundOpsHQ</h4>
+              <p>Professional Excellence</p>
+            </div>
+            <div class="combo-body" style="background: var(--cream);">
+              <div class="label" style="color: var(--taupe);">Featured Content</div>
+              <p style="color: var(--slate);">Our team of experienced professionals delivers comprehensive fund operations solutions tailored to your specific needs.</p>
+              <div class="button-row">
+                <button class="btn btn-navy">Learn More</button>
+                <button class="btn btn-outline">Contact Us</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navy on Beige -->
+          <div class="combo-card">
+            <div class="combo-header" style="background: var(--navy); color: white;">
+              <h4>FundOpsHQ</h4>
+              <p>Professional Excellence</p>
+            </div>
+            <div class="combo-body" style="background: var(--beige);">
+              <div class="label" style="color: var(--warm-dark);">Featured Content</div>
+              <p style="color: var(--slate);">Our team of experienced professionals delivers comprehensive fund operations solutions tailored to your specific needs.</p>
+              <div class="button-row">
+                <button class="btn btn-navy">Learn More</button>
+                <button class="btn btn-outline">Contact Us</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Light Navy Header -->
+          <div class="combo-card">
+            <div class="combo-header" style="background: var(--navy-light); color: white;">
+              <h4>FundOpsHQ</h4>
+              <p>Professional Excellence</p>
+            </div>
+            <div class="combo-body" style="background: var(--gray-cool);">
+              <div class="label" style="color: var(--gray);">Featured Content</div>
+              <p style="color: var(--slate);">Our team of experienced professionals delivers comprehensive fund operations solutions tailored to your specific needs.</p>
+              <div class="button-row">
+                <button class="btn btn-navy">Learn More</button>
+                <button class="btn btn-ghost">Contact Us</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- White on Navy -->
+          <div class="combo-card">
+            <div class="combo-header" style="background: var(--cream); color: var(--navy); border-bottom: 1px solid var(--stone);">
+              <h4>FundOpsHQ</h4>
+              <p style="color: var(--taupe);">Professional Excellence</p>
+            </div>
+            <div class="combo-body" style="background: var(--navy); color: white;">
+              <div class="label" style="color: var(--gray);">Featured Content</div>
+              <p style="color: var(--gray-light);">Our team of experienced professionals delivers comprehensive fund operations solutions tailored to your specific needs.</p>
+              <div class="button-row">
+                <button class="btn" style="background: white; color: var(--navy);">Learn More</button>
+                <button class="btn" style="background: transparent; color: white; border: 1px solid var(--gray);">Contact Us</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- All Warm -->
+          <div class="combo-card">
+            <div class="combo-header" style="background: var(--stone); color: var(--navy);">
+              <h4>FundOpsHQ</h4>
+              <p style="color: var(--warm-dark);">Professional Excellence</p>
+            </div>
+            <div class="combo-body" style="background: var(--cream);">
+              <div class="label" style="color: var(--taupe);">Featured Content</div>
+              <p style="color: var(--warm-dark);">Our team of experienced professionals delivers comprehensive fund operations solutions tailored to your specific needs.</p>
+              <div class="button-row">
+                <button class="btn btn-navy">Learn More</button>
+                <button class="btn" style="background: transparent; color: var(--warm-dark); border: 1px solid var(--stone);">Contact Us</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Button Examples -->
+      <div class="color-section">
+        <h3>Button Styles</h3>
+        <div style="padding: 32px; background: white; border-radius: 12px; margin-bottom: 16px;">
+          <p style="font-size: 12px; color: var(--gray); margin-bottom: 16px;">On White Background</p>
+          <div class="button-row">
+            <button class="btn btn-navy">Primary Action</button>
+            <button class="btn btn-outline">Secondary Action</button>
+            <button class="btn btn-ghost">Tertiary Action</button>
+          </div>
+        </div>
+        <div style="padding: 32px; background: var(--cream); border-radius: 12px; margin-bottom: 16px;">
+          <p style="font-size: 12px; color: var(--taupe); margin-bottom: 16px;">On Cream Background</p>
+          <div class="button-row">
+            <button class="btn btn-navy">Primary Action</button>
+            <button class="btn btn-outline">Secondary Action</button>
+            <button class="btn btn-ghost">Tertiary Action</button>
+          </div>
+        </div>
+        <div style="padding: 32px; background: var(--navy); border-radius: 12px;">
+          <p style="font-size: 12px; color: var(--gray); margin-bottom: 16px;">On Navy Background</p>
+          <div class="button-row">
+            <button class="btn" style="background: white; color: var(--navy);">Primary Action</button>
+            <button class="btn" style="background: transparent; color: white; border: 1px solid var(--gray);">Secondary Action</button>
+            <button class="btn" style="background: transparent; color: var(--gray);">Tertiary Action</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reference Note -->
+      <div class="reference-note">
+        <h4>Design Reference: McKinsey / Goldman Sachs</h4>
+        <p>These brands use restrained color palettes with navy/dark blue as primary, supported by warm neutrals for sophistication. Gold and bright accents are avoided entirely. Typography and whitespace do the heavy lifting. The warm neutrals (cream, beige, stone) add warmth without flashiness - they feel like expensive paper or old-money interiors.</p>
+      </div>
+    </section>
+
+    <!-- PATTERNS SECTION -->
+    <section id="patterns">
+      <h2>Patterns</h2>
+      <p class="subtitle">Subtle, institutional patterns for backgrounds, cards, and overlays.</p>
+
+      <!-- Pattern Swatches -->
+      <div class="color-section">
+        <h3>Pattern Library</h3>
+        <div class="pattern-grid">
+          <!-- Diagonal Stripes -->
+          <div class="pattern-card">
+            <div class="pattern-preview" style="background: var(--navy);">
+              <svg width="100%" height="100%">
+                <defs>
+                  <pattern id="diagStripes" patternUnits="userSpaceOnUse" width="20" height="20" patternTransform="rotate(45)">
+                    <line x1="0" y1="0" x2="0" y2="20" stroke="#264466" stroke-width="1"/>
+                  </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#diagStripes)"/>
+              </svg>
+            </div>
+            <div class="pattern-info">
+              <h4>Diagonal Stripes</h4>
+              <p>Hero sections, podcast covers</p>
+              <code>45° / 20px / 1px</code>
+            </div>
+          </div>
+
+          <!-- Fine Grid -->
+          <div class="pattern-card">
+            <div class="pattern-preview" style="background: var(--navy);">
+              <svg width="100%" height="100%">
+                <defs>
+                  <pattern id="fineGrid" patternUnits="userSpaceOnUse" width="24" height="24">
+                    <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#264466" stroke-width="0.5"/>
+                  </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#fineGrid)"/>
+              </svg>
+            </div>
+            <div class="pattern-info">
+              <h4>Fine Grid</h4>
+              <p>Data dashboards, tables</p>
+              <code>24px / 0.5px</code>
+            </div>
+          </div>
+
+          <!-- Dot Grid -->
+          <div class="pattern-card">
+            <div class="pattern-preview" style="background: var(--cream);">
+              <svg width="100%" height="100%">
+                <defs>
+                  <pattern id="dotGrid" patternUnits="userSpaceOnUse" width="20" height="20">
+                    <circle cx="10" cy="10" r="1" fill="#D4CDC4"/>
+                  </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#dotGrid)"/>
+              </svg>
+            </div>
+            <div class="pattern-info">
+              <h4>Dot Grid</h4>
+              <p>Light backgrounds, cards</p>
+              <code>20px / 1px radius</code>
+            </div>
+          </div>
+
+          <!-- Horizontal Lines -->
+          <div class="pattern-card">
+            <div class="pattern-preview" style="background: var(--beige);">
+              <svg width="100%" height="100%">
+                <defs>
+                  <pattern id="horzLines" patternUnits="userSpaceOnUse" width="100" height="8">
+                    <line x1="0" y1="7" x2="100" y2="7" stroke="#D4CDC4" stroke-width="1"/>
+                  </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#horzLines)"/>
+              </svg>
+            </div>
+            <div class="pattern-info">
+              <h4>Horizontal Lines</h4>
+              <p>Subtle texture, paper feel</p>
+              <code>8px spacing / 1px</code>
+            </div>
+          </div>
+
+          <!-- Cross Hatch -->
+          <div class="pattern-card">
+            <div class="pattern-preview" style="background: var(--navy);">
+              <svg width="100%" height="100%">
+                <defs>
+                  <pattern id="crossHatch" patternUnits="userSpaceOnUse" width="16" height="16">
+                    <path d="M 0 8 L 16 8 M 8 0 L 8 16" fill="none" stroke="#264466" stroke-width="0.5"/>
+                  </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#crossHatch)"/>
+              </svg>
+            </div>
+            <div class="pattern-info">
+              <h4>Cross Hatch</h4>
+              <p>Overlay texture</p>
+              <code>16px / 0.5px</code>
+            </div>
+          </div>
+
+          <!-- Subtle Noise (simulated) -->
+          <div class="pattern-card">
+            <div class="pattern-preview" style="background: var(--cream);">
+              <svg width="100%" height="100%">
+                <defs>
+                  <filter id="noise">
+                    <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" result="noise"/>
+                    <feColorMatrix type="saturate" values="0"/>
+                    <feBlend in="SourceGraphic" in2="noise" mode="multiply"/>
+                  </filter>
+                  <pattern id="noisePattern" patternUnits="userSpaceOnUse" width="100" height="100">
+                    <rect width="100" height="100" fill="#FAF9F7" filter="url(#noise)" opacity="0.3"/>
+                  </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#noisePattern)"/>
+              </svg>
+            </div>
+            <div class="pattern-info">
+              <h4>Paper Texture</h4>
+              <p>Luxury paper feel</p>
+              <code>SVG noise filter</code>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Patterns in Context -->
+      <div class="color-section">
+        <h3>Patterns in Context</h3>
+        <div class="pattern-context-grid">
+          <!-- Hero with Diagonal -->
+          <div class="pattern-context-card">
+            <div class="pattern-context-preview" style="background: var(--navy); position: relative;">
+              <svg width="100%" height="100%" style="position: absolute; top: 0; left: 0; opacity: 0.3;">
+                <defs>
+                  <pattern id="diagStripes2" patternUnits="userSpaceOnUse" width="20" height="20" patternTransform="rotate(45)">
+                    <line x1="0" y1="0" x2="0" y2="20" stroke="#264466" stroke-width="1"/>
+                  </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#diagStripes2)"/>
+              </svg>
+              <div style="position: relative; z-index: 1; padding: 40px; text-align: center;">
+                <h4 style="color: white; font-family: 'DM Sans', sans-serif; font-size: 24px; font-weight: 700; margin-bottom: 8px;">Hero Section</h4>
+                <p style="color: var(--gray); font-size: 14px;">Diagonal stripes add depth without distraction</p>
+              </div>
+            </div>
+            <div class="pattern-context-label">Diagonal Stripes at 30% opacity</div>
+          </div>
+
+          <!-- Card with Dot Grid -->
+          <div class="pattern-context-card">
+            <div class="pattern-context-preview" style="background: var(--cream); position: relative; border: 1px solid var(--stone);">
+              <svg width="100%" height="100%" style="position: absolute; top: 0; left: 0;">
+                <defs>
+                  <pattern id="dotGrid2" patternUnits="userSpaceOnUse" width="20" height="20">
+                    <circle cx="10" cy="10" r="1" fill="#D4CDC4"/>
+                  </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#dotGrid2)"/>
+              </svg>
+              <div style="position: relative; z-index: 1; padding: 40px; text-align: center;">
+                <h4 style="color: var(--navy); font-family: 'DM Sans', sans-serif; font-size: 24px; font-weight: 700; margin-bottom: 8px;">Feature Card</h4>
+                <p style="color: var(--slate); font-size: 14px;">Dot grid adds subtle visual interest</p>
+              </div>
+            </div>
+            <div class="pattern-context-label">Dot Grid on Cream background</div>
+          </div>
+
+          <!-- Table Header with Fine Grid -->
+          <div class="pattern-context-card">
+            <div class="pattern-context-preview" style="background: var(--navy-light); position: relative;">
+              <svg width="100%" height="100%" style="position: absolute; top: 0; left: 0; opacity: 0.4;">
+                <defs>
+                  <pattern id="fineGrid2" patternUnits="userSpaceOnUse" width="24" height="24">
+                    <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#1E3A5F" stroke-width="0.5"/>
+                  </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#fineGrid2)"/>
+              </svg>
+              <div style="position: relative; z-index: 1; padding: 40px; text-align: center;">
+                <h4 style="color: white; font-family: 'DM Sans', sans-serif; font-size: 24px; font-weight: 700; margin-bottom: 8px;">Data Section</h4>
+                <p style="color: var(--gray-light); font-size: 14px;">Fine grid reinforces data precision</p>
+              </div>
+            </div>
+            <div class="pattern-context-label">Fine Grid at 40% on Navy Light</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pattern Usage Guide -->
+      <div class="reference-note">
+        <h4>Pattern Usage Guidelines</h4>
+        <p><strong>Opacity:</strong> Keep patterns between 20-40% opacity. They should add texture, not compete with content.<br><br>
+        <strong>Dark backgrounds:</strong> Use stripes and grids with lighter stroke colors (#264466 or #3d5a7f).<br><br>
+        <strong>Light backgrounds:</strong> Use dots and lines with warm neutrals (stone #D4CDC4 or taupe #A39E93).<br><br>
+        <strong>Don't:</strong> Never use patterns under text-heavy content or on CTAs. Patterns are for atmosphere, not utility areas.</p>
+      </div>
+    </section>
+
+    <!-- ICONS SECTION -->
+    <section id="icons">
+      <h2>Icons</h2>
+      <p class="subtitle">Minimal line icons for fund operations topics. Consistent 24px grid, 1.5px stroke.</p>
+
+      <!-- Icon Grid -->
+      <div class="color-section">
+        <h3>Topic Icons</h3>
+        <div class="icon-grid">
+          <!-- Compliance -->
+          <div class="icon-card">
+            <div class="icon-preview" style="background: var(--gray-cool);">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--navy);">
+                <path d="M9 12l2 2 4-4"/>
+                <path d="M12 3l9 4.5v7c0 4-3.5 7-9 9.5-5.5-2.5-9-5.5-9-9.5v-7L12 3z"/>
+              </svg>
+            </div>
+            <span>Compliance</span>
+          </div>
+
+          <!-- Investor Relations -->
+          <div class="icon-card">
+            <div class="icon-preview" style="background: var(--gray-cool);">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--navy);">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <span>Investor Relations</span>
+          </div>
+
+          <!-- Audit -->
+          <div class="icon-card">
+            <div class="icon-preview" style="background: var(--gray-cool);">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--navy);">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+                <polyline points="10 9 9 9 8 9"/>
+              </svg>
+            </div>
+            <span>Audit</span>
+          </div>
+
+          <!-- Tax -->
+          <div class="icon-card">
+            <div class="icon-preview" style="background: var(--gray-cool);">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--navy);">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                <line x1="1" y1="10" x2="23" y2="10"/>
+              </svg>
+            </div>
+            <span>Tax</span>
+          </div>
+
+          <!-- Fund Administration -->
+          <div class="icon-card">
+            <div class="icon-preview" style="background: var(--gray-cool);">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--navy);">
+                <rect x="3" y="3" width="7" height="7"/>
+                <rect x="14" y="3" width="7" height="7"/>
+                <rect x="14" y="14" width="7" height="7"/>
+                <rect x="3" y="14" width="7" height="7"/>
+              </svg>
+            </div>
+            <span>Fund Admin</span>
+          </div>
+
+          <!-- Banking -->
+          <div class="icon-card">
+            <div class="icon-preview" style="background: var(--gray-cool);">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--navy);">
+                <path d="M3 21h18"/>
+                <path d="M3 10h18"/>
+                <path d="M5 6l7-3 7 3"/>
+                <path d="M4 10v11"/>
+                <path d="M20 10v11"/>
+                <path d="M8 10v11"/>
+                <path d="M12 10v11"/>
+                <path d="M16 10v11"/>
+              </svg>
+            </div>
+            <span>Banking</span>
+          </div>
+
+          <!-- Insurance -->
+          <div class="icon-card">
+            <div class="icon-preview" style="background: var(--gray-cool);">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--navy);">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <span>Insurance</span>
+          </div>
+
+          <!-- Cyber / IT -->
+          <div class="icon-card">
+            <div class="icon-preview" style="background: var(--gray-cool);">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--navy);">
+                <rect x="4" y="4" width="16" height="16" rx="2" ry="2"/>
+                <rect x="9" y="9" width="6" height="6"/>
+                <line x1="9" y1="1" x2="9" y2="4"/>
+                <line x1="15" y1="1" x2="15" y2="4"/>
+                <line x1="9" y1="20" x2="9" y2="23"/>
+                <line x1="15" y1="20" x2="15" y2="23"/>
+                <line x1="20" y1="9" x2="23" y2="9"/>
+                <line x1="20" y1="14" x2="23" y2="14"/>
+                <line x1="1" y1="9" x2="4" y2="9"/>
+                <line x1="1" y1="14" x2="4" y2="14"/>
+              </svg>
+            </div>
+            <span>Cyber / IT</span>
+          </div>
+
+          <!-- CFO -->
+          <div class="icon-card">
+            <div class="icon-preview" style="background: var(--gray-cool);">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--navy);">
+                <line x1="12" y1="1" x2="12" y2="23"/>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+            </div>
+            <span>CFO</span>
+          </div>
+
+          <!-- Fundraising -->
+          <div class="icon-card">
+            <div class="icon-preview" style="background: var(--gray-cool);">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--navy);">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                <polyline points="17 6 23 6 23 12"/>
+              </svg>
+            </div>
+            <span>Fundraising</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Icons on Dark -->
+      <div class="color-section">
+        <h3>Icons on Dark Background</h3>
+        <div class="icon-dark-row">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: white;">
+            <path d="M9 12l2 2 4-4"/>
+            <path d="M12 3l9 4.5v7c0 4-3.5 7-9 9.5-5.5-2.5-9-5.5-9-9.5v-7L12 3z"/>
+          </svg>
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: white;">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: white;">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+          </svg>
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: white;">
+            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+            <line x1="1" y1="10" x2="23" y2="10"/>
+          </svg>
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: white;">
+            <rect x="3" y="3" width="7" height="7"/>
+            <rect x="14" y="3" width="7" height="7"/>
+            <rect x="14" y="14" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/>
+          </svg>
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: white;">
+            <path d="M3 21h18"/>
+            <path d="M3 10h18"/>
+            <path d="M5 6l7-3 7 3"/>
+            <path d="M4 10v11"/>
+            <path d="M20 10v11"/>
+            <path d="M8 10v11"/>
+            <path d="M12 10v11"/>
+            <path d="M16 10v11"/>
+          </svg>
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: white;">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: white;">
+            <rect x="4" y="4" width="16" height="16" rx="2" ry="2"/>
+            <rect x="9" y="9" width="6" height="6"/>
+            <line x1="9" y1="1" x2="9" y2="4"/>
+            <line x1="15" y1="1" x2="15" y2="4"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Icon Usage -->
+      <div class="reference-note">
+        <h4>Icon Guidelines</h4>
+        <p><strong>Style:</strong> Use Lucide or Feather-style line icons. Consistent 1.5px stroke width, rounded caps and joins.<br><br>
+        <strong>Size:</strong> Default 24x24px. Scale to 20px for small UI, 32-48px for feature callouts.<br><br>
+        <strong>Color:</strong> Navy (#1E3A5F) on light backgrounds, white (#FFFFFF) on dark backgrounds. Never use gradients or multiple colors.<br><br>
+        <strong>Don't:</strong> Avoid filled icons, decorative icons, or icons with too much detail. Keep them simple and functional.</p>
+      </div>
+    </section>
+
+    <!-- LOGOS SECTION -->
+    <section id="logos">
+      <h2>Logo Variations</h2>
+      <p class="subtitle">Logo lockups for different contexts. Monochrome only - navy on light, white on dark.</p>
+
+      <!-- Primary Lockups -->
+      <div class="color-section">
+        <h3>Primary Lockups</h3>
+        <div class="logo-grid">
+          <!-- Full Wordmark on Light -->
+          <div class="logo-card">
+            <div class="logo-preview" style="background: var(--cream);">
+              <span style="font-family: 'DM Sans', sans-serif; font-size: 32px; font-weight: 700; color: var(--navy);">FundOpsHQ</span>
+            </div>
+            <div class="logo-info">
+              <h4>Full Wordmark</h4>
+              <p>Primary logo on light backgrounds</p>
+            </div>
+          </div>
+
+          <!-- Full Wordmark on Dark -->
+          <div class="logo-card">
+            <div class="logo-preview" style="background: var(--navy);">
+              <span style="font-family: 'DM Sans', sans-serif; font-size: 32px; font-weight: 700; color: white;">FundOpsHQ</span>
+            </div>
+            <div class="logo-info">
+              <h4>Full Wordmark - Reversed</h4>
+              <p>Primary logo on dark backgrounds</p>
+            </div>
+          </div>
+
+          <!-- Stacked -->
+          <div class="logo-card">
+            <div class="logo-preview" style="background: var(--gray-cool); flex-direction: column;">
+              <span style="font-family: 'DM Sans', sans-serif; font-size: 28px; font-weight: 700; color: var(--navy);">FundOps</span>
+              <span style="font-family: 'DM Sans', sans-serif; font-size: 28px; font-weight: 700; color: var(--navy);">HQ</span>
+            </div>
+            <div class="logo-info">
+              <h4>Stacked Wordmark</h4>
+              <p>Square formats, social profiles</p>
+            </div>
+          </div>
+
+          <!-- Icon Only -->
+          <div class="logo-card">
+            <div class="logo-preview" style="background: var(--gray-cool);">
+              <span style="font-family: 'DM Sans', sans-serif; font-size: 48px; font-weight: 700; color: var(--navy);">F</span>
+            </div>
+            <div class="logo-info">
+              <h4>Lettermark</h4>
+              <p>Favicons, app icons, small spaces</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub-brands -->
+      <div class="color-section">
+        <h3>Sub-brand Lockups</h3>
+        <div class="logo-grid">
+          <!-- Interviews -->
+          <div class="logo-card">
+            <div class="logo-preview" style="background: var(--cream);">
+              <span style="font-family: 'DM Sans', sans-serif; font-size: 24px; color: var(--navy);"><strong>FundOpsHQ</strong> <span style="color: var(--slate); font-weight: 400;">Interviews</span></span>
+            </div>
+            <div class="logo-info">
+              <h4>Interviews</h4>
+              <p>Podcast / video series</p>
+            </div>
+          </div>
+
+          <!-- Academy -->
+          <div class="logo-card">
+            <div class="logo-preview" style="background: var(--cream);">
+              <span style="font-family: 'DM Sans', sans-serif; font-size: 24px; color: var(--navy);"><strong>FundOpsHQ</strong> <span style="color: var(--slate); font-weight: 400;">Academy</span></span>
+            </div>
+            <div class="logo-info">
+              <h4>Academy</h4>
+              <p>Educational content, courses</p>
+            </div>
+          </div>
+
+          <!-- Weekly -->
+          <div class="logo-card">
+            <div class="logo-preview" style="background: var(--cream);">
+              <span style="font-family: 'DM Sans', sans-serif; font-size: 24px; color: var(--navy);"><strong>FundOpsHQ</strong> <span style="color: var(--slate); font-weight: 400;">Weekly</span></span>
+            </div>
+            <div class="logo-info">
+              <h4>Weekly</h4>
+              <p>Newsletter</p>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="logo-card">
+            <div class="logo-preview" style="background: var(--cream);">
+              <span style="font-family: 'DM Sans', sans-serif; font-size: 24px; color: var(--navy);"><strong>FundOpsHQ</strong> <span style="color: var(--slate); font-weight: 400;">Tools</span></span>
+            </div>
+            <div class="logo-info">
+              <h4>Tools</h4>
+              <p>Calculators, templates</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Logo on Backgrounds -->
+      <div class="color-section">
+        <h3>Logo on Various Backgrounds</h3>
+        <div class="logo-bg-row">
+          <div class="logo-bg-card" style="background: white;">
+            <span style="font-family: 'DM Sans', sans-serif; font-size: 20px; font-weight: 700; color: var(--navy);">FundOpsHQ</span>
+          </div>
+          <div class="logo-bg-card" style="background: var(--cream);">
+            <span style="font-family: 'DM Sans', sans-serif; font-size: 20px; font-weight: 700; color: var(--navy);">FundOpsHQ</span>
+          </div>
+          <div class="logo-bg-card" style="background: var(--beige);">
+            <span style="font-family: 'DM Sans', sans-serif; font-size: 20px; font-weight: 700; color: var(--navy);">FundOpsHQ</span>
+          </div>
+          <div class="logo-bg-card" style="background: var(--navy);">
+            <span style="font-family: 'DM Sans', sans-serif; font-size: 20px; font-weight: 700; color: white;">FundOpsHQ</span>
+          </div>
+          <div class="logo-bg-card" style="background: var(--navy-dark);">
+            <span style="font-family: 'DM Sans', sans-serif; font-size: 20px; font-weight: 700; color: white;">FundOpsHQ</span>
+          </div>
+          <div class="logo-bg-card" style="background: var(--navy-light);">
+            <span style="font-family: 'DM Sans', sans-serif; font-size: 20px; font-weight: 700; color: white;">FundOpsHQ</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Logo Guidelines -->
+      <div class="reference-note">
+        <h4>Logo Guidelines</h4>
+        <p><strong>Typography:</strong> DM Sans Bold (700) is the logo typeface. Letter-spacing: -0.02em.<br><br>
+        <strong>Color:</strong> Navy (#1E3A5F) on all light backgrounds. White (#FFFFFF) on dark backgrounds. Never use gray or other colors for the logo.<br><br>
+        <strong>Clear Space:</strong> Maintain minimum clear space equal to the height of the 'F' on all sides.<br><br>
+        <strong>Minimum Size:</strong> 80px wide for digital, 20mm for print. Below this, use the lettermark.<br><br>
+        <strong>Don't:</strong> Never add effects, gradients, shadows, or outlines. Never stretch or compress. Never place on busy backgrounds without a solid backdrop.</p>
+      </div>
+    </section>
+
+    <!-- TYPOGRAPHY SECTION -->
+    <section id="typography">
+      <h2>Typography</h2>
+      <p class="subtitle">DM Sans for headings and brand. Inter for body text and UI.</p>
+
+      <!-- Type Scale -->
+      <div class="color-section">
+        <h3>Type Scale</h3>
+        <div class="type-scale">
+          <!-- Display -->
+          <div class="type-row">
+            <div class="type-label">
+              <h4>Display</h4>
+              <code>DM Sans 64px/700</code>
+            </div>
+            <div class="type-sample">
+              <span style="font-family: 'DM Sans', sans-serif; font-size: 64px; font-weight: 700; color: var(--navy); letter-spacing: -0.02em; line-height: 1.1;">Fund Operations</span>
+            </div>
+          </div>
+
+          <!-- H1 -->
+          <div class="type-row">
+            <div class="type-label">
+              <h4>Heading 1</h4>
+              <code>DM Sans 48px/700</code>
+            </div>
+            <div class="type-sample">
+              <span style="font-family: 'DM Sans', sans-serif; font-size: 48px; font-weight: 700; color: var(--navy); letter-spacing: -0.02em; line-height: 1.2;">Professional Excellence</span>
+            </div>
+          </div>
+
+          <!-- H2 -->
+          <div class="type-row">
+            <div class="type-label">
+              <h4>Heading 2</h4>
+              <code>DM Sans 36px/700</code>
+            </div>
+            <div class="type-sample">
+              <span style="font-family: 'DM Sans', sans-serif; font-size: 36px; font-weight: 700; color: var(--navy); letter-spacing: -0.01em; line-height: 1.2;">Compliance & Regulatory</span>
+            </div>
+          </div>
+
+          <!-- H3 -->
+          <div class="type-row">
+            <div class="type-label">
+              <h4>Heading 3</h4>
+              <code>DM Sans 24px/600</code>
+            </div>
+            <div class="type-sample">
+              <span style="font-family: 'DM Sans', sans-serif; font-size: 24px; font-weight: 600; color: var(--navy); line-height: 1.3;">Investor Relations Best Practices</span>
+            </div>
+          </div>
+
+          <!-- H4 -->
+          <div class="type-row">
+            <div class="type-label">
+              <h4>Heading 4</h4>
+              <code>DM Sans 18px/600</code>
+            </div>
+            <div class="type-sample">
+              <span style="font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 600; color: var(--navy); line-height: 1.4;">Fund Administration Essentials</span>
+            </div>
+          </div>
+
+          <!-- Body Large -->
+          <div class="type-row">
+            <div class="type-label">
+              <h4>Body Large</h4>
+              <code>Inter 18px/400</code>
+            </div>
+            <div class="type-sample">
+              <span style="font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 400; color: var(--slate); line-height: 1.7;">Our platform provides comprehensive resources for fund operations professionals, from compliance frameworks to investor relations strategies.</span>
+            </div>
+          </div>
+
+          <!-- Body -->
+          <div class="type-row">
+            <div class="type-label">
+              <h4>Body</h4>
+              <code>Inter 16px/400</code>
+            </div>
+            <div class="type-sample">
+              <span style="font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 400; color: var(--slate); line-height: 1.6;">Understanding the complexities of fund operations requires deep expertise across multiple disciplines. Our educational content is designed to help professionals navigate these challenges with confidence.</span>
+            </div>
+          </div>
+
+          <!-- Body Small -->
+          <div class="type-row">
+            <div class="type-label">
+              <h4>Body Small</h4>
+              <code>Inter 14px/400</code>
+            </div>
+            <div class="type-sample">
+              <span style="font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 400; color: var(--slate); line-height: 1.6;">This article covers key concepts in hedge fund tax compliance, including K-1 preparation timelines, state nexus considerations, and common audit triggers.</span>
+            </div>
+          </div>
+
+          <!-- Caption -->
+          <div class="type-row">
+            <div class="type-label">
+              <h4>Caption</h4>
+              <code>Inter 12px/500</code>
+            </div>
+            <div class="type-sample">
+              <span style="font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; color: var(--gray); line-height: 1.5; letter-spacing: 0.02em;">COMPLIANCE  |  5 MIN READ  |  UPDATED DEC 2024</span>
+            </div>
+          </div>
+
+          <!-- Label -->
+          <div class="type-row" style="border-bottom: none;">
+            <div class="type-label">
+              <h4>Label</h4>
+              <code>Inter 11px/600</code>
+            </div>
+            <div class="type-sample">
+              <span style="font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; color: var(--gray); line-height: 1.5; letter-spacing: 0.1em; text-transform: uppercase;">FEATURED ARTICLE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Typography in Context -->
+      <div class="color-section">
+        <h3>Typography in Context</h3>
+        <div class="type-combo-row">
+          <!-- Article Card -->
+          <div class="type-combo-card" style="background: white; box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);">
+            <span style="font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; color: var(--gray); letter-spacing: 0.1em; text-transform: uppercase;">HEDGE FUNDS</span>
+            <h4 style="font-family: 'DM Sans', sans-serif; font-size: 24px; font-weight: 600; color: var(--navy); margin: 12px 0 8px; line-height: 1.3;">K-1 Preparation: A Complete Timeline</h4>
+            <p style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--slate); line-height: 1.6; margin-bottom: 16px;">Essential deadlines and best practices for fund managers preparing partner K-1s.</p>
+            <span style="font-family: 'Inter', sans-serif; font-size: 12px; color: var(--gray);">8 min read</span>
+          </div>
+
+          <!-- Hero Card -->
+          <div class="type-combo-card" style="background: var(--navy); color: white;">
+            <span style="font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; color: var(--gray); letter-spacing: 0.1em; text-transform: uppercase;">FUNDOPSHQ INTERVIEWS</span>
+            <h4 style="font-family: 'DM Sans', sans-serif; font-size: 32px; font-weight: 700; color: white; margin: 12px 0 8px; line-height: 1.2; letter-spacing: -0.01em;">The Future of Fund Operations</h4>
+            <p style="font-family: 'Inter', sans-serif; font-size: 16px; color: var(--gray-light); line-height: 1.6;">Industry leaders discuss automation, AI, and the evolving role of operations professionals.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Typography Guidelines -->
+      <div class="reference-note">
+        <h4>Typography Guidelines</h4>
+        <p><strong>Fonts:</strong> DM Sans (Google Fonts) for all headings and brand text. Inter (Google Fonts) for body copy and UI elements.<br><br>
+        <strong>Weights:</strong> DM Sans: 600-700 only. Inter: 400-600.<br><br>
+        <strong>Colors:</strong> Navy (#1E3A5F) for headings, Slate (#64748B) for body text, Gray (#94A3B8) for captions/meta.<br><br>
+        <strong>Line Height:</strong> Headings: 1.1-1.3. Body: 1.6-1.7. Captions: 1.5.<br><br>
+        <strong>Letter Spacing:</strong> Display/H1: -0.02em. Labels: 0.1em. Everything else: normal.</p>
+      </div>
+    </section>
+
+    <!-- PHOTOGRAPHY SECTION -->
+    <section id="photography">
+      <h2>Photography Direction</h2>
+      <p class="subtitle">Professional, understated imagery that reinforces institutional credibility.</p>
+
+      <!-- Mood Strip -->
+      <div class="color-section">
+        <h3>Color Mood</h3>
+        <div class="mood-strip">
+          <div style="background: var(--navy-dark);"></div>
+          <div style="background: var(--navy);"></div>
+          <div style="background: var(--navy-light);"></div>
+          <div style="background: var(--gray);"></div>
+          <div style="background: var(--stone);"></div>
+          <div style="background: var(--cream);"></div>
+        </div>
+        <p style="font-size: 14px; color: var(--slate);">Photography should lean cool (navy, steel, slate) with warm neutral accents (cream, beige, stone). Avoid saturated colors or high-contrast lighting.</p>
+      </div>
+
+      <!-- Photo Categories -->
+      <div class="color-section">
+        <h3>Image Categories</h3>
+        <div class="photo-grid">
+          <!-- Office/Workspace -->
+          <div class="photo-card">
+            <div class="photo-preview" style="background: linear-gradient(135deg, var(--gray-cool) 0%, var(--beige) 100%);">
+              <span>Modern workspace imagery</span>
+            </div>
+            <div class="photo-info">
+              <h4>Professional Environments</h4>
+              <p>Clean, modern offices. Natural light. Minimal clutter. Think: private equity firm, not startup.</p>
+            </div>
+          </div>
+
+          <!-- People -->
+          <div class="photo-card">
+            <div class="photo-preview" style="background: linear-gradient(135deg, var(--stone) 0%, var(--gray-lighter) 100%);">
+              <span>Professional portraits</span>
+            </div>
+            <div class="photo-info">
+              <h4>People & Portraits</h4>
+              <p>Formal business attire. Confident, approachable expressions. Diverse representation. No forced smiles.</p>
+            </div>
+          </div>
+
+          <!-- Abstract/Data -->
+          <div class="photo-card">
+            <div class="photo-preview" style="background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy) 100%);">
+              <span style="color: var(--gray-light);">Data visualization</span>
+            </div>
+            <div class="photo-info">
+              <h4>Abstract & Data</h4>
+              <p>Charts, graphs, dashboards. Blue-tinted. Clean lines. Suggests precision without overwhelming.</p>
+            </div>
+          </div>
+
+          <!-- Architecture -->
+          <div class="photo-card">
+            <div class="photo-preview" style="background: linear-gradient(135deg, var(--beige) 0%, var(--cream) 100%);">
+              <span>Financial district architecture</span>
+            </div>
+            <div class="photo-info">
+              <h4>Architecture</h4>
+              <p>Financial district buildings. Glass and steel. Clean geometry. Suggests stability and scale.</p>
+            </div>
+          </div>
+
+          <!-- Documents -->
+          <div class="photo-card">
+            <div class="photo-preview" style="background: linear-gradient(135deg, var(--cream) 0%, var(--white) 100%);">
+              <span>Legal and financial documents</span>
+            </div>
+            <div class="photo-info">
+              <h4>Documents & Details</h4>
+              <p>Contracts, reports, bound documents. Quality paper. Suggests thoroughness and attention to detail.</p>
+            </div>
+          </div>
+
+          <!-- Meetings -->
+          <div class="photo-card">
+            <div class="photo-preview" style="background: linear-gradient(135deg, var(--gray-lighter) 0%, var(--beige) 100%);">
+              <span>Boardroom discussions</span>
+            </div>
+            <div class="photo-info">
+              <h4>Meetings & Collaboration</h4>
+              <p>Small groups in discussion. Boardrooms over cafeterias. Professional engagement, not casual chat.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Do's and Don'ts -->
+      <div class="color-section">
+        <h3>Style Guidelines</h3>
+        <div class="type-combo-row">
+          <div class="type-combo-card" style="background: var(--gray-cool);">
+            <h4 style="font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 16px;">Do</h4>
+            <ul style="font-size: 14px; color: var(--slate); line-height: 2; padding-left: 20px;">
+              <li>Use natural, soft lighting</li>
+              <li>Favor cool color temperatures</li>
+              <li>Show real professionals in real settings</li>
+              <li>Include negative space for text overlay</li>
+              <li>Maintain consistent color grading</li>
+              <li>Use shallow depth of field for portraits</li>
+            </ul>
+          </div>
+          <div class="type-combo-card" style="background: var(--beige);">
+            <h4 style="font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 16px;">Don't</h4>
+            <ul style="font-size: 14px; color: var(--slate); line-height: 2; padding-left: 20px;">
+              <li>Use overly staged stock photos</li>
+              <li>Include handshakes or pointing at screens</li>
+              <li>Use warm/orange color casts</li>
+              <li>Show cluttered or messy environments</li>
+              <li>Use heavy filters or HDR effects</li>
+              <li>Include recognizable brand logos</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photography Guidelines -->
+      <div class="reference-note">
+        <h4>Photography Guidelines</h4>
+        <p><strong>Color Treatment:</strong> Desaturate slightly. Pull toward cool blue/gray. Match the brand palette.<br><br>
+        <strong>Lighting:</strong> Soft, natural, or studio lighting. Avoid harsh shadows or high contrast.<br><br>
+        <strong>Composition:</strong> Clean, balanced, plenty of negative space. Rule of thirds. Leave room for overlays.<br><br>
+        <strong>Sources:</strong> Premium stock (Unsplash, Pexels for drafts; Getty, Shutterstock for finals). Custom photography preferred for key hero images.<br><br>
+        <strong>Tone:</strong> Confident but not flashy. Competent but not cold. Professional but approachable. Think: trusted advisor, not aggressive salesperson.</p>
+      </div>
+    </section>
+
+    <!-- COMPONENTS SECTION -->
+    <section id="components">
+      <h2>Components</h2>
+      <p class="subtitle">Reusable UI components following brand guidelines.</p>
+
+      <!-- Navigation -->
+      <div class="color-section">
+        <h3>Navigation Bar</h3>
+        <div class="component-preview" style="background: var(--navy); padding: 0; border-radius: 12px; overflow: hidden;">
+          <nav style="display: flex; justify-content: space-between; align-items: center; padding: 16px 32px;">
+            <span style="font-family: 'DM Sans', sans-serif; font-size: 20px; font-weight: 700; color: white;">FundOpsHQ</span>
+            <div style="display: flex; gap: 32px;">
+              <a href="#" style="color: white; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500;">Articles</a>
+              <a href="#" style="color: var(--gray); text-decoration: none; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500;">Tools</a>
+              <a href="#" style="color: var(--gray); text-decoration: none; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500;">Podcast</a>
+              <a href="#" style="color: var(--gray); text-decoration: none; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500;">About</a>
+            </div>
+            <button class="btn" style="background: white; color: var(--navy); padding: 8px 16px; font-size: 13px;">Subscribe</button>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Cards -->
+      <div class="color-section">
+        <h3>Article Cards</h3>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+          <!-- Card 1 -->
+          <div style="background: white; border-radius: 12px; box-shadow: var(--shadow-card, 0 2px 8px rgba(30, 58, 95, 0.08)); overflow: hidden;">
+            <div style="height: 160px; background: linear-gradient(135deg, var(--navy-light), var(--navy));"></div>
+            <div style="padding: 20px;">
+              <span style="font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; color: var(--gray); letter-spacing: 0.1em; text-transform: uppercase;">HEDGE FUNDS</span>
+              <h4 style="font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 600; color: var(--navy); margin: 8px 0; line-height: 1.3;">K-1 Preparation Timeline</h4>
+              <p style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--slate); line-height: 1.5; margin-bottom: 12px;">Essential deadlines for fund managers.</p>
+              <span style="font-family: 'Inter', sans-serif; font-size: 12px; color: var(--gray);">5 min read</span>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div style="background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08); overflow: hidden;">
+            <div style="height: 160px; background: linear-gradient(135deg, var(--beige), var(--stone));"></div>
+            <div style="padding: 20px;">
+              <span style="font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; color: var(--gray); letter-spacing: 0.1em; text-transform: uppercase;">COMPLIANCE</span>
+              <h4 style="font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 600; color: var(--navy); margin: 8px 0; line-height: 1.3;">SEC Reporting Requirements</h4>
+              <p style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--slate); line-height: 1.5; margin-bottom: 12px;">Navigate Form ADV and Form PF.</p>
+              <span style="font-family: 'Inter', sans-serif; font-size: 12px; color: var(--gray);">8 min read</span>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div style="background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08); overflow: hidden;">
+            <div style="height: 160px; background: linear-gradient(135deg, var(--gray-cool), var(--gray-lighter));"></div>
+            <div style="padding: 20px;">
+              <span style="font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; color: var(--gray); letter-spacing: 0.1em; text-transform: uppercase;">FUND ADMIN</span>
+              <h4 style="font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 600; color: var(--navy); margin: 8px 0; line-height: 1.3;">NAV Calculation Best Practices</h4>
+              <p style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--slate); line-height: 1.5; margin-bottom: 12px;">Ensure accuracy in valuations.</p>
+              <span style="font-family: 'Inter', sans-serif; font-size: 12px; color: var(--gray);">6 min read</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form Elements -->
+      <div class="color-section">
+        <h3>Form Elements</h3>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;">
+          <!-- Left: Form -->
+          <div style="background: white; padding: 32px; border-radius: 12px; box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);">
+            <h4 style="font-family: 'DM Sans', sans-serif; font-size: 20px; font-weight: 600; color: var(--navy); margin-bottom: 24px;">Newsletter Signup</h4>
+            <div style="margin-bottom: 20px;">
+              <label style="display: block; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; color: var(--navy); margin-bottom: 6px;">Email Address</label>
+              <input type="email" placeholder="you@company.com" style="width: 100%; padding: 12px 16px; border: 1px solid var(--gray-lighter); border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 14px; box-sizing: border-box;">
+            </div>
+            <div style="margin-bottom: 20px;">
+              <label style="display: block; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; color: var(--navy); margin-bottom: 6px;">Fund Type</label>
+              <select style="width: 100%; padding: 12px 16px; border: 1px solid var(--gray-lighter); border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 14px; background: white; box-sizing: border-box;">
+                <option>Hedge Fund</option>
+                <option>Private Equity</option>
+                <option>Venture Capital</option>
+                <option>Real Estate</option>
+              </select>
+            </div>
+            <div style="margin-bottom: 24px;">
+              <label style="display: flex; align-items: center; gap: 8px; font-family: 'Inter', sans-serif; font-size: 14px; color: var(--slate); cursor: pointer;">
+                <input type="checkbox" style="width: 18px; height: 18px; accent-color: var(--navy);">
+                I agree to receive weekly updates
+              </label>
+            </div>
+            <button class="btn btn-navy" style="width: 100%;">Subscribe</button>
+          </div>
+          <!-- Right: States -->
+          <div style="background: var(--cream); padding: 32px; border-radius: 12px;">
+            <h4 style="font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 600; color: var(--navy); margin-bottom: 16px;">Input States</h4>
+            <div style="margin-bottom: 16px;">
+              <label style="display: block; font-family: 'Inter', sans-serif; font-size: 12px; color: var(--gray); margin-bottom: 4px;">Default</label>
+              <input type="text" placeholder="Placeholder text" style="width: 100%; padding: 10px 14px; border: 1px solid var(--gray-lighter); border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 14px; box-sizing: border-box;">
+            </div>
+            <div style="margin-bottom: 16px;">
+              <label style="display: block; font-family: 'Inter', sans-serif; font-size: 12px; color: var(--gray); margin-bottom: 4px;">Focus</label>
+              <input type="text" value="Focused input" style="width: 100%; padding: 10px 14px; border: 2px solid var(--navy); border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 14px; box-sizing: border-box; outline: none; box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);">
+            </div>
+            <div style="margin-bottom: 16px;">
+              <label style="display: block; font-family: 'Inter', sans-serif; font-size: 12px; color: var(--gray); margin-bottom: 4px;">Filled</label>
+              <input type="text" value="john@example.com" style="width: 100%; padding: 10px 14px; border: 1px solid var(--gray-light); border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 14px; box-sizing: border-box;">
+            </div>
+            <div>
+              <label style="display: block; font-family: 'Inter', sans-serif; font-size: 12px; color: var(--gray); margin-bottom: 4px;">Disabled</label>
+              <input type="text" value="Cannot edit" disabled style="width: 100%; padding: 10px 14px; border: 1px solid var(--gray-lighter); border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 14px; box-sizing: border-box; background: var(--gray-cool); color: var(--gray); cursor: not-allowed;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="color-section">
+        <h3>Footer</h3>
+        <div style="background: var(--navy); padding: 48px 32px 24px; border-radius: 12px;">
+          <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px;">
+            <div>
+              <span style="font-family: 'DM Sans', sans-serif; font-size: 24px; font-weight: 700; color: white;">FundOpsHQ</span>
+              <p style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--gray); margin-top: 12px; line-height: 1.6;">Professional resources for fund operations teams. Educational content, tools, and industry insights.</p>
+            </div>
+            <div>
+              <h5 style="font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; color: var(--gray); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px;">Resources</h5>
+              <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin-bottom: 8px;"><a href="#" style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--gray-light); text-decoration: none;">Articles</a></li>
+                <li style="margin-bottom: 8px;"><a href="#" style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--gray-light); text-decoration: none;">Tools</a></li>
+                <li style="margin-bottom: 8px;"><a href="#" style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--gray-light); text-decoration: none;">Podcast</a></li>
+              </ul>
+            </div>
+            <div>
+              <h5 style="font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; color: var(--gray); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px;">Topics</h5>
+              <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin-bottom: 8px;"><a href="#" style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--gray-light); text-decoration: none;">Compliance</a></li>
+                <li style="margin-bottom: 8px;"><a href="#" style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--gray-light); text-decoration: none;">Tax</a></li>
+                <li style="margin-bottom: 8px;"><a href="#" style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--gray-light); text-decoration: none;">Audit</a></li>
+              </ul>
+            </div>
+            <div>
+              <h5 style="font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; color: var(--gray); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px;">Company</h5>
+              <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin-bottom: 8px;"><a href="#" style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--gray-light); text-decoration: none;">About</a></li>
+                <li style="margin-bottom: 8px;"><a href="#" style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--gray-light); text-decoration: none;">Contact</a></li>
+                <li style="margin-bottom: 8px;"><a href="#" style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--gray-light); text-decoration: none;">Privacy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div style="border-top: 1px solid #2d4a6f; padding-top: 24px; display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-family: 'Inter', sans-serif; font-size: 13px; color: var(--gray);">2024 FundOpsHQ. All rights reserved.</span>
+            <div style="display: flex; gap: 16px;">
+              <span style="font-family: 'Inter', sans-serif; font-size: 13px; color: var(--gray);">LinkedIn</span>
+              <span style="font-family: 'Inter', sans-serif; font-size: 13px; color: var(--gray);">Twitter</span>
+              <span style="font-family: 'Inter', sans-serif; font-size: 13px; color: var(--gray);">YouTube</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VOICE & TONE SECTION -->
+    <section id="voice">
+      <h2>Voice & Tone</h2>
+      <p class="subtitle">How FundOpsHQ communicates - professional, clear, educational.</p>
+
+      <!-- Voice Principles -->
+      <div class="color-section">
+        <h3>Voice Principles</h3>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;">
+          <div style="background: white; padding: 24px; border-radius: 12px; box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);">
+            <h4 style="font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 12px;">Professional</h4>
+            <p style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--slate); line-height: 1.6;">We speak with authority and expertise. No fluff, no hype - just clear, accurate information fund professionals can trust.</p>
+          </div>
+          <div style="background: white; padding: 24px; border-radius: 12px; box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);">
+            <h4 style="font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 12px;">Educational</h4>
+            <p style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--slate); line-height: 1.6;">We explain complex topics clearly. Technical accuracy matters, but so does accessibility. Experts and newcomers alike should learn from us.</p>
+          </div>
+          <div style="background: white; padding: 24px; border-radius: 12px; box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);">
+            <h4 style="font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 12px;">Trustworthy</h4>
+            <p style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--slate); line-height: 1.6;">We cite sources, acknowledge complexity, and never oversimplify. Our reputation depends on accuracy and reliability.</p>
+          </div>
+          <div style="background: white; padding: 24px; border-radius: 12px; box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);">
+            <h4 style="font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 12px;">Approachable</h4>
+            <p style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--slate); line-height: 1.6;">Professional doesn't mean cold. We're helpful, direct, and human. We're the knowledgeable colleague you want to ask questions.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Writing Examples -->
+      <div class="color-section">
+        <h3>Writing Examples</h3>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+          <!-- Headlines -->
+          <div style="background: var(--gray-cool); padding: 24px; border-radius: 12px;">
+            <h4 style="font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 600; color: var(--navy); margin-bottom: 16px;">Headlines</h4>
+            <div style="margin-bottom: 16px;">
+              <span style="font-family: 'Inter', sans-serif; font-size: 11px; color: #22c55e; font-weight: 600;">DO</span>
+              <p style="font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 600; color: var(--navy); margin-top: 4px;">"K-1 Preparation: A Complete Timeline for Fund Managers"</p>
+            </div>
+            <div>
+              <span style="font-family: 'Inter', sans-serif; font-size: 11px; color: #ef4444; font-weight: 600;">DON'T</span>
+              <p style="font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 600; color: var(--gray); margin-top: 4px; text-decoration: line-through;">"EVERYTHING You Need to Know About K-1s!!!"</p>
+            </div>
+          </div>
+          <!-- CTAs -->
+          <div style="background: var(--gray-cool); padding: 24px; border-radius: 12px;">
+            <h4 style="font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 600; color: var(--navy); margin-bottom: 16px;">Call-to-Actions</h4>
+            <div style="margin-bottom: 16px;">
+              <span style="font-family: 'Inter', sans-serif; font-size: 11px; color: #22c55e; font-weight: 600;">DO</span>
+              <p style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--navy); margin-top: 4px;">"Read the full guide" / "Download the template" / "Subscribe to weekly insights"</p>
+            </div>
+            <div>
+              <span style="font-family: 'Inter', sans-serif; font-size: 11px; color: #ef4444; font-weight: 600;">DON'T</span>
+              <p style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--gray); margin-top: 4px; text-decoration: line-through;">"Click here now!" / "Don't miss out!" / "Get started FREE today!"</p>
+            </div>
+          </div>
+          <!-- Body Copy -->
+          <div style="background: var(--gray-cool); padding: 24px; border-radius: 12px;">
+            <h4 style="font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 600; color: var(--navy); margin-bottom: 16px;">Body Copy</h4>
+            <div style="margin-bottom: 16px;">
+              <span style="font-family: 'Inter', sans-serif; font-size: 11px; color: #22c55e; font-weight: 600;">DO</span>
+              <p style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--navy); margin-top: 4px; line-height: 1.6;">"Form ADV Part 2A requires investment advisers to disclose their advisory business practices, fees, and conflicts of interest."</p>
+            </div>
+            <div>
+              <span style="font-family: 'Inter', sans-serif; font-size: 11px; color: #ef4444; font-weight: 600;">DON'T</span>
+              <p style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--gray); margin-top: 4px; line-height: 1.6; text-decoration: line-through;">"Form ADV is basically this super important form that you definitely need to know about if you're in the fund game!"</p>
+            </div>
+          </div>
+          <!-- Errors -->
+          <div style="background: var(--gray-cool); padding: 24px; border-radius: 12px;">
+            <h4 style="font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 600; color: var(--navy); margin-bottom: 16px;">Error Messages</h4>
+            <div style="margin-bottom: 16px;">
+              <span style="font-family: 'Inter', sans-serif; font-size: 11px; color: #22c55e; font-weight: 600;">DO</span>
+              <p style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--navy); margin-top: 4px;">"Please enter a valid email address" / "This field is required"</p>
+            </div>
+            <div>
+              <span style="font-family: 'Inter', sans-serif; font-size: 11px; color: #ef4444; font-weight: 600;">DON'T</span>
+              <p style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--gray); margin-top: 4px; text-decoration: line-through;">"Oops! Something went wrong :(" / "Error 422"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Avoid List -->
+      <div class="reference-note">
+        <h4>Always Avoid</h4>
+        <p><strong>Emojis</strong> in formal content (articles, tools, emails). Exception: casual social media replies.<br><br>
+        <strong>Casual slang</strong> - no "game-changer," "crushing it," "level up," etc.<br><br>
+        <strong>Hype language</strong> - no "revolutionary," "best ever," "must-have," excessive exclamation points.<br><br>
+        <strong>Unexplained jargon</strong> - define technical terms on first use or link to a glossary.<br><br>
+        <strong>Passive voice</strong> when active is clearer - "The SEC requires..." not "It is required by the SEC that..."</p>
+      </div>
+    </section>
+
+    <!-- SOCIAL TEMPLATES SECTION -->
+    <section id="templates">
+      <h2>Social Media Templates</h2>
+      <p class="subtitle">Ready-to-use SVG templates for all major platforms. Find them in <code>/templates/social/</code></p>
+
+      <!-- Platform Overview -->
+      <div class="color-section">
+        <h3>Available Templates</h3>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+          <!-- YouTube -->
+          <div style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);">
+            <h4 style="font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 16px;">YouTube</h4>
+            <ul style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--slate); line-height: 2; padding-left: 20px;">
+              <li>Thumbnail (1280x720)</li>
+              <li>Channel Banner (2560x1440)</li>
+              <li>Profile Photo (800x800)</li>
+              <li>End Screen (1920x1080)</li>
+            </ul>
+          </div>
+          <!-- LinkedIn -->
+          <div style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);">
+            <h4 style="font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 16px;">LinkedIn</h4>
+            <ul style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--slate); line-height: 2; padding-left: 20px;">
+              <li>Post Image (1200x627)</li>
+              <li>Banner (1584x396)</li>
+              <li>Article Cover (1200x644)</li>
+              <li>Profile Photo (400x400)</li>
+            </ul>
+          </div>
+          <!-- Twitter -->
+          <div style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);">
+            <h4 style="font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 16px;">Twitter/X</h4>
+            <ul style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--slate); line-height: 2; padding-left: 20px;">
+              <li>Post Image (1200x675)</li>
+              <li>Header (1500x500)</li>
+              <li>Profile Photo (400x400)</li>
+            </ul>
+          </div>
+          <!-- Instagram -->
+          <div style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);">
+            <h4 style="font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 16px;">Instagram</h4>
+            <ul style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--slate); line-height: 2; padding-left: 20px;">
+              <li>Square Post (1080x1080)</li>
+              <li>Portrait Post (1080x1350)</li>
+              <li>Story/Reel (1080x1920)</li>
+              <li>Profile Photo (320x320)</li>
+            </ul>
+          </div>
+          <!-- Podcast -->
+          <div style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);">
+            <h4 style="font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 16px;">Podcast</h4>
+            <ul style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--slate); line-height: 2; padding-left: 20px;">
+              <li>Cover Art (3000x3000)</li>
+              <li>Episode Card (1200x630)</li>
+            </ul>
+          </div>
+          <!-- Open Graph -->
+          <div style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);">
+            <h4 style="font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 600; color: var(--navy); margin-bottom: 16px;">Open Graph</h4>
+            <ul style="font-family: 'Inter', sans-serif; font-size: 14px; color: var(--slate); line-height: 2; padding-left: 20px;">
+              <li>Default OG (1200x630)</li>
+              <li>Article OG (1200x630)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- YouTube Templates -->
+      <div class="color-section">
+        <h3>YouTube</h3>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
+          <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);">
+            <img src="templates/social/youtube-thumbnail.svg" alt="YouTube Thumbnail" style="width: 100%; display: block;">
+            <div style="padding: 16px; border-top: 1px solid var(--gray-lighter); display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <h4 style="font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; color: var(--navy);">YouTube Thumbnail</h4>
+                <p style="font-family: 'Inter', sans-serif; font-size: 12px; color: var(--gray);">1280 x 720</p>
+              </div>
+              <a href="templates/social/youtube-thumbnail.svg" download style="font-family: 'Inter', sans-serif; font-size: 12px; color: var(--navy); font-weight: 500; text-decoration: none; padding: 6px 12px; background: var(--gray-cool); border-radius: 6px;">Download</a>
+            </div>
+          </div>
+          <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);">
+            <img src="templates/social/youtube-banner.svg" alt="YouTube Banner" style="width: 100%; display: block;">
+            <div style="padding: 16px; border-top: 1px solid var(--gray-lighter); display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <h4 style="font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; color: var(--navy);">YouTube Channel Banner</h4>
+                <p style="font-family: 'Inter', sans-serif; font-size: 12px; color: var(--gray);">2560 x 1440</p>
+              </div>
+              <a href="templates/social/youtube-banner.svg" download style="font-family: 'Inter', sans-serif; font-size: 12px; color: var(--navy); font-weight: 500; text-decoration: none; padding: 6px 12px; background: var(--gray-cool); border-radius: 6px;">Download</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LinkedIn Templates -->
+      <div class="color-section">
+        <h3>LinkedIn</h3>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
+          <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);">
+            <img src="templates/social/linkedin-post.svg" alt="LinkedIn Post" style="width: 100%; display: block;">
+            <div style="padding: 16px; border-top: 1px solid var(--gray-lighter); display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <h4 style="font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; color: var(--navy);">LinkedIn Post Image</h4>
+                <p style="font-family: 'Inter', sans-serif; font-size: 12px; color: var(--gray);">1200 x 627</p>
+              </div>
+              <a href="templates/social/linkedin-post.svg" download style="font-family: 'Inter', sans-serif; font-size: 12px; color: var(--navy); font-weight: 500; text-decoration: none; padding: 6px 12px; background: var(--gray-cool); border-radius: 6px;">Download</a>
+            </div>
+          </div>
+          <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);">
+            <img src="templates/social/linkedin-banner.svg" alt="LinkedIn Banner" style="width: 100%; display: block;">
+            <div style="padding: 16px; border-top: 1px solid var(--gray-lighter); display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <h4 style="font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; color: var(--navy);">LinkedIn Profile Banner</h4>
+                <p style="font-family: 'Inter', sans-serif; font-size: 12px; color: var(--gray);">1584 x 396</p>
+              </div>
+              <a href="templates/social/linkedin-banner.svg" download style="font-family: 'Inter', sans-serif; font-size: 12px; color: var(--navy); font-weight: 500; text-decoration: none; padding: 6px 12px; background: var(--gray-cool); border-radius: 6px;">Download</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Twitter Templates -->
+      <div class="color-section">
+        <h3>Twitter / X</h3>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
+          <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);">
+            <img src="templates/social/twitter-post.svg" alt="Twitter Post" style="width: 100%; display: block;">
+            <div style="padding: 16px; border-top: 1px solid var(--gray-lighter); display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <h4 style="font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; color: var(--navy);">Twitter/X Post Image</h4>
+                <p style="font-family: 'Inter', sans-serif; font-size: 12px; color: var(--gray);">1200 x 675</p>
+              </div>
+              <a href="templates/social/twitter-post.svg" download style="font-family: 'Inter', sans-serif; font-size: 12px; color: var(--navy); font-weight: 500; text-decoration: none; padding: 6px 12px; background: var(--gray-cool); border-radius: 6px;">Download</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Instagram Templates -->
+      <div class="color-section">
+        <h3>Instagram / TikTok</h3>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+          <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);">
+            <img src="templates/social/instagram-post-square.svg" alt="Instagram Square" style="width: 100%; display: block;">
+            <div style="padding: 16px; border-top: 1px solid var(--gray-lighter); display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <h4 style="font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; color: var(--navy);">Square Post</h4>
+                <p style="font-family: 'Inter', sans-serif; font-size: 12px; color: var(--gray);">1080 x 1080</p>
+              </div>
+              <a href="templates/social/instagram-post-square.svg" download style="font-family: 'Inter', sans-serif; font-size: 12px; color: var(--navy); font-weight: 500; text-decoration: none; padding: 6px 12px; background: var(--gray-cool); border-radius: 6px;">Download</a>
+            </div>
+          </div>
+          <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);">
+            <div style="height: 300px; overflow: hidden;">
+              <img src="templates/social/instagram-story.svg" alt="Instagram Story" style="width: 100%; display: block;">
+            </div>
+            <div style="padding: 16px; border-top: 1px solid var(--gray-lighter); display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <h4 style="font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; color: var(--navy);">Story / Reel / TikTok</h4>
+                <p style="font-family: 'Inter', sans-serif; font-size: 12px; color: var(--gray);">1080 x 1920</p>
+              </div>
+              <a href="templates/social/instagram-story.svg" download style="font-family: 'Inter', sans-serif; font-size: 12px; color: var(--navy); font-weight: 500; text-decoration: none; padding: 6px 12px; background: var(--gray-cool); border-radius: 6px;">Download</a>
+            </div>
+          </div>
+          <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);">
+            <div style="padding: 40px; display: flex; justify-content: center; background: var(--gray-cool);">
+              <img src="templates/social/profile-square.svg" alt="Profile Photo" style="width: 150px; height: 150px; border-radius: 50%;">
+            </div>
+            <div style="padding: 16px; border-top: 1px solid var(--gray-lighter); display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <h4 style="font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; color: var(--navy);">Profile Photo (All Platforms)</h4>
+                <p style="font-family: 'Inter', sans-serif; font-size: 12px; color: var(--gray);">800 x 800 (scale as needed)</p>
+              </div>
+              <a href="templates/social/profile-square.svg" download style="font-family: 'Inter', sans-serif; font-size: 12px; color: var(--navy); font-weight: 500; text-decoration: none; padding: 6px 12px; background: var(--gray-cool); border-radius: 6px;">Download</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Podcast Templates -->
+      <div class="color-section">
+        <h3>Podcast</h3>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
+          <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);">
+            <img src="templates/social/podcast-episode.svg" alt="Podcast Episode" style="width: 100%; display: block;">
+            <div style="padding: 16px; border-top: 1px solid var(--gray-lighter); display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <h4 style="font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; color: var(--navy);">Episode Share Card</h4>
+                <p style="font-family: 'Inter', sans-serif; font-size: 12px; color: var(--gray);">1200 x 630</p>
+              </div>
+              <a href="templates/social/podcast-episode.svg" download style="font-family: 'Inter', sans-serif; font-size: 12px; color: var(--navy); font-weight: 500; text-decoration: none; padding: 6px 12px; background: var(--gray-cool); border-radius: 6px;">Download</a>
+            </div>
+          </div>
+          <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);">
+            <div style="padding: 20px; background: var(--gray-cool); display: flex; justify-content: center;">
+              <div style="width: 200px; height: 200px; background: var(--navy); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                <span style="font-family: 'DM Sans', sans-serif; font-size: 24px; font-weight: 700; color: white;">FundOpsHQ</span>
+              </div>
+            </div>
+            <div style="padding: 16px; border-top: 1px solid var(--gray-lighter); display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <h4 style="font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; color: var(--navy);">Podcast Cover Art</h4>
+                <p style="font-family: 'Inter', sans-serif; font-size: 12px; color: var(--gray);">3000 x 3000 (use existing)</p>
+              </div>
+              <a href="podcast/cover-3000x3000.svg" download style="font-family: 'Inter', sans-serif; font-size: 12px; color: var(--navy); font-weight: 500; text-decoration: none; padding: 6px 12px; background: var(--gray-cool); border-radius: 6px;">Download</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Open Graph Templates -->
+      <div class="color-section">
+        <h3>Open Graph / Website Sharing</h3>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
+          <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);">
+            <img src="templates/social/og-default.svg" alt="Default OG" style="width: 100%; display: block;">
+            <div style="padding: 16px; border-top: 1px solid var(--gray-lighter); display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <h4 style="font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; color: var(--navy);">Default OG Image</h4>
+                <p style="font-family: 'Inter', sans-serif; font-size: 12px; color: var(--gray);">1200 x 630</p>
+              </div>
+              <a href="templates/social/og-default.svg" download style="font-family: 'Inter', sans-serif; font-size: 12px; color: var(--navy); font-weight: 500; text-decoration: none; padding: 6px 12px; background: var(--gray-cool); border-radius: 6px;">Download</a>
+            </div>
+          </div>
+          <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(30, 58, 95, 0.08);">
+            <img src="templates/social/og-article.svg" alt="Article OG" style="width: 100%; display: block;">
+            <div style="padding: 16px; border-top: 1px solid var(--gray-lighter); display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <h4 style="font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; color: var(--navy);">Article OG Image</h4>
+                <p style="font-family: 'Inter', sans-serif; font-size: 12px; color: var(--gray);">1200 x 630</p>
+              </div>
+              <a href="templates/social/og-article.svg" download style="font-family: 'Inter', sans-serif; font-size: 12px; color: var(--navy); font-weight: 500; text-decoration: none; padding: 6px 12px; background: var(--gray-cool); border-radius: 6px;">Download</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Export Files -->
+      <div class="reference-note">
+        <h4>Export Files</h4>
+        <p><strong>CSS Variables:</strong> <code>exports/css/brand-variables.css</code> - Copy-paste CSS custom properties<br><br>
+        <strong>Tailwind Config:</strong> <code>exports/css/tailwind.brand.js</code> - Extend your Tailwind config<br><br>
+        <strong>Brand Tokens:</strong> <code>brand-tokens.json</code> - Complete programmatic reference for all brand values</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="status">
+    Brand System Complete - 9 Sections
+  </div>
 </body>
 </html>

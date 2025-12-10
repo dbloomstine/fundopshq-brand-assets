@@ -2,8 +2,12 @@
 
 Use this reference when implementing FundOpsHQ brand elements in any project.
 
-Brand assets repository: https://github.com/dbloomstine/fundopshq-brand-assets
-Interactive brand kit: https://dbloomstine.github.io/fundopshq-brand-assets/
+## Authoritative Sources
+
+- **Brand Assets Repository**: https://github.com/dbloomstine/fundopshq-brand-assets
+- **Interactive Brand Guide**: Open `index.html` in the repository root
+- **Design Tokens**: `brand-tokens.json` in the repository root (v2.0.0 - monochrome palette)
+- **This File**: Primary AI reference for brand implementation
 
 ## Color Palette
 

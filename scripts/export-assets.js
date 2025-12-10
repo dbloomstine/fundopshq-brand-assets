@@ -106,48 +106,8 @@ async function exportPodcastCover() {
   await exportSvgToPng(svgPath, path.join(EXPORTS_DIR, 'logos/podcast', 'podcast-cover-500x500.png'), 500, 500);
 }
 
-async function exportFavicons() {
-  console.log('\n=== Exporting Favicons ===\n');
-
-  // Use the FOHQ primary light logo for favicons (works on light backgrounds)
-  const svgPath = path.join(ROOT, 'logos', 'fohq-primary-light.svg');
-
-  const faviconSizes = [
-    { name: 'favicon-16x16.png', size: 16 },
-    { name: 'favicon-32x32.png', size: 32 },
-    { name: 'favicon-48x48.png', size: 48 },
-    { name: 'favicon-64x64.png', size: 64 },
-    { name: 'favicon-128x128.png', size: 128 },
-    { name: 'favicon-256x256.png', size: 256 },
-    { name: 'apple-touch-icon.png', size: 180 },
-    { name: 'android-chrome-192x192.png', size: 192 },
-    { name: 'android-chrome-512x512.png', size: 512 }
-  ];
-
-  for (const favicon of faviconSizes) {
-    const outputPath = path.join(EXPORTS_DIR, 'favicon', favicon.name);
-    await exportSvgToPng(svgPath, outputPath, favicon.size, favicon.size);
-  }
-
-  // Create site.webmanifest
-  const manifest = {
-    name: "FundOpsHQ",
-    short_name: "FundOpsHQ",
-    icons: [
-      { src: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
-      { src: "/android-chrome-512x512.png", sizes: "512x512", type: "image/png" }
-    ],
-    theme_color: "#1E3A5F",
-    background_color: "#ffffff",
-    display: "standalone"
-  };
-
-  fs.writeFileSync(
-    path.join(EXPORTS_DIR, 'favicon', 'site.webmanifest'),
-    JSON.stringify(manifest, null, 2)
-  );
-  console.log('  Created: site.webmanifest');
-}
+// NOTE: Favicon export moved to dedicated script: export-favicon.js
+// Run: node scripts/export-favicon.js
 
 async function exportSocialMedia() {
   console.log('\n=== Exporting Social Media Templates ===\n');
@@ -221,7 +181,7 @@ async function main() {
   try {
     await exportLogos();
     await exportPodcastCover();
-    await exportFavicons();
+    // Favicons: run `node scripts/export-favicon.js` separately
     await exportSocialMedia();
 
     console.log('\n=== Export Complete ===');
