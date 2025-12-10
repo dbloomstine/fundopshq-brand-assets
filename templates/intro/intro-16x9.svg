@@ -1,0 +1,21 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A5F"/>
+      <stop offset="100%" stop-color="#152d4a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <!-- FundOpsHQ Interviews wordmark - centered -->
+  <text x="960" y="480" text-anchor="middle" fill="#FFFFFF" font-family="DM Sans, system-ui, sans-serif" font-size="72" font-weight="700">FundOps</text>
+  <text x="1248" y="480" text-anchor="middle" fill="#64748B" font-family="DM Sans, system-ui, sans-serif" font-size="72" font-weight="700">HQ</text>
+
+  <!-- "Interviews" subtitle -->
+  <text x="960" y="560" text-anchor="middle" fill="#94A3B8" font-family="Inter, system-ui, sans-serif" font-size="36" font-weight="400" letter-spacing="8">INTERVIEWS</text>
+
+  <!-- Subtle line accent -->
+  <rect x="860" y="600" width="200" height="2" fill="#64748B" opacity="0.5"/>
+</svg>
