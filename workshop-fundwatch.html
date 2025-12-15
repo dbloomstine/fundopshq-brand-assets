@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FundWatch Briefing Logo Workshop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #F1F5F9;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .workshop-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: #1E3A5F;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: #64748B;
+      font-size: 16px;
+      margin-bottom: 32px;
+    }
+
+    .preview-section {
+      margin-bottom: 40px;
+    }
+
+    .preview-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #64748B;
+      margin-bottom: 12px;
+    }
+
+    .preview-sublabel {
+      font-size: 14px;
+      color: #94A3B8;
+      margin-bottom: 16px;
+    }
+
+    /* Logo cards */
+    .logo-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+
+    .logo-preview {
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #FFFFFF;
+    }
+
+    .logo-preview img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .logo-info {
+      padding: 16px 20px;
+      border-top: 1px solid #E2E8F0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #FAFAFA;
+    }
+
+    .logo-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: #1E3A5F;
+    }
+
+    .logo-desc {
+      font-size: 13px;
+      color: #64748B;
+      margin-top: 2px;
+    }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 20px;
+      background: #1E3A5F;
+      color: #FFFFFF;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 6px;
+      transition: background 0.2s ease;
+    }
+
+    .download-btn:hover {
+      background: #152d4a;
+    }
+
+    /* Size indicators */
+    .size-badge {
+      display: inline-block;
+      padding: 4px 10px;
+      background: #E2E8F0;
+      border-radius: 4px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: #64748B;
+      margin-right: 8px;
+    }
+
+    /* Section divider */
+    .section-divider {
+      height: 1px;
+      background: #E2E8F0;
+      margin: 48px 0;
+    }
+
+    /* Inline text logo styling */
+    .text-logo {
+      font-family: 'DM Sans', sans-serif;
+      display: inline;
+    }
+
+    .text-logo .bold {
+      font-weight: 700;
+      color: #1E3A5F;
+    }
+
+    .text-logo .regular {
+      font-weight: 400;
+      color: #64748B;
+    }
+
+    /* Square preview container */
+    .square-preview {
+      width: 300px;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .square-preview .text-logo {
+      font-size: 28px;
+      display: block;
+      text-align: center;
+    }
+
+    /* Wide preview container */
+    .wide-preview {
+      width: 100%;
+      max-width: 600px;
+      aspect-ratio: 1200 / 630;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .wide-preview .text-logo {
+      font-size: 32px;
+      display: block;
+      text-align: center;
+    }
+
+    .beehiiv-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      background: #FEF3C7;
+      border: 1px solid #FCD34D;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      color: #92400E;
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="workshop-container">
+    <h1>FundWatch Briefing</h1>
+    <p class="subtitle">Newsletter Logo - Ready for Beehiiv</p>
+
+    <!-- 800x800 Publication Logo -->
+    <div class="preview-section">
+      <div class="beehiiv-label">Beehiiv Publication Logo</div>
+      <div class="preview-label">Publication Logo</div>
+      <div class="preview-sublabel">For favicon and mobile app logo</div>
+      <div class="logo-card">
+        <div class="logo-preview">
+          <div class="square-preview">
+            <span class="text-logo">
+              <span class="bold">FundWatch</span>
+            </span>
+            <span class="text-logo">
+              <span class="regular">Briefing</span>
+            </span>
+          </div>
+        </div>
+        <div class="logo-info">
+          <div>
+            <div class="logo-name">Publication Logo</div>
+            <div class="logo-desc"><span class="size-badge">800 x 800 px</span> Square format</div>
+          </div>
+          <a href="logos/fundwatch-briefing-800x800.svg" download class="download-btn">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download SVG
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1200x630 Thumbnail Preview -->
+    <div class="preview-section">
+      <div class="beehiiv-label">Beehiiv Default Thumbnail</div>
+      <div class="preview-label">Default Thumbnail Preview</div>
+      <div class="preview-sublabel">For post previews in web browsers</div>
+      <div class="logo-card">
+        <div class="logo-preview">
+          <div class="wide-preview">
+            <span class="text-logo">
+              <span class="bold">FundWatch</span>
+            </span>
+            <span class="text-logo">
+              <span class="regular">Briefing</span>
+            </span>
+          </div>
+        </div>
+        <div class="logo-info">
+          <div>
+            <div class="logo-name">Default Thumbnail</div>
+            <div class="logo-desc"><span class="size-badge">1200 x 630 px</span> Social share format</div>
+          </div>
+          <a href="logos/fundwatch-briefing-1200x630.svg" download class="download-btn">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download SVG
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- Direct file links -->
+    <div class="preview-section">
+      <div class="preview-label">Direct Download Links</div>
+      <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+        <a href="logos/fundwatch-briefing-800x800.svg" download style="padding: 16px 24px; background: #1E3A5F; color: white; text-decoration: none; border-radius: 8px; font-weight: 500;">
+          800x800 Publication Logo (SVG)
+        </a>
+        <a href="logos/fundwatch-briefing-1200x630.svg" download style="padding: 16px 24px; background: #1E3A5F; color: white; text-decoration: none; border-radius: 8px; font-weight: 500;">
+          1200x630 Thumbnail (SVG)
+        </a>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

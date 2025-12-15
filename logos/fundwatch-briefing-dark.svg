@@ -1,0 +1,21 @@
+<svg width="320" height="48" viewBox="0 0 320 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- FundWatch Briefing - White (for dark backgrounds) -->
+  <!-- Logo mark: stylized eye/watch icon representing monitoring -->
+  <g>
+    <!-- Outer ring -->
+    <circle cx="24" cy="24" r="18" stroke="#FFFFFF" stroke-width="2.5" fill="none"/>
+    <!-- Inner eye/focus circle -->
+    <circle cx="24" cy="24" r="7" fill="#FFFFFF"/>
+    <!-- Horizontal scan line left -->
+    <line x1="2" y1="24" x2="14" y2="24" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+    <!-- Horizontal scan line right -->
+    <line x1="34" y1="24" x2="46" y2="24" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+    <!-- Small tick marks for "watch" feel -->
+    <line x1="24" y1="2" x2="24" y2="8" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+    <line x1="24" y1="40" x2="24" y2="46" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <!-- Text: FundWatch -->
+  <text x="58" y="28" font-family="DM Sans, system-ui, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" letter-spacing="-0.02em">FundWatch</text>
+  <!-- Text: Briefing (lighter weight, slightly offset) -->
+  <text x="175" y="28" font-family="DM Sans, system-ui, sans-serif" font-size="22" font-weight="400" fill="#FFFFFF" opacity="0.85" letter-spacing="-0.01em">Briefing</text>
+</svg>
