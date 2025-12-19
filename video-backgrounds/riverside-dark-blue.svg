@@ -1,0 +1,21 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark blue gradient background matching FundOpsHQ brand -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a5f"/>
+      <stop offset="50%" stop-color="#1a3352"/>
+      <stop offset="100%" stop-color="#152a45"/>
+    </linearGradient>
+    <!-- Subtle radial highlight -->
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#243f61" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#1a3352" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Base gradient -->
+  <rect width="1920" height="1080" fill="url(#bgGradient)"/>
+
+  <!-- Subtle center glow for depth -->
+  <rect width="1920" height="1080" fill="url(#centerGlow)"/>
+</svg>
